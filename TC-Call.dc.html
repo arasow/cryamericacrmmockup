@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Call workspace — CRY America CRM</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#171717}a:hover{color:#8A5A00}
+</style>
+</helmet>
+<div style="display: flex; flex-wrap: wrap; min-height: 1500px; background: #FFF6CF; color: #171717; font-family: 'IBM Plex Sans', sans-serif; font-size: 14px; line-height: 20px">
+<nav aria-label="Main" style="flex: 1 1 232px; background: #F9CC02; color: #171717; padding: 24px 16px; box-sizing: border-box; display: flex; flex-direction: column; gap: 4px">
+<div style="padding: 0 12px 24px; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 18px; font-weight: 700; color: #171717">CRY America</span><span style="font-size: 12px; color: #3D3A2E">Donor CRM</span></div>
+<a href="Main.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #171717; text-decoration: none">Dashboard</a>
+<a href="Donors.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #171717; text-decoration: none">Donors</a>
+<a href="Donations.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #171717; text-decoration: none">Donations</a>
+<a href="NewPledge.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #171717; text-decoration: none">Pledges</a>
+<a href="BulkImport.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #171717; text-decoration: none">Bulk import</a>
+<a href="TC-Dashboard.dc.html" style="padding: 10px 12px; border-radius: 8px; background: #171717; color: #F9CC02; font-weight: 600; text-decoration: none">Tele-calling</a>
+<a href="VM-Dashboard.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #171717; text-decoration: none">Volunteers</a>
+<span style="padding: 16px 12px 6px; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: #3D3A2E">Set-up</span>
+<a href="Masters.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #171717; text-decoration: none">Masters</a>
+<a href="Organisation.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #171717; text-decoration: none">Organisation</a>
+</nav>
+<main style="flex: 999 1 560px; min-width: 0; padding: 32px 32px 48px; box-sizing: border-box; display: flex; flex-direction: column; gap: 24px">
+<div style="display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between; align-items: flex-end">
+<div style="display: flex; flex-direction: column; gap: 4px"><h1 style="margin: 0; font-size: 28px; line-height: 36px; font-weight: 600">Call workspace</h1><span style="color: #4A4636">Due today · attempt 2 · from the queue of 15</span></div>
+<div style="display: flex; flex-wrap: wrap; gap: 12px; align-items: center"><a href="TC-CallList.dc.html" style="font-weight: 600">← Back to call list</a><span style="color: #4A4636">Next in queue: Rajesh Ahuja</span></div>
+</div>
+<div role="tablist" aria-label="Tele-calling" style="display: flex; gap: 28px; border-bottom: 1px solid #E8D9A8; flex-wrap: wrap"><a href="TC-Dashboard.dc.html" role="tab" aria-selected="false" style="padding: 8px 0 10px; text-decoration: none; color: #4A4636">Dashboard</a><a href="TC-CallList.dc.html" role="tab" aria-selected="false" style="padding: 8px 0 10px; text-decoration: none; color: #4A4636">Call list</a><a href="TC-Call.dc.html" role="tab" aria-selected="true" style="padding: 8px 0 10px; text-decoration: none; border-bottom: 3px solid #171717; font-weight: 600; color: #171717">Call workspace</a><a href="TC-Rules.dc.html" role="tab" aria-selected="false" style="padding: 8px 0 10px; text-decoration: none; color: #4A4636">Disposition rules</a></div>
+<div style="display: flex; flex-wrap: wrap; gap: 24px; align-items: flex-start">
+<section aria-label="Donor" style="flex: 1 1 340px; background: #FFFEF9; border: 1px solid #E8D9A8; border-radius: 12px; padding: 20px 24px; display: flex; flex-direction: column; gap: 14px">
+<div style="display: flex; gap: 14px; align-items: center"><span style="width: 52px; height: 52px; border-radius: 50%; background: #F9CC02; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 18px">SK</span><div style="display: flex; flex-direction: column"><b style="font-size: 20px; line-height: 26px">Sunayana Kannur</b><span style="color: #4A4636">US-2018-002471 · Washington 98075</span></div></div>
+<div style="display: flex; gap: 8px; flex-wrap: wrap"><span style="padding: 2px 10px; border-radius: 999px; background: #DCEFE3; color: #1E6B47; font-weight: 600; font-size: 12px">10:30 AM PT · callable</span><span style="padding: 2px 10px; border-radius: 999px; background: #ECE7D6; font-weight: 600; font-size: 12px">DNC: No</span><span style="padding: 2px 10px; border-radius: 999px; background: #ECE7D6; font-weight: 600; font-size: 12px">Do not email: No</span></div>
+<dl style="margin: 0; display: grid; grid-template-columns: auto 1fr; gap: 8px 16px">
+<dt style="color: #4A4636">Email</dt><dd style="margin: 0">su•••@gmail.com</dd>
+<dt style="color: #4A4636">Account manager</dt><dd style="margin: 0">Supritha</dd>
+<dt style="color: #4A4636">Last gift</dt><dd style="margin: 0"><b>$50</b> on Oct-10-2025<br><span style="color: #4A4636">CRY Seattle Dandiya - 2025 · CRY Dandia-New</span></dd>
+<dt style="color: #4A4636">Lifetime</dt><dd style="margin: 0"><b>$2,931</b></dd>
+</dl>
+<div style="display: flex; flex-direction: column; gap: 6px"><b>Giving trend</b>
+<div role="img" aria-label="Giving FY23 $400, FY24 $500, FY25 $50" style="display: flex; gap: 16px; align-items: flex-end; height: 96px; border-bottom: 1px solid #CFC7AE; font-variant-numeric: tabular-nums">
+<div style="flex: 1; display: flex; flex-direction: column; align-items: center; gap: 4px"><span style="font-size: 12px">$400</span><div style="width: 36px; height: 64px; background: #171717; border-radius: 3px 3px 0 0"></div></div>
+<div style="flex: 1; display: flex; flex-direction: column; align-items: center; gap: 4px"><span style="font-size: 12px">$500</span><div style="width: 36px; height: 80px; background: #171717; border-radius: 3px 3px 0 0"></div></div>
+<div style="flex: 1; display: flex; flex-direction: column; align-items: center; gap: 4px"><span style="font-size: 12px; font-weight: 700; color: #A3261F">$50</span><div style="width: 36px; height: 8px; background: #A3261F; border-radius: 3px 3px 0 0"></div></div>
+</div>
+<div style="display: flex; gap: 16px; color: #4A4636; font-size: 12px; text-align: center"><span style="flex: 1">FY 23</span><span style="flex: 1">FY 24</span><span style="flex: 1">FY 25</span></div></div>
+<div style="padding: 12px 14px; border-radius: 10px; background: #FFF3B8"><b>Talking points:</b> thank her for the Seattle Dandiya 2025 gift; giving fell from $500 to $50 last year — suggested ask $500, the FY 24 level.</div>
+<div style="display: flex; flex-direction: column; gap: 6px"><b>Call history</b><span style="display: flex; justify-content: space-between; gap: 8px; padding-top: 6px; border-top: 1px solid #F1E7C4"><span>Oct-10-2026 · Supritha</span><span style="padding: 1px 8px; border-radius: 999px; background: #FBEBD7; color: #8A4B08; font-weight: 600; font-size: 12px">Ringing</span></span></div>
+</section>
+<div style="flex: 2 1 560px; display: flex; flex-direction: column; gap: 24px">
+<section aria-label="Call" style="background: #171717; color: #FFFEF9; border-radius: 12px; padding: 20px 24px; display: flex; flex-wrap: wrap; gap: 16px; align-items: center; justify-content: space-between">
+<div style="display: flex; flex-direction: column; gap: 4px"><span style="color: #F9CC02; font-weight: 600; font-size: 12px; letter-spacing: 1px; text-transform: uppercase">Zoho Voice · click-to-call</span><span style="font-size: 24px; line-height: 32px; font-weight: 700">+1 (206) •••-8745</span><span style="color: #E8D9A8">{{ callStatus }}</span></div>
+<div style="display: flex; gap: 10px; flex-wrap: wrap">
+<sc-if value="{{ isReady }}" hint-placeholder-val="{{ true }}"><button type="button" onClick="{{ onDial }}" style="height: 48px; padding: 0 22px; display: inline-flex; gap: 10px; align-items: center; border: 0; border-radius: 10px; background: #F9CC02; color: #171717; font: inherit; font-weight: 700"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>Call now</button></sc-if>
+<sc-if value="{{ isDialling }}" hint-placeholder-val="{{ false }}"><button type="button" onClick="{{ onConnect }}" style="height: 44px; padding: 0 16px; border: 0; border-radius: 10px; background: #DCEFE3; color: #1E6B47; font: inherit; font-weight: 700">Donor answered</button><button type="button" onClick="{{ onNoAnswer }}" style="height: 44px; padding: 0 16px; border: 0; border-radius: 10px; background: #FBEBD7; color: #8A4B08; font: inherit; font-weight: 700">No answer</button></sc-if>
+<sc-if value="{{ isConnected }}" hint-placeholder-val="{{ false }}"><button type="button" style="height: 44px; padding: 0 16px; border: 1px solid #E8D9A8; border-radius: 10px; background: transparent; color: #FFFEF9; font: inherit">Mute</button><button type="button" style="height: 44px; padding: 0 16px; border: 1px solid #E8D9A8; border-radius: 10px; background: transparent; color: #FFFEF9; font: inherit">Hold</button><button type="button" onClick="{{ onEnd }}" style="height: 44px; padding: 0 18px; border: 0; border-radius: 10px; background: #D93A2B; color: #FFFFFF; font: inherit; font-weight: 700">End call</button></sc-if>
+<sc-if value="{{ isEnded }}" hint-placeholder-val="{{ false }}"><button type="button" onClick="{{ onDial }}" style="height: 44px; padding: 0 16px; border: 1px solid #F9CC02; border-radius: 10px; background: transparent; color: #F9CC02; font: inherit; font-weight: 600">Redial</button></sc-if>
+</div>
+</section>
+<section aria-label="Disposition" style="background: #FFFEF9; border: 1px solid #E8D9A8; border-radius: 12px; padding: 20px 24px; display: flex; flex-direction: column; gap: 14px">
+<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 8px; flex-wrap: wrap"><h2 style="margin: 0; font-size: 18px; line-height: 24px; font-weight: 600">Mark the disposition</h2><span style="color: #4A4636">{{ dispHint }}</span></div>
+<sc-for list="{{ groups }}" as="g" hint-placeholder-count="2">
+<div style="display: flex; flex-direction: column; gap: 8px"><span style="font-size: 12px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: #4A4636">{{ g.name }}</span>
+<div role="radiogroup" aria-label="{{ g.name }}" style="display: flex; gap: 8px; flex-wrap: wrap">
+<sc-for list="{{ g.items }}" as="o" hint-placeholder-count="4"><button type="button" role="radio" aria-checked="{{ o.sel }}" onClick="{{ o.pick }}" style="min-height: 40px; padding: 6px 14px; border-radius: 10px; border: {{ o.border }}; background: {{ o.bg }}; color: {{ o.fg }}; font: inherit; font-weight: 600">{{ o.label }}</button></sc-for>
+</div></div>
+</sc-for>
+<div style="display: flex; flex-wrap: wrap; gap: 12px">
+<sc-if value="{{ needDate }}" hint-placeholder-val="{{ false }}"><label style="flex: 1 1 200px; display: flex; flex-direction: column; gap: 4px"><span style="font-weight: 600">Next follow-up date (required, after Oct-16-2026)</span><input type="text" value="{{ date }}" onChange="{{ onDate }}" placeholder="mmm-dd-yyyy" style="height: 40px; border: 1px solid #171717; border-radius: 8px; padding: 0 10px; font: inherit; background: #FFFBEA"></label></sc-if>
+<sc-if value="{{ needPledge }}" hint-placeholder-val="{{ false }}"><label style="flex: 1 1 160px; display: flex; flex-direction: column; gap: 4px"><span style="font-weight: 600">Pledge amount (US$)</span><input type="text" value="{{ pledge }}" onChange="{{ onPledge }}" placeholder="e.g. 500" style="height: 40px; border: 1px solid #CDBF8F; border-radius: 8px; padding: 0 10px; font: inherit; background: #FFFEF9"></label></sc-if>
+<label style="flex: 2 1 280px; display: flex; flex-direction: column; gap: 4px"><span style="font-weight: 600">Remarks</span><input type="text" value="{{ remarks }}" onChange="{{ onRemarks }}" placeholder="What did the donor say?" style="height: 40px; border: 1px solid #CDBF8F; border-radius: 8px; padding: 0 10px; font: inherit; background: #FFFEF9"></label>
+</div>
+<sc-if value="{{ error }}" hint-placeholder-val="{{ false }}"><div role="alert" style="padding: 10px 14px; border-radius: 10px; background: #FBE4E2; color: #A3261F; font-weight: 600">{{ errorText }}</div></sc-if>
+</section>
+<section aria-label="Workflow trigger" style="background: #FFFEF9; border: 1px solid #E8D9A8; border-radius: 12px; padding: 20px 24px; display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 8px; flex-wrap: wrap"><h2 style="margin: 0; font-size: 18px; line-height: 24px; font-weight: 600">{{ wfTitle }}</h2><span style="padding: 2px 10px; border-radius: 999px; background: {{ catBg }}; color: {{ catFg }}; font-weight: 600; font-size: 12px">{{ cat }}</span></div>
+<sc-if value="{{ noDisp }}" hint-placeholder-val="{{ false }}"><span style="color: #4A4636">Pick a disposition to see the follow-up date, record updates and email this call will trigger.</span></sc-if>
+<sc-for list="{{ steps }}" as="w" hint-placeholder-count="5">
+<div style="display: flex; gap: 12px; align-items: flex-start; padding: 10px 0; border-top: 1px solid #F1E7C4"><span style="width: 26px; height: 26px; flex: none; border-radius: 50%; background: {{ w.bg }}; color: {{ w.fg }}; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 13px">{{ w.icon }}</span><div style="display: flex; flex-direction: column; gap: 2px"><b>{{ w.t }}</b><span style="color: #4A4636">{{ w.d }}</span></div></div>
+</sc-for>
+<div style="display: flex; gap: 12px; justify-content: flex-end; flex-wrap: wrap">
+<sc-if value="{{ notSaved }}" hint-placeholder-val="{{ true }}"><button type="button" onClick="{{ onSave }}" style="height: 44px; padding: 0 20px; border: 0; border-radius: 8px; background: #171717; color: #F9CC02; font: inherit; font-weight: 700">Save disposition &amp; trigger workflow</button></sc-if>
+<sc-if value="{{ saved }}" hint-placeholder-val="{{ false }}"><button type="button" onClick="{{ onReset }}" style="height: 44px; padding: 0 16px; border: 1px solid #171717; border-radius: 8px; background: #FFFEF9; font: inherit; font-weight: 600">Undo</button><a href="TC-CallList.dc.html" style="height: 44px; padding: 0 20px; display: flex; align-items: center; border-radius: 8px; background: #171717; color: #F9CC02; text-decoration: none; font-weight: 700">Next donor: Rajesh Ahuja →</a></sc-if>
+</div>
+</section>
+</div>
+</div>
+</main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1500}}'>
+class Component extends DCLogic {
+constructor(props) { super(props); this.state = { phase: 'ready', disp: '', date: '', pledge: '', remarks: '', saved: false, error: '' }; }
+renderVals() {
+const st = this.state;
+const R = {
+'Answered - Will/May Donate': { cat: 'Contacted', max: 1, next: 'manual', email: 'yes', watch: true },
+'Will Donate': { cat: 'Contacted', max: 3, next: 'manual', email: 'yes', watch: true, pledge: true },
+'Call Back': { cat: 'Contacted', max: 3, next: 'manual', email: 'no' },
+'Volunteer': { cat: 'Contacted', max: 1, next: 'none', email: 'no', volunteer: true },
+'Donated already': { cat: 'Contacted', max: 1, next: 'none', email: 'no', attempts: true },
+'Ringing': { cat: 'Not contacted', max: 3, next: 'auto', email: 'third', attempts: true },
+'Voicemail': { cat: 'Not contacted', max: 1, next: 'auto', email: 'yes', attempts: true },
+'AI Assistant': { cat: 'Not contacted', max: 1, next: 'year', email: 'yes' }
+};
+const groups = [['Contacted', ['Answered - Will/May Donate', 'Will Donate', 'Call Back', 'Volunteer', 'Donated already']], ['Not contacted', ['Ringing', 'Voicemail', 'AI Assistant']]].map((g) => ({
+name: g[0], items: g[1].map((d) => { const sel = st.disp === d; return { label: d, sel: sel ? 'true' : 'false', bg: sel ? '#171717' : '#FFFEF9', fg: sel ? '#F9CC02' : '#171717', border: sel ? '2px solid #171717' : '1px solid #CDBF8F', pick: () => this.setState({ disp: d, saved: false, error: '' }) }; })
+}));
+const M = { Jan: 0, Feb: 1, Mar: 2, Apr: 3, May: 4, Jun: 5, Jul: 6, Aug: 7, Sep: 8, Oct: 9, Nov: 10, Dec: 11 };
+const parse = (s) => { const m = /^([A-Za-z]{3})-(\d{1,2})-(\d{4})$/.exec((s || '').trim()); if (!m) return null; const k = m[1][0].toUpperCase() + m[1].slice(1).toLowerCase(); if (!(k in M)) return null; return new Date(+m[3], M[k], +m[2]); };
+const today = new Date(2026, 9, 16);
+const r = R[st.disp];
+const attempt = 2;
+let steps = [], wfTitle = 'Workflow that will run', cat = 'Pick a disposition', catBg = '#ECE7D6', catFg = '#4A4636';
+const ok = (t, d) => ({ icon: st.saved ? '✓' : '•', bg: st.saved ? '#DCEFE3' : '#ECE7D6', fg: st.saved ? '#1E6B47' : '#4A4636', t: t, d: d });
+const skip = (t, d) => ({ icon: '–', bg: '#F1E7C4', fg: '#4A4636', t: t, d: d });
+if (r) {
+cat = r.cat; catBg = r.cat === 'Contacted' ? '#DCEFE3' : '#FBEBD7'; catFg = r.cat === 'Contacted' ? '#1E6B47' : '#8A4B08';
+wfTitle = st.saved ? 'Workflow triggered' : 'Workflow that will run';
+let nx;
+if (r.next === 'auto') nx = 'Auto-scheduled to Sat Oct-17-2026 (today is Friday, so the rule moves it to Saturday).';
+else if (r.next === 'year') nx = 'Auto-scheduled to Oct-16-2027 (today + 365 days).';
+else if (r.next === 'manual') nx = st.date ? 'Follow-up set by you: ' + st.date + '.' : 'You must set a follow-up date after Oct-16-2026.';
+else nx = 'No follow-up call. Donor leaves the calling queue.';
+steps.push(ok('Next call date', nx));
+const lim = r.max > 1 ? 'Attempt ' + attempt + ' of ' + r.max + ' allowed for this status.' : 'Limit 1 for this status: if the next call ends the same way, the donor leaves the queue.';
+steps.push(ok('Attempts', lim));
+steps.push(ok('Donor record updated', 'Last disposition = ' + st.disp + ', category = ' + r.cat + ', last call = Oct-16-2026 10:30 AM PT, next call = ' + (r.next === 'none' ? 'none' : r.next === 'manual' ? (st.date || '[your date]') : r.next === 'year' ? 'Oct-16-2027' : 'Oct-17-2026') + (r.attempts ? ', attempts = ' + attempt : '') + '.'));
+if (r.email === 'yes') steps.push(ok('Email to donor', 'Sent to su•••@gmail.com (email on file, Do not email = No).'));
+else if (r.email === 'third') steps.push(skip('Email to donor', 'Not yet — sends only if the 3rd attempt is also Ringing.'));
+else steps.push(skip('Email to donor', 'No email for this status.'));
+if (r.watch) steps.push(ok('Watch for the gift', (r.pledge && st.pledge ? 'Pledge of $' + st.pledge + ' recorded. ' : '') + 'When a donation from this donor is posted, the follow-up is removed automatically.'));
+if (r.volunteer) steps.push(ok('Mark as volunteer and Do Not Call', 'Donor tagged Volunteer; DNC set so she never appears in a call list again.'));
+}
+const phase = st.phase;
+const callStatus = { ready: 'Ready · donor local time 10:30 AM PT', dialling: 'Dialling through Zoho Voice…', connected: 'Connected · 02:47 · recording on', ended: st.noAnswer ? 'No answer · call ended after 32 s' : 'Call ended · 03:12 · recording saved' }[phase];
+return {
+callStatus: callStatus, isReady: phase === 'ready', isDialling: phase === 'dialling', isConnected: phase === 'connected', isEnded: phase === 'ended',
+dispHint: phase === 'ended' ? (st.noAnswer ? 'No answer — pick Ringing, Voicemail or AI Assistant' : 'Pick the outcome of the conversation') : 'Pick after the call ends',
+groups: groups, needDate: !!(r && r.next === 'manual'), needPledge: !!(r && r.pledge), date: st.date, pledge: st.pledge, remarks: st.remarks,
+noDisp: !r, error: !!st.error, errorText: st.error, steps: steps, wfTitle: wfTitle, cat: cat, catBg: catBg, catFg: catFg, saved: st.saved, notSaved: !st.saved,
+onDial: () => this.setState({ phase: 'dialling', noAnswer: false }),
+onConnect: () => this.setState({ phase: 'connected' }),
+onNoAnswer: () => this.setState({ phase: 'ended', noAnswer: true }),
+onEnd: () => this.setState({ phase: 'ended', noAnswer: false }),
+onDate: (e) => this.setState({ date: e.target.value, error: '' }),
+onPledge: (e) => this.setState({ pledge: e.target.value }),
+onRemarks: (e) => this.setState({ remarks: e.target.value }),
+onReset: () => this.setState({ saved: false }),
+onSave: () => {
+if (!r) { this.setState({ error: 'Pick a disposition first.' }); return; }
+if (r.next === 'manual') { const d = parse(st.date); if (!d) { this.setState({ error: 'Enter the follow-up date as mmm-dd-yyyy, for example Oct-23-2026.' }); return; } if (d <= today) { this.setState({ error: 'The follow-up date must be after Oct-16-2026.' }); return; } }
+this.setState({ saved: true, error: '' });
+}
+};
+}
+}
+</script>
+<a href="index.html" style="position:fixed;right:20px;bottom:20px;z-index:9999;background:#171717;color:#F9CC02;font:600 13px/1 'IBM Plex Sans',system-ui,sans-serif;padding:11px 16px;border-radius:999px;text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,.25)">&#8592; All screens</a>
+</body>
+</html>

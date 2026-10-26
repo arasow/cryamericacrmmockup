@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Tele-calling dashboard — CRY America CRM</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#171717}a:hover{color:#8A5A00}
+</style>
+</helmet>
+<div style="display: flex; flex-wrap: wrap; min-height: 2280px; background: #FFF6CF; color: #171717; font-family: 'IBM Plex Sans', sans-serif; font-size: 14px; line-height: 20px">
+<nav aria-label="Main" style="flex: 1 1 232px; background: #F9CC02; color: #171717; padding: 24px 16px; box-sizing: border-box; display: flex; flex-direction: column; gap: 4px">
+<div style="padding: 0 12px 24px; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 18px; font-weight: 700; color: #171717">CRY America</span><span style="font-size: 12px; color: #3D3A2E">Donor CRM</span></div>
+<a href="Main.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #171717; text-decoration: none">Dashboard</a>
+<a href="Donors.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #171717; text-decoration: none">Donors</a>
+<a href="Donations.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #171717; text-decoration: none">Donations</a>
+<a href="NewPledge.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #171717; text-decoration: none">Pledges</a>
+<a href="BulkImport.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #171717; text-decoration: none">Bulk import</a>
+<a href="TC-Dashboard.dc.html" style="padding: 10px 12px; border-radius: 8px; background: #171717; color: #F9CC02; font-weight: 600; text-decoration: none">Tele-calling</a>
+<a href="VM-Dashboard.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #171717; text-decoration: none">Volunteers</a>
+<span style="padding: 16px 12px 6px; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: #3D3A2E">Set-up</span>
+<a href="Masters.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #171717; text-decoration: none">Masters</a>
+<a href="Organisation.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #171717; text-decoration: none">Organisation</a>
+</nav>
+<main style="flex: 999 1 560px; min-width: 0; padding: 32px 32px 48px; box-sizing: border-box; display: flex; flex-direction: column; gap: 24px">
+<div style="display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between; align-items: flex-end">
+<div style="display: flex; flex-direction: column; gap: 4px"><h1 style="margin: 0; font-size: 28px; line-height: 36px; font-weight: 600">Tele-calling dashboard</h1><span style="color: #4A4636">Live Donors Tele-calling 2026 · October 2026 · as of Fri Oct-16-2026, 1:30 PM ET</span></div>
+<div style="display: flex; flex-wrap: wrap; gap: 12px; align-items: center"><label style="display: flex; gap: 8px; align-items: center"><span style="color: #4A4636">Campaign</span><select style="height: 40px; border: 1px solid #CDBF8F; border-radius: 8px; padding: 0 8px; font: inherit; background: #FFFEF9"><option>Live Donors Tele-calling 2026</option><option>Lapsed Donors Tele-calling 2026</option></select></label><label style="display: flex; gap: 8px; align-items: center"><span style="color: #4A4636">Telecaller</span><select style="height: 40px; border: 1px solid #CDBF8F; border-radius: 8px; padding: 0 8px; font: inherit; background: #FFFEF9"><option>All telecallers</option><option>Lipika</option><option>Supritha</option><option>Patrick</option><option>Renuka</option></select></label><label style="display: flex; gap: 8px; align-items: center"><span style="color: #4A4636">Month</span><select style="height: 40px; border: 1px solid #CDBF8F; border-radius: 8px; padding: 0 8px; font: inherit; background: #FFFEF9"><option>October 2026</option><option>September 2026</option></select></label></div>
+</div>
+<div role="tablist" aria-label="Tele-calling" style="display: flex; gap: 28px; border-bottom: 1px solid #E8D9A8; flex-wrap: wrap"><a href="TC-Dashboard.dc.html" role="tab" aria-selected="true" style="padding: 8px 0 10px; text-decoration: none; border-bottom: 3px solid #171717; font-weight: 600; color: #171717">Dashboard</a><a href="TC-CallList.dc.html" role="tab" aria-selected="false" style="padding: 8px 0 10px; text-decoration: none; color: #4A4636">Call list</a><a href="TC-Call.dc.html" role="tab" aria-selected="false" style="padding: 8px 0 10px; text-decoration: none; color: #4A4636">Call workspace</a><a href="TC-Rules.dc.html" role="tab" aria-selected="false" style="padding: 8px 0 10px; text-decoration: none; color: #4A4636">Disposition rules</a></div>
+<section aria-label="Key figures" style="display: flex; flex-wrap: wrap; gap: 12px; font-variant-numeric: tabular-nums">
+<sc-for list="{{ kpis }}" as="k" hint-placeholder-count="6">
+<div style="flex: 1 1 140px; background: #FFFEF9; border: 1px solid #E8D9A8; border-radius: 12px; padding: 16px 18px; display: flex; flex-direction: column; gap: 4px">
+<span style="color: #4A4636; font-weight: 600">{{ k.label }}</span>
+<span style="font-size: 30px; line-height: 38px; font-weight: 700">{{ k.value }}</span>
+<span style="color: #4A4636; font-size: 13px">{{ k.note }}</span>
+</div>
+</sc-for>
+</section>
+<div style="display: flex; flex-wrap: wrap; gap: 24px; align-items: stretch">
+<section aria-label="Reminders" style="flex: 3 1 560px; background: #FFFEF9; border: 1px solid #E8D9A8; border-radius: 12px; padding: 20px 24px; display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px"><h2 style="margin: 0; font-size: 18px; line-height: 24px; font-weight: 600">Reminders for today</h2><span style="color: #4A4636">Generated by the disposition workflows</span></div>
+<sc-for list="{{ reminders }}" as="r" hint-placeholder-count="5">
+<div style="display: flex; gap: 16px; align-items: center; padding: 12px 0; border-top: 1px solid #F1E7C4">
+<span style="min-width: 56px; height: 44px; padding: 0 8px; box-sizing: border-box; border-radius: 10px; background: {{ r.bg }}; color: {{ r.fg }}; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: 700">{{ r.n }}</span>
+<div style="flex: 1; display: flex; flex-direction: column; gap: 2px"><b>{{ r.t }}</b><span style="color: #4A4636">{{ r.d }}</span></div>
+<a href="{{ r.h }}" style="white-space: nowrap; font-weight: 600">{{ r.a }} →</a>
+</div>
+</sc-for>
+</section>
+<section aria-label="Best time to call" style="flex: 2 1 340px; background: #FFFEF9; border: 1px solid #E8D9A8; border-radius: 12px; padding: 20px 24px; display: flex; flex-direction: column; gap: 12px">
+<h2 style="margin: 0; font-size: 18px; line-height: 24px; font-weight: 600">Who to call right now</h2>
+<span style="color: #4A4636">Today's due follow-ups by the donor's time zone. Calls are allowed 9 AM–8 PM donor local time.</span>
+<sc-for list="{{ tzs }}" as="z" hint-placeholder-count="4">
+<div style="display: flex; gap: 12px; align-items: center; padding: 10px 0; border-top: 1px solid #F1E7C4">
+<div style="flex: 1; display: flex; flex-direction: column"><b>{{ z.z }}</b><span style="color: #4A4636">Local time {{ z.t }}</span></div>
+<span style="font-size: 20px; font-weight: 700; min-width: 32px; text-align: right">{{ z.n }}</span>
+<span style="padding: 3px 10px; border-radius: 999px; background: {{ z.bg }}; color: {{ z.fg }}; font-weight: 600; font-size: 12px; white-space: nowrap">{{ z.s }}</span>
+</div>
+</sc-for>
+<div style="margin-top: auto; padding: 12px 14px; border-radius: 10px; background: #FFF3B8"><b>Pace check:</b> 794 donors are not yet called. At 25 calls a day per telecaller, all 4 telecallers would finish the base in about 8 working days.</div>
+</section>
+</div>
+<section aria-label="Productivity by telecaller" style="background: #FFFEF9; border: 1px solid #E8D9A8; border-radius: 12px; padding: 20px 24px; display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px"><h2 style="margin: 0; font-size: 18px; line-height: 24px; font-weight: 600">Productivity by telecaller</h2><span style="color: #4A4636">Coverage = calls ÷ base · Contact rate = spoken ÷ calls</span></div>
+<div style="overflow-x: auto">
+<table style="width: 100%; min-width: 980px; border-collapse: collapse; font-variant-numeric: tabular-nums">
+<thead><tr style="background: #FFFBEA; text-align: left; color: #4A4636; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px">
+<th style="padding: 10px 12px; font-weight: 600">Telecaller</th><th style="padding: 10px 12px; font-weight: 600; text-align: right">Base</th><th style="padding: 10px 12px; font-weight: 600; width: 220px">Coverage</th><th style="padding: 10px 12px; font-weight: 600; text-align: right">Spoken</th><th style="padding: 10px 12px; font-weight: 600; text-align: right">Contact rate</th><th style="padding: 10px 12px; font-weight: 600; text-align: right">Pledges</th><th style="padding: 10px 12px; font-weight: 600; text-align: right">Donated</th><th style="padding: 10px 12px; font-weight: 600; text-align: right">Amount</th><th style="padding: 10px 12px; font-weight: 600; text-align: right">$ per call</th><th style="padding: 10px 12px; font-weight: 600">Status</th></tr></thead>
+<tbody>
+<sc-for list="{{ prod }}" as="p" hint-placeholder-count="4">
+<tr style="border-top: 1px solid #F1E7C4">
+<td style="padding: 12px"><b>{{ p.name }}</b><br><span style="color: #4A4636; font-size: 12px">{{ p.mix }}</span></td>
+<td style="padding: 12px; text-align: right">{{ p.base }}</td>
+<td style="padding: 12px"><div style="display: flex; flex-direction: column; gap: 4px"><span>{{ p.calls }} calls · {{ p.cov }}</span><div style="height: 8px; border-radius: 4px; background: #F1E7C4"><div style="width: {{ p.covw }}; height: 8px; border-radius: 4px; background: #171717"></div></div></div></td>
+<td style="padding: 12px; text-align: right">{{ p.spk }}</td>
+<td style="padding: 12px; text-align: right; font-weight: 600">{{ p.cr }}</td>
+<td style="padding: 12px; text-align: right">{{ p.pl }}</td>
+<td style="padding: 12px; text-align: right">{{ p.don }}</td>
+<td style="padding: 12px; text-align: right; font-weight: 600">{{ p.amt }}</td>
+<td style="padding: 12px; text-align: right">{{ p.perCall }}</td>
+<td style="padding: 12px"><span style="padding: 2px 10px; border-radius: 999px; background: {{ p.sbg }}; color: {{ p.sfg }}; font-weight: 600; font-size: 12px; white-space: nowrap">{{ p.status }}</span></td>
+</tr>
+</sc-for>
+<tr style="border-top: 2px solid #171717; font-weight: 700"><td style="padding: 12px">Total</td><td style="padding: 12px; text-align: right">878</td><td style="padding: 12px">84 calls · 10%</td><td style="padding: 12px; text-align: right">18</td><td style="padding: 12px; text-align: right">21%</td><td style="padding: 12px; text-align: right">17</td><td style="padding: 12px; text-align: right">3</td><td style="padding: 12px; text-align: right">$1,501</td><td style="padding: 12px; text-align: right">$17.87</td><td style="padding: 12px"></td></tr>
+</tbody></table></div>
+<span style="color: #4A4636"><b style="color: #171717">Insight:</b> Lipika reaches 37% of the donors she calls and converts every conversation to a pledge; Supritha reaches 10%. Most of Supritha's calls end as Ringing or Voicemail — calling Pacific donors after 5 PM local time may lift her contact rate.</span>
+</section>
+<div style="display: flex; flex-wrap: wrap; gap: 24px; align-items: stretch">
+<section aria-label="Conversion funnel" style="flex: 1 1 460px; background: #FFFEF9; border: 1px solid #E8D9A8; border-radius: 12px; padding: 20px 24px; display: flex; flex-direction: column; gap: 12px">
+<h2 style="margin: 0; font-size: 18px; line-height: 24px; font-weight: 600">Conversion funnel, October</h2>
+<sc-for list="{{ funnel }}" as="f" hint-placeholder-count="5">
+<div style="display: flex; flex-direction: column; gap: 4px">
+<div style="display: flex; justify-content: space-between; gap: 8px"><b>{{ f.name }}</b><span style="font-variant-numeric: tabular-nums"><b>{{ f.v }}</b> <span style="color: #4A4636">{{ f.conv }}</span></span></div>
+<div style="height: 14px; border-radius: 4px; background: #F1E7C4"><div style="width: {{ f.w }}; height: 14px; border-radius: 4px; background: #171717"></div></div>
+</div>
+</sc-for>
+<span style="color: #4A4636">The leak is between pledge and gift: 14 of 17 pledges have not arrived. Pledge follow-ups are the fastest money.</span>
+</section>
+<section aria-label="Call outcomes" style="flex: 1 1 460px; background: #FFFEF9; border: 1px solid #E8D9A8; border-radius: 12px; padding: 20px 24px; display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; flex-direction: column; gap: 2px"><h2 style="margin: 0; font-size: 18px; line-height: 24px; font-weight: 600">Call outcomes by disposition</h2><span style="color: #4A4636">Supritha's calls on Oct-10-2026 (19 donors in the sample)</span></div>
+<sc-for list="{{ dispo }}" as="d" hint-placeholder-count="5">
+<div style="display: flex; gap: 12px; align-items: center">
+<span style="width: 132px; padding: 2px 10px; border-radius: 999px; background: {{ d.bg }}; color: {{ d.fg }}; font-weight: 600; font-size: 12px; text-align: center">{{ d.name }}</span>
+<div style="flex: 1; height: 14px; border-radius: 4px; background: #F1E7C4"><div style="width: {{ d.w }}; height: 14px; border-radius: 4px; background: #171717"></div></div>
+<span style="width: 72px; text-align: right; font-variant-numeric: tabular-nums"><b>{{ d.n }}</b> · {{ d.share }}</span>
+</div>
+</sc-for>
+<span style="color: #4A4636">89% not contacted (Ringing, Voicemail, AI Assistant) · 11% contacted. One Will Donate pledge of $300 came in as $350.</span>
+</section>
+</div>
+<section aria-label="Data quality" style="background: #FFFEF9; border: 1px solid #E8D9A8; border-radius: 12px; padding: 20px 24px; display: flex; flex-direction: column; gap: 12px">
+<h2 style="margin: 0; font-size: 18px; line-height: 24px; font-weight: 600">Data checks before calling</h2>
+<div style="display: flex; flex-wrap: wrap; gap: 12px">
+<sc-for list="{{ dq }}" as="q" hint-placeholder-count="4">
+<div style="flex: 1 1 220px; padding: 14px 16px; border-radius: 10px; background: #FFFBEA; border: 1px solid #F1E7C4; display: flex; flex-direction: column; gap: 4px"><span style="font-size: 22px; font-weight: 700">{{ q.n }}</span><b>{{ q.t }}</b><span style="color: #4A4636; font-size: 13px">{{ q.d }}</span></div>
+</sc-for>
+</div>
+</section>
+</main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":2280}}'>
+class Component extends DCLogic {
+renderVals() {
+return {"kpis": [{"label": "Calling base", "value": "878", "note": "Regular 511 · Dinner 367 · 4 telecallers"}, {"label": "Calls made", "value": "84", "note": "10% of base covered · 794 not yet called"}, {"label": "Spoken to", "value": "18", "note": "21% contact rate (spoken ÷ calls)"}, {"label": "Pledges", "value": "17", "note": "94% of donors spoken to pledged"}, {"label": "Donated", "value": "3", "note": "18% of pledges converted · 14 awaiting gift"}, {"label": "Amount raised", "value": "$1,501", "note": "$500 per gift · $17.87 per call"}], "prod": [{"name": "Lipika", "base": "175", "mix": "93 regular · 82 dinner", "calls": "35", "cov": "20%", "covw": "20.0%", "spk": "13", "cr": "37%", "pl": "13", "don": "2", "amt": "$1,151", "perCall": "$32.89", "status": "Top performer", "sbg": "#DCEFE3", "sfg": "#1E6B47"}, {"name": "Supritha", "base": "267", "mix": "122 regular · 145 dinner", "calls": "49", "cov": "18%", "covw": "18.4%", "spk": "5", "cr": "10%", "pl": "4", "don": "1", "amt": "$350", "perCall": "$7.14", "status": "Low contact rate", "sbg": "#FBEBD7", "sfg": "#8A4B08"}, {"name": "Patrick", "base": "186", "mix": "96 regular · 90 dinner", "calls": "0", "cov": "0%", "covw": "0.0%", "spk": "0", "cr": "—", "pl": "0", "don": "0", "amt": "$0", "perCall": "—", "status": "Not started", "sbg": "#FBE4E2", "sfg": "#A3261F"}, {"name": "Renuka", "base": "250", "mix": "200 regular · 50 dinner", "calls": "0", "cov": "0%", "covw": "0.0%", "spk": "0", "cr": "—", "pl": "0", "don": "0", "amt": "$0", "perCall": "—", "status": "Not started", "sbg": "#FBE4E2", "sfg": "#A3261F"}], "funnel": [{"name": "Calling base", "v": "878", "w": "100.0%", "conv": ""}, {"name": "Called", "v": "84", "w": "9.6%", "conv": "10% of previous step"}, {"name": "Spoken to", "v": "18", "w": "2.1%", "conv": "21% of previous step"}, {"name": "Pledged", "v": "17", "w": "1.9%", "conv": "94% of previous step"}, {"name": "Donated", "v": "3", "w": "0.6%", "conv": "18% of previous step"}], "dispo": [{"name": "Ringing", "cat": "Not contacted", "n": "10", "w": "52.6%", "share": "53%", "bg": "#FBEBD7", "fg": "#8A4B08"}, {"name": "Voicemail", "cat": "Not contacted", "n": "5", "w": "26.3%", "share": "26%", "bg": "#FBEBD7", "fg": "#8A4B08"}, {"name": "AI Assistant", "cat": "Not contacted", "n": "2", "w": "10.5%", "share": "11%", "bg": "#ECE7D6", "fg": "#4A4636"}, {"name": "Call Back", "cat": "Contacted", "n": "1", "w": "5.3%", "share": "5%", "bg": "#E3EAF5", "fg": "#1F3A68"}, {"name": "Will Donate", "cat": "Contacted", "n": "1", "w": "5.3%", "share": "5%", "bg": "#DCEFE3", "fg": "#1E6B47"}], "tzs": [{"z": "Eastern (ET)", "t": "1:30 PM", "n": "7", "s": "Call now", "bg": "#DCEFE3", "fg": "#1E6B47"}, {"z": "Central (CT)", "t": "12:30 PM", "n": "1", "s": "Call now", "bg": "#DCEFE3", "fg": "#1E6B47"}, {"z": "Pacific (PT)", "t": "10:30 AM", "n": "6", "s": "Call now", "bg": "#DCEFE3", "fg": "#1E6B47"}, {"z": "Hawaii (HT)", "t": "7:30 AM", "n": "1", "s": "From 2:30 PM ET", "bg": "#FBE4E2", "fg": "#A3261F"}], "reminders": [{"n": "15", "t": "Follow-ups due today", "d": "10 Ringing and 5 Voicemail from Oct-10-2026, auto-scheduled to today. 1 in Hawaii can only be called after 2:30 PM ET.", "a": "Open queue", "h": "TC-CallList.dc.html", "bg": "#171717", "fg": "#F9CC02"}, {"n": "1", "t": "Call back without a date", "d": "Geeta Paranandi — “in a flight to california, asked to email”. Call Back needs a follow-up date after today; send the requested email.", "a": "Set date", "h": "TC-Call.dc.html", "bg": "#FBE4E2", "fg": "#A3261F"}, {"n": "14", "t": "Pledges awaiting a gift", "d": "Will Donate / Answered follow-ups stay open until the gift arrives; the workflow closes each one automatically when the donation is posted.", "a": "See pledges", "h": "TC-CallList.dc.html", "bg": "#FBEBD7", "fg": "#8A4B08"}, {"n": "436", "t": "Donors with no calls yet", "d": "Patrick (186) and Renuka (250) have not started. Half of the base is untouched with 2 weeks left in October.", "a": "Reassign", "h": "TC-CallList.dc.html", "bg": "#FBE4E2", "fg": "#A3261F"}, {"n": "2", "t": "Parked for next year", "d": "AI Assistant (Google Voice screening) → next attempt Oct-10-2027; thank-you email already sent.", "a": "View", "h": "TC-CallList.dc.html", "bg": "#ECE7D6", "fg": "#4A4636"}], "dq": [{"t": "Email suppressed (Do Not Email)", "n": "5", "d": "Email triggers are skipped for these donors even when the rule says “send”."}, {"t": "Mail scrub flags", "n": "2", "d": "DM bounced (Aug '25) and snail mail bounced — confirm the address on the call."}, {"t": "No account manager", "n": "1", "d": "Prashant Kuhite has a telecaller but no account manager."}, {"t": "Gift date after today", "n": "1", "d": "Prashant Kuhite: $350 dated Nov-10-2026 in the sheet — check the date."}]};
+}
+}
+</script>
+<a href="index.html" style="position:fixed;right:20px;bottom:20px;z-index:9999;background:#171717;color:#F9CC02;font:600 13px/1 'IBM Plex Sans',system-ui,sans-serif;padding:11px 16px;border-radius:999px;text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,.25)">&#8592; All screens</a>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Masters — Campaigns — CRY America CRM</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#171717}a:hover{color:#8A5A00}
+</style>
+</helmet>
+<div style="display: flex; flex-wrap: wrap; min-height: 1160px; background: #FFF6CF; color: #171717; font-family: 'IBM Plex Sans', sans-serif; font-size: 14px; line-height: 20px">
+<nav aria-label="Main" style="flex: 1 1 232px; background: #F9CC02; color: #171717; padding: 24px 16px; box-sizing: border-box; display: flex; flex-direction: column; gap: 4px">
+<div style="padding: 0 12px 24px; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 18px; font-weight: 700; color: #171717">CRY America</span><span style="font-size: 12px; color: #3D3A2E">Donor CRM</span></div>
+<a href="Main.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #171717; text-decoration: none">Dashboard</a>
+<a href="Donors.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #171717; text-decoration: none">Donors</a>
+<a href="Donations.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #171717; text-decoration: none">Donations</a>
+<a href="NewPledge.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #171717; text-decoration: none">Pledges</a>
+<a href="BulkImport.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #171717; text-decoration: none">Bulk import</a>
+<a href="TC-Dashboard.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #171717; text-decoration: none">Tele-calling</a>
+<a href="VM-Dashboard.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #171717; text-decoration: none">Volunteers</a>
+<span style="padding: 16px 12px 6px; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: #3D3A2E">Set-up</span>
+<a href="Masters.dc.html" style="padding: 10px 12px; border-radius: 8px; background: #171717; color: #F9CC02; text-decoration: none; font-weight: 600">Masters</a>
+<a href="Organisation.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #171717; text-decoration: none">Organisation</a>
+</nav>
+<main style="flex: 999 1 560px; min-width: 0; padding: 32px 32px 48px; box-sizing: border-box; display: flex; flex-direction: column; gap: 24px">
+<h1 style="margin: 0; font-size: 28px; line-height: 36px; font-weight: 600">Masters</h1>
+<div style="display: flex; flex-wrap: wrap; gap: 24px; align-items: flex-start">
+<nav aria-label="Master lists" style="flex: 1 1 220px; background: #FFFEF9; border: 1px solid #E8D9A8; border-radius: 12px; padding: 8px; display: flex; flex-direction: column">
+<a href="Organisation.dc.html" style="padding: 10px 12px; border-radius: 8px; text-decoration: none">Organisation</a>
+<a href="#" style="padding: 10px 12px; border-radius: 8px; text-decoration: none">Financial years</a>
+<a href="#" style="padding: 10px 12px; border-radius: 8px; text-decoration: none">Locations</a>
+<a href="#" style="padding: 10px 12px; border-radius: 8px; text-decoration: none">Zip codes</a>
+<a href="#" style="padding: 10px 12px; border-radius: 8px; text-decoration: none">Payment type categories</a>
+<a href="#" style="padding: 10px 12px; border-radius: 8px; text-decoration: none">Banks (QuickBooks)</a>
+<a href="#" style="padding: 10px 12px; border-radius: 8px; text-decoration: none">Payment types</a>
+<a href="Masters.dc.html" aria-current="page" style="padding: 10px 12px; border-radius: 8px; text-decoration: none; background: #F9CC02; color: #8A4B08; font-weight: 600">Campaigns</a>
+<a href="#" style="padding: 10px 12px; border-radius: 8px; text-decoration: none">Causes</a>
+<a href="#" style="padding: 10px 12px; border-radius: 8px; text-decoration: none">Fiduciary types</a>
+</nav>
+<div style="flex: 4 1 600px; min-width: 0; display: flex; flex-direction: column; gap: 24px">
+<div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: space-between; align-items: center"><h2 style="margin: 0; font-size: 20px; line-height: 28px; font-weight: 600">Campaigns</h2><div style="display: flex; gap: 12px; flex-wrap: wrap"><label style="display: flex; gap: 8px; align-items: center"><span style="position: absolute; left: -9999px">Search campaigns</span><input type="search" placeholder="Search code or name" style="height: 40px; padding: 0 12px; border: 1px solid #CDBF8F; border-radius: 8px; font: inherit; background: #FFFEF9"></label><button type="button" style="height: 40px; padding: 0 16px; border: 0; border-radius: 8px; background: #171717; color: #F9CC02; font: inherit; font-weight: 600">+ New campaign</button></div></div>
+<div style="background: #FFFEF9; border: 1px solid #E8D9A8; border-radius: 12px; overflow-x: auto">
+<table style="width: 100%; min-width: 860px; border-collapse: collapse">
+<thead><tr style="background: #FFFBEA; text-align: left; color: #4A4636; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px"><th style="padding: 10px 16px; font-weight: 600">Code</th><th style="padding: 10px 12px; font-weight: 600">Name</th><th style="padding: 10px 12px; font-weight: 600">Category</th><th style="padding: 10px 12px; font-weight: 600">Sub-category</th><th style="padding: 10px 12px; font-weight: 600">QB class</th><th style="padding: 10px 12px; font-weight: 600">Print receipt</th><th style="padding: 10px 12px; font-weight: 600">Location</th><th style="padding: 10px 16px 10px 12px; font-weight: 600">Status</th></tr></thead>
+<tbody>
+<tr style="border-top: 1px solid #F1E7C4; background: #FFF3B8"><td style="padding: 12px 16px; font-weight: 600">[SEA-DIN-26]</td><td style="padding: 12px">Seattle Dinner Gala 2026</td><td style="padding: 12px">Events</td><td style="padding: 12px">Dinners</td><td style="padding: 12px">[WA – Dinners]</td><td style="padding: 12px">Yes</td><td style="padding: 12px">Seattle (Action Center)</td><td style="padding: 12px 16px 12px 12px"><span style="padding: 2px 10px; border-radius: 999px; background: #E3F1E8; color: #1E6B47; font-weight: 600; font-size: 12px">Active</span></td></tr>
+<tr style="border-top: 1px solid #F1E7C4"><td style="padding: 12px 16px; font-weight: 600">[BAY-HOL-26]</td><td style="padding: 12px">Bay Area Holi 2026</td><td style="padding: 12px">Events</td><td style="padding: 12px">Holi</td><td style="padding: 12px">[CA – Holi]</td><td style="padding: 12px">Yes</td><td style="padding: 12px">Bay Area (Action Center)</td><td style="padding: 12px 16px 12px 12px"><span style="padding: 2px 10px; border-radius: 999px; background: #E3F1E8; color: #1E6B47; font-weight: 600; font-size: 12px">Active</span></td></tr>
+<tr style="border-top: 1px solid #F1E7C4"><td style="padding: 12px 16px; font-weight: 600">[WEB-GEN]</td><td style="padding: 12px">Web donations</td><td style="padding: 12px">Online</td><td style="padding: 12px">General</td><td style="padding: 12px">[National – Web]</td><td style="padding: 12px">Yes</td><td style="padding: 12px">Corporate</td><td style="padding: 12px 16px 12px 12px"><span style="padding: 2px 10px; border-radius: 999px; background: #E3F1E8; color: #1E6B47; font-weight: 600; font-size: 12px">Active</span></td></tr>
+<tr style="border-top: 1px solid #F1E7C4"><td style="padding: 12px 16px; font-weight: 600">[NY-WLK-25]</td><td style="padding: 12px">New York Walk 2025</td><td style="padding: 12px">Events</td><td style="padding: 12px">Walk</td><td style="padding: 12px">[NY – Walk]</td><td style="padding: 12px">No</td><td style="padding: 12px">New York (Action Center)</td><td style="padding: 12px 16px 12px 12px"><span style="padding: 2px 10px; border-radius: 999px; background: #F1E7C4; color: #4A4F5C; font-weight: 600; font-size: 12px">Inactive</span></td></tr>
+</tbody>
+</table>
+</div>
+<section aria-label="Edit campaign" style="background: #FFFEF9; border: 1px solid #E8D9A8; border-radius: 12px; padding: 24px; display: flex; flex-direction: column; gap: 16px">
+<h3 style="margin: 0; font-size: 18px; line-height: 24px; font-weight: 600">Edit campaign · [SEA-DIN-26]</h3>
+<div style="display: flex; flex-wrap: wrap; gap: 16px">
+<label style="flex: 1 1 180px; display: flex; flex-direction: column; gap: 6px"><span style="font-weight: 600">Campaign code <span style="color: #A3261F">*</span></span><input type="text" value="[SEA-DIN-26]" style="height: 40px; border: 1px solid #CDBF8F; border-radius: 8px; padding: 0 12px; font: inherit"></label>
+<label style="flex: 2 1 280px; display: flex; flex-direction: column; gap: 6px"><span style="font-weight: 600">Campaign name <span style="color: #A3261F">*</span></span><input type="text" value="Seattle Dinner Gala 2026" style="height: 40px; border: 1px solid #CDBF8F; border-radius: 8px; padding: 0 12px; font: inherit"></label>
+<label style="flex: 1 1 180px; display: flex; flex-direction: column; gap: 6px"><span style="font-weight: 600">Category</span><select style="height: 40px; border: 1px solid #CDBF8F; border-radius: 8px; padding: 0 8px; font: inherit; background: #FFFEF9"><option>Events</option><option>Online</option><option>Workplace giving</option></select></label>
+<label style="flex: 1 1 180px; display: flex; flex-direction: column; gap: 6px"><span style="font-weight: 600">Sub-category</span><select style="height: 40px; border: 1px solid #CDBF8F; border-radius: 8px; padding: 0 8px; font: inherit; background: #FFFEF9"><option>Dinners</option><option>Holi</option><option>Dandia</option><option>Walk</option></select></label>
+<label style="flex: 1 1 180px; display: flex; flex-direction: column; gap: 6px"><span style="font-weight: 600">QB class <span style="color: #A3261F">*</span></span><select style="height: 40px; border: 1px solid #CDBF8F; border-radius: 8px; padding: 0 8px; font: inherit; background: #FFFEF9"><option>[WA – Dinners]</option></select></label>
+<label style="flex: 1 1 220px; display: flex; flex-direction: column; gap: 6px"><span style="font-weight: 600">Location</span><select style="height: 40px; border: 1px solid #CDBF8F; border-radius: 8px; padding: 0 8px; font: inherit; background: #FFFEF9"><option>Seattle (Action Center)</option><option>Corporate</option></select></label>
+<label style="flex: 1 1 140px; display: flex; flex-direction: column; gap: 6px"><span style="font-weight: 600">Status</span><select style="height: 40px; border: 1px solid #CDBF8F; border-radius: 8px; padding: 0 8px; font: inherit; background: #FFFEF9"><option>Active</option><option>Inactive</option></select></label>
+<label style="flex: 1 1 180px; display: flex; gap: 10px; align-items: center; height: 40px; align-self: flex-end"><input type="checkbox" checked style="width: 18px; height: 18px; accent-color: #171717">Print receipt</label>
+</div>
+<div style="display: flex; gap: 12px; justify-content: flex-end"><button type="button" style="height: 40px; padding: 0 16px; border: 1px solid #CDBF8F; border-radius: 8px; background: #FFFEF9; font: inherit; font-weight: 600">Cancel</button><button type="button" style="height: 40px; padding: 0 16px; border: 0; border-radius: 8px; background: #171717; color: #F9CC02; font: inherit; font-weight: 600">Save campaign</button></div>
+</section>
+</div>
+</div>
+</main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1160}}'>
+class Component extends DCLogic {
+renderVals() {
+return {};
+}
+}
+</script>
+<a href="index.html" style="position:fixed;right:20px;bottom:20px;z-index:9999;background:#171717;color:#F9CC02;font:600 13px/1 'IBM Plex Sans',system-ui,sans-serif;padding:11px 16px;border-radius:999px;text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,.25)">&#8592; All screens</a>
+</body>
+</html>

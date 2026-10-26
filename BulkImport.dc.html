@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Bulk import — CRY America CRM</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#171717}a:hover{color:#8A5A00}
+</style>
+</helmet>
+<div style="display: flex; flex-wrap: wrap; min-height: 1240px; background: #FFF6CF; color: #171717; font-family: 'IBM Plex Sans', sans-serif; font-size: 14px; line-height: 20px">
+<nav aria-label="Main" style="flex: 1 1 232px; background: #F9CC02; color: #171717; padding: 24px 16px; box-sizing: border-box; display: flex; flex-direction: column; gap: 4px">
+<div style="padding: 0 12px 24px; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 18px; font-weight: 700; color: #171717">CRY America</span><span style="font-size: 12px; color: #3D3A2E">Donor CRM</span></div>
+<a href="Main.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #171717; text-decoration: none">Dashboard</a>
+<a href="Donors.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #171717; text-decoration: none">Donors</a>
+<a href="Donations.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #171717; text-decoration: none">Donations</a>
+<a href="NewPledge.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #171717; text-decoration: none">Pledges</a>
+<a href="BulkImport.dc.html" style="padding: 10px 12px; border-radius: 8px; background: #171717; color: #F9CC02; text-decoration: none; font-weight: 600">Bulk import</a>
+<a href="TC-Dashboard.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #171717; text-decoration: none">Tele-calling</a>
+<a href="VM-Dashboard.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #171717; text-decoration: none">Volunteers</a>
+<span style="padding: 16px 12px 6px; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: #3D3A2E">Set-up</span>
+<a href="Masters.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #171717; text-decoration: none">Masters</a>
+<a href="Organisation.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #171717; text-decoration: none">Organisation</a>
+</nav>
+<main style="flex: 999 1 560px; min-width: 0; padding: 32px 32px 48px; box-sizing: border-box; display: flex; flex-direction: column; gap: 24px">
+<div style="display: flex; flex-direction: column; gap: 4px"><h1 style="margin: 0; font-size: 28px; line-height: 36px; font-weight: 600">Bulk import — donation transactions</h1><span style="color: #4A4636">For fiduciary files (Benevity, YourCause, CyberGrants) and any batch of offline gifts. Nothing is posted until the Operations Head approves the batch.</span></div>
+<ol aria-label="Import steps" style="list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px">
+<li style="flex: 1 1 180px; padding: 12px 16px; border-radius: 10px; background: #E3F1E8; color: #1E6B47; font-weight: 600">1 · Upload ✓</li>
+<li style="flex: 1 1 180px; padding: 12px 16px; border-radius: 10px; background: #E3F1E8; color: #1E6B47; font-weight: 600">2 · Map columns ✓</li>
+<li style="flex: 1 1 180px; padding: 12px 16px; border-radius: 10px; background: #171717; color: #F9CC02; font-weight: 600" aria-current="step">3 · Validate</li>
+<li style="flex: 1 1 180px; padding: 12px 16px; border-radius: 10px; background: #FFFEF9; border: 1px solid #E8D9A8; color: #4A4636; font-weight: 600">4 · Approve and import</li>
+</ol>
+<section style="background: #FFFEF9; border: 1px solid #E8D9A8; border-radius: 12px; padding: 24px; display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 18px; line-height: 24px; font-weight: 600">File and template</h2>
+<div style="display: flex; flex-wrap: wrap; gap: 16px; align-items: flex-end">
+<div style="flex: 2 1 320px; display: flex; flex-direction: column; gap: 6px"><span style="font-weight: 600">Uploaded file</span><span style="min-height: 40px; display: flex; align-items: center; padding: 0 12px; border-radius: 8px; border: 1px dashed #CDBF8F; background: #FFFBEA">[file name].xlsx · [n] rows</span></div>
+<label style="flex: 1 1 200px; display: flex; flex-direction: column; gap: 6px"><span style="font-weight: 600">Fiduciary type</span><select style="height: 40px; border: 1px solid #CDBF8F; border-radius: 8px; padding: 0 8px; font: inherit; background: #FFFEF9"><option>Benevity</option><option>YourCause</option><option>CyberGrants</option><option>None (offline gifts)</option></select></label>
+</div>
+<fieldset style="border: 0; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 12px"><legend style="font-weight: 600; padding: 0 0 8px">Template</legend>
+<label style="flex: 1 1 280px; display: flex; gap: 12px; align-items: flex-start; padding: 16px; border: 1px solid #CDBF8F; border-radius: 10px"><input type="radio" name="tpl" style="width: 18px; height: 18px; margin-top: 2px; accent-color: #171717"><span><b>With QuickBooks information</b><br><span style="color: #4A4636">File already carries QB bank, class, account, document no. and deposit reference</span></span></label>
+<label style="flex: 1 1 280px; display: flex; gap: 12px; align-items: flex-start; padding: 16px; border: 2px solid #171717; border-radius: 10px; background: #FFF3B8"><input type="radio" name="tpl" checked style="width: 18px; height: 18px; margin-top: 2px; accent-color: #171717"><span><b>Without QuickBooks information</b><br><span style="color: #4A4636">QB fields filled from the Payment Type, Campaign and Cause masters</span></span></label>
+</fieldset>
+<div style="display: flex; gap: 16px; flex-wrap: wrap"><a href="#">Download template with QB fields</a><a href="#">Download template without QB fields</a></div>
+</section>
+<section style="background: #FFFEF9; border: 1px solid #E8D9A8; border-radius: 12px; padding: 24px; display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 18px; line-height: 24px; font-weight: 600">Validation result</h2>
+<div style="display: flex; flex-wrap: wrap; gap: 12px; font-variant-numeric: tabular-nums">
+<div style="flex: 1 1 160px; padding: 16px; border-radius: 10px; background: #FFFBEA; border: 1px solid #F1E7C4; display: flex; flex-direction: column"><span style="font-size: 22px; line-height: 28px; font-weight: 600">[n]</span><span style="color: #4A4636">Rows read</span></div>
+<div style="flex: 1 1 160px; padding: 16px; border-radius: 10px; background: #E3F1E8; display: flex; flex-direction: column"><span style="font-size: 22px; line-height: 28px; font-weight: 600; color: #1E6B47">[n]</span><span style="color: #1E6B47">Ready to import</span></div>
+<div style="flex: 1 1 160px; padding: 16px; border-radius: 10px; background: #FBEBD7; display: flex; flex-direction: column"><span style="font-size: 22px; line-height: 28px; font-weight: 600; color: #8A4B08">[n]</span><span style="color: #8A4B08">Need review</span></div>
+<div style="flex: 1 1 160px; padding: 16px; border-radius: 10px; background: #FBE4E2; display: flex; flex-direction: column"><span style="font-size: 22px; line-height: 28px; font-weight: 600; color: #A3261F">[n]</span><span style="color: #A3261F">Errors — will not import</span></div>
+<div style="flex: 1 1 160px; padding: 16px; border-radius: 10px; background: #FFFBEA; border: 1px solid #F1E7C4; display: flex; flex-direction: column"><span style="font-size: 22px; line-height: 28px; font-weight: 600">$[total]</span><span style="color: #4A4636">Gross · $[fees] fees</span></div>
+</div>
+<div style="border: 1px solid #F1E7C4; border-radius: 10px; overflow-x: auto">
+<table style="width: 100%; min-width: 820px; border-collapse: collapse">
+<thead><tr style="background: #FFFBEA; text-align: left; color: #4A4636; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px"><th style="padding: 10px 16px; font-weight: 600">Row</th><th style="padding: 10px 12px; font-weight: 600">Donor in file</th><th style="padding: 10px 12px; font-weight: 600">Issue</th><th style="padding: 10px 12px; font-weight: 600">Suggested fix</th><th style="padding: 10px 16px 10px 12px; font-weight: 600">Action</th></tr></thead>
+<tbody>
+<tr style="border-top: 1px solid #F1E7C4"><td style="padding: 12px 16px">[n]</td><td style="padding: 12px">[name, email]</td><td style="padding: 12px"><span style="color: #8A4B08; font-weight: 600">Review</span> · Possible duplicate donor</td><td style="padding: 12px">Match to existing donor [ID]</td><td style="padding: 12px 16px 12px 12px"><span style="display: flex; gap: 12px"><a href="#">Match</a><a href="NewDonor.dc.html">Create new</a></span></td></tr>
+<tr style="border-top: 1px solid #F1E7C4"><td style="padding: 12px 16px">[n]</td><td style="padding: 12px">[name, email]</td><td style="padding: 12px"><span style="color: #8A4B08; font-weight: 600">Review</span> · Employer match without original gift</td><td style="padding: 12px">Link to employee gift [receipt no.]</td><td style="padding: 12px 16px 12px 12px"><a href="#">Link gift</a></td></tr>
+<tr style="border-top: 1px solid #F1E7C4"><td style="padding: 12px 16px">[n]</td><td style="padding: 12px">[name, email]</td><td style="padding: 12px"><span style="color: #A3261F; font-weight: 600">Error</span> · Campaign code not in Campaign master</td><td style="padding: 12px">Choose an active campaign</td><td style="padding: 12px 16px 12px 12px"><a href="Masters.dc.html">Fix</a></td></tr>
+<tr style="border-top: 1px solid #F1E7C4"><td style="padding: 12px 16px">[n]</td><td style="padding: 12px">[name, email]</td><td style="padding: 12px"><span style="color: #A3261F; font-weight: 600">Error</span> · Receipt date falls in a locked financial year</td><td style="padding: 12px">Change date or ask Finance to unlock</td><td style="padding: 12px 16px 12px 12px"><a href="#">Fix</a></td></tr>
+</tbody>
+</table>
+</div>
+</section>
+<div style="display: flex; gap: 12px; justify-content: flex-end; flex-wrap: wrap"><button type="button" style="height: 44px; padding: 0 20px; border: 1px solid #CDBF8F; border-radius: 8px; background: #FFFEF9; font: inherit; font-weight: 600">Back to mapping</button><button type="button" style="height: 44px; padding: 0 20px; border: 1px solid #171717; border-radius: 8px; background: #FFFEF9; font: inherit; font-weight: 600">Re-validate</button><button type="button" style="height: 44px; padding: 0 20px; border: 0; border-radius: 8px; background: #171717; color: #F9CC02; font: inherit; font-weight: 600">Send for Operations Head approval</button></div>
+</main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1240}}'>
+class Component extends DCLogic {
+renderVals() {
+return {};
+}
+}
+</script>
+<a href="index.html" style="position:fixed;right:20px;bottom:20px;z-index:9999;background:#171717;color:#F9CC02;font:600 13px/1 'IBM Plex Sans',system-ui,sans-serif;padding:11px 16px;border-radius:999px;text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,.25)">&#8592; All screens</a>
+</body>
+</html>

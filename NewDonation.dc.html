@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>New donation transaction — CRY America CRM</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#171717}a:hover{color:#8A5A00}
+</style>
+</helmet>
+<div style="display: flex; flex-wrap: wrap; min-height: 1960px; background: #FFF6CF; color: #171717; font-family: 'IBM Plex Sans', sans-serif; font-size: 14px; line-height: 20px">
+<nav aria-label="Main" style="flex: 1 1 232px; background: #F9CC02; color: #171717; padding: 24px 16px; box-sizing: border-box; display: flex; flex-direction: column; gap: 4px">
+<div style="padding: 0 12px 24px; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 18px; font-weight: 700; color: #171717">CRY America</span><span style="font-size: 12px; color: #3D3A2E">Donor CRM</span></div>
+<a href="Main.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #171717; text-decoration: none">Dashboard</a>
+<a href="Donors.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #171717; text-decoration: none">Donors</a>
+<a href="Donations.dc.html" style="padding: 10px 12px; border-radius: 8px; background: #171717; color: #F9CC02; text-decoration: none; font-weight: 600">Donations</a>
+<a href="NewPledge.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #171717; text-decoration: none">Pledges</a>
+<a href="BulkImport.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #171717; text-decoration: none">Bulk import</a>
+<a href="TC-Dashboard.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #171717; text-decoration: none">Tele-calling</a>
+<a href="VM-Dashboard.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #171717; text-decoration: none">Volunteers</a>
+<span style="padding: 16px 12px 6px; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: #3D3A2E">Set-up</span>
+<a href="Masters.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #171717; text-decoration: none">Masters</a>
+<a href="Organisation.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #171717; text-decoration: none">Organisation</a>
+</nav>
+<main style="flex: 999 1 560px; min-width: 0; padding: 24px 32px 48px; box-sizing: border-box; display: flex; flex-direction: column; gap: 24px">
+<a href="DonorOverview.dc.html" style="color: #4A4636; text-decoration: none">← Back to donor</a>
+<div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: space-between; align-items: flex-end; max-width: 960px">
+<div style="display: flex; flex-direction: column; gap: 4px"><h1 style="margin: 0; font-size: 28px; line-height: 36px; font-weight: 600">New donation transaction</h1><span style="color: #4A4636">All amounts in US dollars. Online gifts arrive automatically by API or webhook; use this form for checks, wire, stocks and corrections.</span></div>
+</div>
+<form style="display: flex; flex-direction: column; gap: 24px; max-width: 960px">
+<section style="background: #FFFEF9; border: 1px solid #E8D9A8; border-radius: 12px; padding: 24px; display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 18px; line-height: 24px; font-weight: 600">Receipt and reference</h2>
+<div style="display: flex; flex-wrap: wrap; gap: 16px">
+<label style="flex: 1 1 200px; display: flex; flex-direction: column; gap: 6px"><span style="font-weight: 600">Receipt number</span><input type="text" value="Assigned on save" readonly style="height: 40px; border: 1px solid #E8D9A8; border-radius: 8px; padding: 0 12px; font: inherit; background: #F4F2EC; color: #4A4636"></label>
+<label style="flex: 1 1 200px; display: flex; flex-direction: column; gap: 6px"><span style="font-weight: 600">Receipt date <span style="color: #A3261F">*</span></span><input type="text" placeholder="mmm-dd-yyyy" value="Oct-16-2026" style="height: 40px; border: 1px solid #CDBF8F; border-radius: 8px; padding: 0 12px; font: inherit"></label>
+<label style="flex: 1 1 200px; display: flex; flex-direction: column; gap: 6px"><span style="font-weight: 600">Reference number</span><input type="text" placeholder="Check no., wire ref., gateway ID" style="height: 40px; border: 1px solid #CDBF8F; border-radius: 8px; padding: 0 12px; font: inherit"></label>
+<label style="flex: 1 1 200px; display: flex; flex-direction: column; gap: 6px"><span style="font-weight: 600">Reference date</span><input type="text" placeholder="mmm-dd-yyyy" style="height: 40px; border: 1px solid #CDBF8F; border-radius: 8px; padding: 0 12px; font: inherit"></label>
+</div>
+</section>
+<section style="background: #FFFEF9; border: 1px solid #E8D9A8; border-radius: 12px; padding: 24px; display: flex; flex-direction: column; gap: 16px">
+<div style="display: flex; justify-content: space-between; align-items: center"><h2 style="margin: 0; font-size: 18px; line-height: 24px; font-weight: 600">Donor</h2><a href="NewDonor.dc.html" style="font-weight: 600; color: #8A5A00">+ Create new donor</a></div>
+<label style="display: flex; flex-direction: column; gap: 6px"><span style="font-weight: 600">Donor <span style="color: #A3261F">*</span></span><input type="search" value="Deepa Doshi · deepa.doshi@gmail.com · ID 46877319" style="height: 40px; border: 1px solid #171717; border-radius: 8px; padding: 0 12px; font: inherit"></label>
+<div style="display: flex; flex-wrap: wrap; gap: 16px">
+<label style="flex: 2 1 320px; display: flex; flex-direction: column; gap: 6px"><span style="font-weight: 600">Address line 1</span><input type="text" value="10003 NE 15th St" style="height: 40px; border: 1px solid #CDBF8F; border-radius: 8px; padding: 0 12px; font: inherit"></label>
+<label style="flex: 1 1 200px; display: flex; flex-direction: column; gap: 6px"><span style="font-weight: 600">Address line 2</span><input type="text" style="height: 40px; border: 1px solid #CDBF8F; border-radius: 8px; padding: 0 12px; font: inherit"></label>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 16px">
+<label style="flex: 2 1 180px; display: flex; flex-direction: column; gap: 6px"><span style="font-weight: 600">City</span><input type="text" value="Bellevue" style="height: 40px; border: 1px solid #CDBF8F; border-radius: 8px; padding: 0 12px; font: inherit"></label>
+<label style="flex: 1 1 120px; display: flex; flex-direction: column; gap: 6px"><span style="font-weight: 600">State</span><input type="text" value="WA" style="height: 40px; border: 1px solid #CDBF8F; border-radius: 8px; padding: 0 12px; font: inherit"></label>
+<label style="flex: 1 1 120px; display: flex; flex-direction: column; gap: 6px"><span style="font-weight: 600">ZIP code</span><input type="text" value="98004" style="height: 40px; border: 1px solid #CDBF8F; border-radius: 8px; padding: 0 12px; font: inherit"></label>
+<label style="flex: 1 1 160px; display: flex; flex-direction: column; gap: 6px"><span style="font-weight: 600">Country</span><input type="text" value="United States" style="height: 40px; border: 1px solid #CDBF8F; border-radius: 8px; padding: 0 12px; font: inherit"></label>
+</div>
+<span style="color: #1E6B47; font-weight: 600">Address verified with Smarty</span>
+</section>
+<section style="background: #FFFEF9; border: 1px solid #E8D9A8; border-radius: 12px; padding: 24px; display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 18px; line-height: 24px; font-weight: 600">Amounts (USD)</h2>
+<div style="display: flex; flex-wrap: wrap; gap: 16px">
+<label style="flex: 1 1 220px; display: flex; flex-direction: column; gap: 6px"><span style="font-weight: 600">Transaction amount <span style="color: #A3261F">*</span></span><input type="number" min="0" step="0.01" value="{{ amount }}" onChange="{{ onAmount }}" style="height: 40px; border: 1px solid #CDBF8F; border-radius: 8px; padding: 0 12px; font: inherit; font-variant-numeric: tabular-nums"></label>
+<label style="flex: 1 1 220px; display: flex; flex-direction: column; gap: 6px"><span style="font-weight: 600">Quid-pro-quo amount</span><input type="number" min="0" step="0.01" value="{{ qpq }}" onChange="{{ onQpq }}" style="height: 40px; border: 1px solid #CDBF8F; border-radius: 8px; padding: 0 12px; font: inherit; font-variant-numeric: tabular-nums"><span style="color: #4A4636; font-size: 13px">Value of goods or services received (e.g. gala dinner). Not tax-deductible under 501(c)(3). Default 0.</span></label>
+<div style="flex: 1 1 220px; display: flex; flex-direction: column; gap: 6px"><span style="font-weight: 600">Donation amount</span><span style="height: 40px; display: flex; align-items: center; padding: 0 12px; border-radius: 8px; background: #FFF3B8; border: 1px solid #E8D9A8; font-weight: 700; font-size: 16px; font-variant-numeric: tabular-nums">{{ donation }}</span><span style="color: #4A4636; font-size: 13px">Transaction amount minus quid-pro-quo amount</span></div>
+</div>
+</section>
+<section style="background: #FFFEF9; border: 1px solid #E8D9A8; border-radius: 12px; padding: 24px; display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 18px; line-height: 24px; font-weight: 600">Classification</h2>
+<div style="display: flex; flex-wrap: wrap; gap: 16px">
+<label style="flex: 1 1 260px; display: flex; flex-direction: column; gap: 6px"><span style="font-weight: 600">Donation type <span style="color: #A3261F">*</span></span><select style="height: 40px; border: 1px solid #CDBF8F; border-radius: 8px; padding: 0 8px; font: inherit; background: #FFFEF9"><option>One-time</option><option>Recurring</option><option>Employee giving</option><option>Employer match</option><option>Stock</option></select></label>
+<label style="flex: 1 1 260px; display: flex; flex-direction: column; gap: 6px"><span style="font-weight: 600">Fiduciary type</span><select style="height: 40px; border: 1px solid #CDBF8F; border-radius: 8px; padding: 0 8px; font: inherit; background: #FFFEF9"><option>None (direct gift)</option><option>Benevity</option><option>YourCause</option><option>CyberGrants</option></select></label>
+<label style="flex: 1 1 260px; display: flex; flex-direction: column; gap: 6px"><span style="font-weight: 600">Campaign <span style="color: #A3261F">*</span></span><select style="height: 40px; border: 1px solid #CDBF8F; border-radius: 8px; padding: 0 8px; font: inherit; background: #FFFEF9"><option>[Campaign code] · [Campaign name]</option></select></label>
+<label style="flex: 1 1 260px; display: flex; flex-direction: column; gap: 6px"><span style="font-weight: 600">Reporting campaign</span><select style="height: 40px; border: 1px solid #CDBF8F; border-radius: 8px; padding: 0 8px; font: inherit; background: #FFFEF9"><option>Same as campaign</option></select></label>
+<label style="flex: 1 1 260px; display: flex; flex-direction: column; gap: 6px"><span style="font-weight: 600">Cause</span><select style="height: 40px; border: 1px solid #CDBF8F; border-radius: 8px; padding: 0 8px; font: inherit; background: #FFFEF9"><option>[Cause code] · [Cause name]</option></select></label>
+<label style="flex: 1 1 260px; display: flex; flex-direction: column; gap: 6px"><span style="font-weight: 600">Fund</span><select style="height: 40px; border: 1px solid #CDBF8F; border-radius: 8px; padding: 0 8px; font: inherit; background: #FFFEF9"><option>Unrestricted</option><option>Restricted</option></select></label>
+<label style="flex: 1 1 260px; display: flex; flex-direction: column; gap: 6px"><span style="font-weight: 600">Sales agent</span><input type="text" placeholder="Name" style="height: 40px; border: 1px solid #CDBF8F; border-radius: 8px; padding: 0 12px; font: inherit"></label>
+<label style="flex: 1 1 260px; display: flex; flex-direction: column; gap: 6px"><span style="font-weight: 600">Linked to pledge</span><select style="height: 40px; border: 1px solid #CDBF8F; border-radius: 8px; padding: 0 8px; font: inherit; background: #FFFEF9"><option>No pledge</option><option>[Pledge no.] · $[balance] open</option></select></label>
+</div>
+</section>
+<section style="background: #FFFEF9; border: 1px solid #E8D9A8; border-radius: 12px; padding: 24px; display: flex; flex-direction: column; gap: 16px">
+<div style="display: flex; flex-wrap: wrap; gap: 8px; justify-content: space-between; align-items: center"><h2 style="margin: 0; font-size: 18px; line-height: 24px; font-weight: 600">QuickBooks information</h2><span style="padding: 2px 10px; border-radius: 999px; background: #FBEBD7; color: #8A4B08; font-weight: 600; font-size: 12px">Not yet posted</span></div>
+<div style="display: flex; flex-wrap: wrap; gap: 16px">
+<label style="flex: 1 1 260px; display: flex; flex-direction: column; gap: 6px"><span style="font-weight: 600">Payment type category <span style="color: #A3261F">*</span></span><select value="{{ cat }}" onChange="{{ onCat }}" style="height: 40px; border: 1px solid #CDBF8F; border-radius: 8px; padding: 0 8px; font: inherit; background: #FFFEF9"><option value="Online">Online</option><option value="Checks">Checks</option><option value="Wire">Wire</option><option value="Stocks">Stocks</option></select></label>
+<label style="flex: 1 1 260px; display: flex; flex-direction: column; gap: 6px"><span style="font-weight: 600">Payment type <span style="color: #A3261F">*</span></span><select value="{{ ptype }}" onChange="{{ onType }}" style="height: 40px; border: 1px solid #CDBF8F; border-radius: 8px; padding: 0 8px; font: inherit; background: #FFFEF9"><sc-for list="{{ types }}" as="t" hint-placeholder-count="3"><option value="{{ t }}">{{ t }}</option></sc-for></select></label>
+<div style="flex: 1 1 260px; display: flex; flex-direction: column; gap: 6px"><span style="font-weight: 600">QB bank</span><span style="height: 40px; display: flex; align-items: center; padding: 0 12px; border-radius: 8px; background: #F4F2EC; border: 1px solid #E8D9A8">{{ bank }}</span><span style="color: #4A4636; font-size: 13px">From the Payment Type master</span></div>
+<div style="flex: 1 1 260px; display: flex; flex-direction: column; gap: 6px"><span style="font-weight: 600">QB class</span><span style="height: 40px; display: flex; align-items: center; padding: 0 12px; border-radius: 8px; background: #F4F2EC; border: 1px solid #E8D9A8">[QB class from Campaign master]</span></div>
+<div style="flex: 1 1 260px; display: flex; flex-direction: column; gap: 6px"><span style="font-weight: 600">QB account</span><span style="height: 40px; display: flex; align-items: center; padding: 0 12px; border-radius: 8px; background: #F4F2EC; border: 1px solid #E8D9A8">[QB code from Cause master]</span></div>
+<label style="flex: 1 1 260px; display: flex; flex-direction: column; gap: 6px"><span style="font-weight: 600">QB document number</span><input type="text" placeholder="Filled after posting" style="height: 40px; border: 1px solid #CDBF8F; border-radius: 8px; padding: 0 12px; font: inherit"></label>
+<label style="flex: 1 1 260px; display: flex; flex-direction: column; gap: 6px"><span style="font-weight: 600">QB document date</span><input type="text" placeholder="mmm-dd-yyyy" style="height: 40px; border: 1px solid #CDBF8F; border-radius: 8px; padding: 0 12px; font: inherit"></label>
+<label style="flex: 1 1 260px; display: flex; flex-direction: column; gap: 6px"><span style="font-weight: 600">QB deposit reference</span><input type="text" style="height: 40px; border: 1px solid #CDBF8F; border-radius: 8px; padding: 0 12px; font: inherit"></label>
+<label style="flex: 2 1 540px; display: flex; flex-direction: column; gap: 6px"><span style="font-weight: 600">QB deposit memo</span><input type="text" style="height: 40px; border: 1px solid #CDBF8F; border-radius: 8px; padding: 0 12px; font: inherit"></label>
+</div>
+</section>
+<section style="background: #FFFEF9; border: 1px solid #E8D9A8; border-radius: 12px; padding: 24px; display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 18px; line-height: 24px; font-weight: 600">Notes</h2>
+<label style="display: flex; flex-direction: column; gap: 6px"><span style="font-weight: 600">Message from donor</span><textarea rows="3" style="border: 1px solid #CDBF8F; border-radius: 8px; padding: 10px 12px; font: inherit; resize: vertical"></textarea></label>
+<label style="display: flex; flex-direction: column; gap: 6px"><span style="font-weight: 600">Internal note</span><textarea rows="3" placeholder="Not shown to donors" style="border: 1px solid #CDBF8F; border-radius: 8px; padding: 10px 12px; font: inherit; resize: vertical"></textarea></label>
+</section>
+<div style="display: flex; gap: 12px; justify-content: flex-end; flex-wrap: wrap"><a href="DonorOverview.dc.html" style="height: 44px; padding: 0 20px; display: flex; align-items: center; border: 1px solid #CDBF8F; border-radius: 8px; text-decoration: none; font-weight: 600; background: #FFFEF9">Cancel</a><button type="button" style="height: 44px; padding: 0 20px; border: 1px solid #171717; border-radius: 8px; background: #FFFEF9; font: inherit; font-weight: 600">Save and add another</button><a href="DonorSummaries.dc.html" style="height: 44px; padding: 0 20px; display: flex; align-items: center; background: #171717; color: #F9CC02; border-radius: 8px; text-decoration: none; font-weight: 600">Save and issue receipt</a></div>
+</form>
+</main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1960}}'>
+class Component extends DCLogic {
+constructor(props) {
+super(props);
+this.state = { amount: '1000.00', qpq: '0.00', cat: 'Online', ptype: 'Give Butter' };
+}
+renderVals() {
+const map = {
+Online: ['Authorized.net', 'Events Authorized.net', 'Paypal', 'Give Butter', 'Recurring Auth.net', 'Recurring Events Auth.net', 'Offline Recurring'],
+Checks: ['Checks', 'Fiduciaries'],
+Wire: ['Wire', 'Fiduciaries'],
+Stocks: ['Stocks']
+};
+const types = map[this.state.cat] || [];
+const ptype = types.indexOf(this.state.ptype) >= 0 ? this.state.ptype : types[0];
+const a = parseFloat(this.state.amount) || 0;
+const q = parseFloat(this.state.qpq) || 0;
+const d = Math.max(a - q, 0);
+return {
+amount: this.state.amount,
+qpq: this.state.qpq,
+donation: '$' + d.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }),
+cat: this.state.cat,
+ptype: ptype,
+types: types,
+bank: '[QB bank linked to ' + ptype + ']',
+onAmount: (e) => this.setState({ amount: e.target.value }),
+onQpq: (e) => this.setState({ qpq: e.target.value }),
+onCat: (e) => this.setState({ cat: e.target.value, ptype: (map[e.target.value] || [])[0] }),
+onType: (e) => this.setState({ ptype: e.target.value })
+};
+}
+}
+</script>
+<a href="index.html" style="position:fixed;right:20px;bottom:20px;z-index:9999;background:#171717;color:#F9CC02;font:600 13px/1 'IBM Plex Sans',system-ui,sans-serif;padding:11px 16px;border-radius:999px;text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,.25)">&#8592; All screens</a>
+</body>
+</html>

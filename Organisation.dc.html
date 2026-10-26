@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Organisation master — CRY America CRM</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#171717}a:hover{color:#8A5A00}
+</style>
+</helmet>
+<div style="display: flex; flex-wrap: wrap; min-height: 1160px; background: #FFF6CF; color: #171717; font-family: 'IBM Plex Sans', sans-serif; font-size: 14px; line-height: 20px">
+<nav aria-label="Main" style="flex: 1 1 232px; background: #F9CC02; color: #171717; padding: 24px 16px; box-sizing: border-box; display: flex; flex-direction: column; gap: 4px">
+<div style="padding: 0 12px 24px; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 18px; font-weight: 700; color: #171717">CRY America</span><span style="font-size: 12px; color: #3D3A2E">Donor CRM</span></div>
+<a href="Main.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #171717; text-decoration: none">Dashboard</a>
+<a href="Donors.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #171717; text-decoration: none">Donors</a>
+<a href="Donations.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #171717; text-decoration: none">Donations</a>
+<a href="NewPledge.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #171717; text-decoration: none">Pledges</a>
+<a href="BulkImport.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #171717; text-decoration: none">Bulk import</a>
+<a href="TC-Dashboard.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #171717; text-decoration: none">Tele-calling</a>
+<a href="VM-Dashboard.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #171717; text-decoration: none">Volunteers</a>
+<span style="padding: 16px 12px 6px; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: #3D3A2E">Set-up</span>
+<a href="Masters.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #171717; text-decoration: none">Masters</a>
+<a href="Organisation.dc.html" style="padding: 10px 12px; border-radius: 8px; background: #171717; color: #F9CC02; text-decoration: none; font-weight: 600">Organisation</a>
+</nav>
+<main style="flex: 999 1 560px; min-width: 0; padding: 32px 32px 48px; box-sizing: border-box; display: flex; flex-direction: column; gap: 24px">
+<div style="display: flex; flex-direction: column; gap: 4px"><h1 style="margin: 0; font-size: 28px; line-height: 36px; font-weight: 600">Organisation master</h1><span style="color: #4A4636">Printed on every receipt and year-end summary.</span></div>
+<form style="display: flex; flex-direction: column; gap: 24px; max-width: 960px">
+<section style="background: #FFFEF9; border: 1px solid #E8D9A8; border-radius: 12px; padding: 24px; display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 18px; line-height: 24px; font-weight: 600">Organisation details</h2>
+<div style="display: flex; flex-wrap: wrap; gap: 24px; align-items: flex-start">
+<div style="flex: 0 0 160px; display: flex; flex-direction: column; gap: 8px; align-items: flex-start"><span style="font-weight: 600">Logo</span><span style="width: 160px; height: 120px; border: 1px dashed #CDBF8F; border-radius: 10px; background: #FFFBEA; display: flex; align-items: center; justify-content: center; color: #4A4636; text-align: center">[Org logo]</span><button type="button" style="height: 36px; padding: 0 14px; border: 1px solid #171717; border-radius: 8px; background: #FFFEF9; font: inherit; font-weight: 600">Upload logo</button></div>
+<div style="flex: 1 1 480px; display: flex; flex-wrap: wrap; gap: 16px">
+<label style="flex: 2 1 300px; display: flex; flex-direction: column; gap: 6px"><span style="font-weight: 600">Organisation name <span style="color: #A3261F">*</span></span><input type="text" value="CRY America" style="height: 40px; border: 1px solid #CDBF8F; border-radius: 8px; padding: 0 12px; font: inherit"></label>
+<label style="flex: 1 1 180px; display: flex; flex-direction: column; gap: 6px"><span style="font-weight: 600">Federal tax ID (EIN) <span style="color: #A3261F">*</span></span><input type="text" value="[XX-XXXXXXX]" style="height: 40px; border: 1px solid #CDBF8F; border-radius: 8px; padding: 0 12px; font: inherit"></label>
+<label style="flex: 1 1 220px; display: flex; flex-direction: column; gap: 6px"><span style="font-weight: 600">Mobile</span><input type="tel" value="[phone]" style="height: 40px; border: 1px solid #CDBF8F; border-radius: 8px; padding: 0 12px; font: inherit"></label>
+<label style="flex: 1 1 220px; display: flex; flex-direction: column; gap: 6px"><span style="font-weight: 600">Email</span><input type="email" value="[email]" style="height: 40px; border: 1px solid #CDBF8F; border-radius: 8px; padding: 0 12px; font: inherit"></label>
+</div>
+</div>
+<label style="display: flex; flex-direction: column; gap: 6px"><span style="font-weight: 600">Address</span><input type="text" value="[street address]" style="height: 40px; border: 1px solid #CDBF8F; border-radius: 8px; padding: 0 12px; font: inherit"></label>
+<div style="display: flex; flex-wrap: wrap; gap: 16px">
+<label style="flex: 2 1 180px; display: flex; flex-direction: column; gap: 6px"><span style="font-weight: 600">City</span><input type="text" value="[city]" style="height: 40px; border: 1px solid #CDBF8F; border-radius: 8px; padding: 0 12px; font: inherit"></label>
+<label style="flex: 1 1 120px; display: flex; flex-direction: column; gap: 6px"><span style="font-weight: 600">State</span><input type="text" value="[state]" style="height: 40px; border: 1px solid #CDBF8F; border-radius: 8px; padding: 0 12px; font: inherit"></label>
+<label style="flex: 1 1 120px; display: flex; flex-direction: column; gap: 6px"><span style="font-weight: 600">ZIP code</span><input type="text" value="[zip]" style="height: 40px; border: 1px solid #CDBF8F; border-radius: 8px; padding: 0 12px; font: inherit"></label>
+<label style="flex: 1 1 160px; display: flex; flex-direction: column; gap: 6px"><span style="font-weight: 600">Country</span><input type="text" value="United States" style="height: 40px; border: 1px solid #CDBF8F; border-radius: 8px; padding: 0 12px; font: inherit"></label>
+</div>
+</section>
+<section style="background: #FFFEF9; border: 1px solid #E8D9A8; border-radius: 12px; padding: 24px; display: flex; flex-direction: column; gap: 16px">
+<div style="display: flex; justify-content: space-between; align-items: center"><h2 style="margin: 0; font-size: 18px; line-height: 24px; font-weight: 600">Receipt signatories</h2><button type="button" style="border: 0; background: none; color: #8A5A00; font: inherit; font-weight: 600; padding: 0">+ Add signatory</button></div>
+<div style="border: 1px solid #F1E7C4; border-radius: 10px; overflow-x: auto">
+<table style="width: 100%; min-width: 640px; border-collapse: collapse">
+<thead><tr style="background: #FFFBEA; text-align: left; color: #4A4636; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px"><th style="padding: 10px 16px; font-weight: 600">Name</th><th style="padding: 10px 12px; font-weight: 600">Title</th><th style="padding: 10px 12px; font-weight: 600">Signature</th><th style="padding: 10px 12px; font-weight: 600">Effective from</th><th style="padding: 10px 16px 10px 12px; font-weight: 600">Effective till</th></tr></thead>
+<tbody>
+<tr style="border-top: 1px solid #F1E7C4"><td style="padding: 12px 16px; font-weight: 600">[Signatory name]</td><td style="padding: 12px">[Title]</td><td style="padding: 12px"><span style="padding: 2px 10px; border-radius: 999px; background: #E3F1E8; color: #1E6B47; font-weight: 600; font-size: 12px">Uploaded</span></td><td style="padding: 12px">[mmm-dd-yyyy]</td><td style="padding: 12px 16px 12px 12px">Current</td></tr>
+<tr style="border-top: 1px solid #F1E7C4"><td style="padding: 12px 16px; font-weight: 600">[Previous signatory]</td><td style="padding: 12px">[Title]</td><td style="padding: 12px"><span style="padding: 2px 10px; border-radius: 999px; background: #E3F1E8; color: #1E6B47; font-weight: 600; font-size: 12px">Uploaded</span></td><td style="padding: 12px">[mmm-dd-yyyy]</td><td style="padding: 12px 16px 12px 12px">[mmm-dd-yyyy]</td></tr>
+</tbody>
+</table>
+</div>
+<span style="color: #4A4636">A receipt uses the signatory whose effective dates cover the receipt date.</span>
+</section>
+<div style="display: flex; gap: 12px; justify-content: flex-end"><button type="button" style="height: 44px; padding: 0 20px; border: 1px solid #CDBF8F; border-radius: 8px; background: #FFFEF9; font: inherit; font-weight: 600">Cancel</button><button type="button" style="height: 44px; padding: 0 20px; border: 0; border-radius: 8px; background: #171717; color: #F9CC02; font: inherit; font-weight: 600">Save</button></div>
+</form>
+</main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1160}}'>
+class Component extends DCLogic {
+renderVals() {
+return {};
+}
+}
+</script>
+<a href="index.html" style="position:fixed;right:20px;bottom:20px;z-index:9999;background:#171717;color:#F9CC02;font:600 13px/1 'IBM Plex Sans',system-ui,sans-serif;padding:11px 16px;border-radius:999px;text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,.25)">&#8592; All screens</a>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Donor relationships — CRY America CRM</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#171717}a:hover{color:#8A5A00}
+</style>
+</helmet>
+<div style="display: flex; flex-wrap: wrap; min-height: 1060px; background: #FFF6CF; color: #171717; font-family: 'IBM Plex Sans', sans-serif; font-size: 14px; line-height: 20px">
+<nav aria-label="Main" style="flex: 1 1 232px; background: #F9CC02; color: #171717; padding: 24px 16px; box-sizing: border-box; display: flex; flex-direction: column; gap: 4px">
+<div style="padding: 0 12px 24px; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 18px; font-weight: 700; color: #171717">CRY America</span><span style="font-size: 12px; color: #3D3A2E">Donor CRM</span></div>
+<a href="Main.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #171717; text-decoration: none">Dashboard</a>
+<a href="Donors.dc.html" style="padding: 10px 12px; border-radius: 8px; background: #171717; color: #F9CC02; text-decoration: none; font-weight: 600">Donors</a>
+<a href="Donations.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #171717; text-decoration: none">Donations</a>
+<a href="NewPledge.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #171717; text-decoration: none">Pledges</a>
+<a href="BulkImport.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #171717; text-decoration: none">Bulk import</a>
+<a href="TC-Dashboard.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #171717; text-decoration: none">Tele-calling</a>
+<a href="VM-Dashboard.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #171717; text-decoration: none">Volunteers</a>
+<span style="padding: 16px 12px 6px; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: #3D3A2E">Set-up</span>
+<a href="Masters.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #171717; text-decoration: none">Masters</a>
+<a href="Organisation.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #171717; text-decoration: none">Organisation</a>
+</nav>
+<main style="flex: 999 1 560px; min-width: 0; padding: 24px 32px 48px; box-sizing: border-box; display: flex; flex-direction: column; gap: 24px">
+<a href="Donors.dc.html" style="color: #4A4636; text-decoration: none">← Back to donors</a>
+<div style="display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between; align-items: flex-start">
+<div style="display: flex; gap: 16px; align-items: center">
+<span style="width: 56px; height: 56px; border-radius: 50%; background: #F9CC02; color: #8A4B08; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 18px">DD</span>
+<div style="display: flex; flex-direction: column; gap: 4px"><h1 style="margin: 0; font-size: 28px; line-height: 36px; font-weight: 600">Deepa Doshi</h1><span style="color: #4A4636">Individual · Donor ID 46877319 · Added Oct-14-2026 · Seattle</span></div>
+</div>
+<div style="display: flex; gap: 12px; flex-wrap: wrap"><a href="NewPledge.dc.html" style="height: 40px; padding: 0 16px; display: flex; align-items: center; border: 1px solid #171717; border-radius: 8px; text-decoration: none; font-weight: 600">+ New pledge</a><a href="NewDonation.dc.html" style="height: 40px; padding: 0 16px; display: flex; align-items: center; background: #171717; color: #F9CC02; border-radius: 8px; text-decoration: none; font-weight: 600">+ Add transaction</a></div>
+</div>
+<div role="tablist" style="display: flex; gap: 24px; border-bottom: 1px solid #E8D9A8">
+<a href="DonorOverview.dc.html" role="tab" aria-selected="false" style="padding: 8px 0 10px; color: #4A4636; text-decoration: none">Overview</a>
+<a href="DonorRelationships.dc.html" role="tab" aria-selected="true" style="padding: 8px 0 10px; border-bottom: 3px solid #171717; font-weight: 600; text-decoration: none">Relationships</a>
+<a href="DonorSummaries.dc.html" role="tab" aria-selected="false" style="padding: 8px 0 10px; color: #4A4636; text-decoration: none">Giving summaries</a>
+</div>
+<div style="display: flex; flex-direction: column; gap: 24px; max-width: 960px">
+<section style="display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; justify-content: space-between; align-items: center"><h2 style="margin: 0; font-size: 18px; line-height: 24px; font-weight: 600">Donor owner (fundraiser)</h2><button type="button" style="height: 36px; padding: 0 14px; border: 1px solid #171717; border-radius: 8px; background: #FFFEF9; font: inherit; font-weight: 600">Change owner</button></div>
+<div style="background: #FFFEF9; border: 1px solid #E8D9A8; border-radius: 12px; padding: 20px 24px; display: flex; flex-wrap: wrap; gap: 16px; align-items: center; justify-content: space-between">
+<div style="display: flex; gap: 12px; align-items: center"><span style="width: 40px; height: 40px; border-radius: 50%; background: #E8D9A8; color: #171717; display: flex; align-items: center; justify-content: center; font-weight: 600">FR</span><span><b>[Fundraiser name]</b><br><span style="color: #4A4636">Seattle gala team · owns tables and pledges for this donor</span></span></div>
+<span style="color: #4A4636">Assigned Oct-14-2026</span>
+</div>
+</section>
+<section style="display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; justify-content: space-between; align-items: center"><h2 style="margin: 0; font-size: 18px; line-height: 24px; font-weight: 600">Employer and matching gifts</h2><button type="button" style="height: 36px; padding: 0 14px; border: 1px solid #171717; border-radius: 8px; background: #FFFEF9; font: inherit; font-weight: 600">+ Add employer</button></div>
+<div style="background: #FFFEF9; border: 1px solid #E8D9A8; border-radius: 12px; overflow-x: auto">
+<table style="width: 100%; min-width: 640px; border-collapse: collapse">
+<thead><tr style="background: #FFFBEA; text-align: left; color: #4A4636; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px"><th style="padding: 10px 24px; font-weight: 600">Company</th><th style="padding: 10px 12px; font-weight: 600">Role</th><th style="padding: 10px 12px; font-weight: 600">Matching</th><th style="padding: 10px 12px; font-weight: 600">Fiduciary</th><th style="padding: 10px 24px 10px 12px; font-weight: 600">Since</th></tr></thead>
+<tbody><tr style="border-top: 1px solid #F1E7C4"><td style="padding: 12px 24px; font-weight: 600">[Employer]</td><td style="padding: 12px">Employee</td><td style="padding: 12px">[Ratio, e.g. 1:1] up to $[annual cap]</td><td style="padding: 12px">Benevity</td><td style="padding: 12px 24px 12px 12px">[mmm-dd-yyyy]</td></tr></tbody>
+</table>
+</div>
+</section>
+<section style="display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; justify-content: space-between; align-items: center"><h2 style="margin: 0; font-size: 18px; line-height: 24px; font-weight: 600">Household</h2><button type="button" style="height: 36px; padding: 0 14px; border: 1px solid #171717; border-radius: 8px; background: #FFFEF9; font: inherit; font-weight: 600">+ Add household</button></div>
+<div style="background: #FFFEF9; border: 1px dashed #CDBF8F; border-radius: 12px; padding: 32px 24px; display: flex; flex-direction: column; gap: 6px; align-items: center; text-align: center"><b>No household</b><span style="color: #4A4636">Link this donor to a household so family gifts and receipts can be combined.</span></div>
+</section>
+<section style="display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; justify-content: space-between; align-items: center"><h2 style="margin: 0; font-size: 18px; line-height: 24px; font-weight: 600">Other relationships</h2><button type="button" style="height: 36px; padding: 0 14px; border: 1px solid #171717; border-radius: 8px; background: #FFFEF9; font: inherit; font-weight: 600">+ Add relationship</button></div>
+<div style="background: #FFFEF9; border: 1px dashed #CDBF8F; border-radius: 12px; padding: 32px 24px; display: flex; flex-direction: column; gap: 6px; align-items: center; text-align: center"><b>No relationships yet</b><span style="color: #4A4636">Connect spouse, referrer, table host or other donors.</span></div>
+</section>
+</div>
+</main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1060}}'>
+class Component extends DCLogic {
+renderVals() {
+return {};
+}
+}
+</script>
+<a href="index.html" style="position:fixed;right:20px;bottom:20px;z-index:9999;background:#171717;color:#F9CC02;font:600 13px/1 'IBM Plex Sans',system-ui,sans-serif;padding:11px 16px;border-radius:999px;text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,.25)">&#8592; All screens</a>
+</body>
+</html>

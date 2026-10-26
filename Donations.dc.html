@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Donations — CRY America CRM</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#171717}a:hover{color:#8A5A00}
+</style>
+</helmet>
+<div style="display: flex; flex-wrap: wrap; min-height: 1560px; background: #FFF6CF; color: #171717; font-family: 'IBM Plex Sans', sans-serif; font-size: 14px; line-height: 20px">
+<nav aria-label="Main" style="flex: 1 1 232px; background: #F9CC02; color: #171717; padding: 24px 16px; box-sizing: border-box; display: flex; flex-direction: column; gap: 4px">
+<div style="padding: 0 12px 24px; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 18px; font-weight: 700; color: #171717">CRY America</span><span style="font-size: 12px; color: #3D3A2E">Donor CRM</span></div>
+<a href="Main.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #171717; text-decoration: none">Dashboard</a>
+<a href="Donors.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #171717; text-decoration: none">Donors</a>
+<a href="Donations.dc.html" style="padding: 10px 12px; border-radius: 8px; background: #171717; color: #F9CC02; text-decoration: none; font-weight: 600">Donations</a>
+<a href="NewPledge.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #171717; text-decoration: none">Pledges</a>
+<a href="BulkImport.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #171717; text-decoration: none">Bulk import</a>
+<a href="TC-Dashboard.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #171717; text-decoration: none">Tele-calling</a>
+<a href="VM-Dashboard.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #171717; text-decoration: none">Volunteers</a>
+<span style="padding: 16px 12px 6px; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: #3D3A2E">Set-up</span>
+<a href="Masters.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #171717; text-decoration: none">Masters</a>
+<a href="Organisation.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #171717; text-decoration: none">Organisation</a>
+</nav>
+<main style="flex: 999 1 560px; min-width: 0; padding: 32px 32px 48px; box-sizing: border-box; display: flex; flex-direction: column; gap: 24px">
+<div style="display: flex; flex-wrap: wrap; gap: 16px; align-items: flex-end; justify-content: space-between">
+<div style="display: flex; flex-direction: column; gap: 4px"><h1 style="margin: 0; font-size: 28px; line-height: 36px; font-weight: 600">Donations</h1><span style="color: #4A4636">All donation transactions, every channel · amounts in US dollars</span></div>
+<div style="display: flex; gap: 12px; flex-wrap: wrap"><a href="BulkImport.dc.html" style="height: 40px; padding: 0 16px; display: flex; align-items: center; border: 1px solid #171717; border-radius: 8px; text-decoration: none; font-weight: 600">Import</a><a href="NewDonation.dc.html" style="height: 40px; padding: 0 16px; display: flex; align-items: center; background: #171717; color: #F9CC02; border-radius: 8px; text-decoration: none; font-weight: 600">+ New donation</a></div>
+</div>
+<section aria-label="Ask the transaction database" style="background: #FFFEF9; border: 1px solid #E8D9A8; border-radius: 12px; padding: 20px 24px; display: flex; flex-direction: column; gap: 14px">
+<div style="display: flex; flex-wrap: wrap; gap: 8px; justify-content: space-between; align-items: baseline"><h2 style="margin: 0; font-size: 18px; line-height: 24px; font-weight: 600">Ask the transaction database</h2><span style="color: #4A4636; font-size: 13px">AI report builder · read-only, it cannot change or post any transaction</span></div>
+<div style="display: flex; flex-wrap: wrap; gap: 12px">
+<label style="flex: 1 1 420px; display: flex"><span style="position: absolute; left: -9999px">Describe the transaction report you need</span><input type="text" value="{{ q }}" onChange="{{ onType }}" placeholder="e.g. Checks received in September by sales agent, not yet posted to QuickBooks" style="flex: 1; height: 44px; padding: 0 14px; border: 1px solid #171717; border-radius: 10px; font: inherit; background: #FFFBEA"></label>
+<button type="button" onClick="{{ onAsk }}" style="height: 44px; padding: 0 20px; border: 0; border-radius: 10px; background: #171717; color: #F9CC02; font: inherit; font-weight: 600">Generate report</button>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center"><span style="color: #4A4636">Try:</span>
+<sc-for list="{{ examples }}" as="e" hint-placeholder-count="4"><button type="button" onClick="{{ e.pick }}" style="min-height: 32px; padding: 4px 12px; border: 1px solid #CDBF8F; border-radius: 999px; background: #FFFEF9; font: inherit; font-size: 13px; text-align: left">{{ e.q }}</button></sc-for>
+</div>
+<sc-if value="{{ answered }}" hint-placeholder-val="{{ true }}">
+<div style="border-top: 1px solid #F1E7C4; padding-top: 14px; display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center"><span style="font-weight: 600">Understood as:</span>
+<sc-for list="{{ result.chips }}" as="c" hint-placeholder-count="4"><span style="padding: 3px 10px; border-radius: 999px; background: #FFF3B8; border: 1px solid #E8D9A8; font-size: 13px">{{ c }}</span></sc-for>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: space-between">
+<span><b style="font-size: 18px">{{ result.count }}</b> <span style="color: #4A4636">{{ result.note }}</span></span>
+<div style="display: flex; flex-wrap: wrap; gap: 8px"><button type="button" style="height: 36px; padding: 0 14px; border: 1px solid #171717; border-radius: 8px; background: #FFFEF9; font: inherit; font-weight: 600">Save as report</button><button type="button" style="height: 36px; padding: 0 14px; border: 1px solid #171717; border-radius: 8px; background: #FFFEF9; font: inherit; font-weight: 600">Export to Excel</button><button type="button" style="height: 36px; padding: 0 14px; border: 1px solid #171717; border-radius: 8px; background: #FFFEF9; font: inherit; font-weight: 600">Show as chart</button></div>
+</div>
+<span style="color: #4A4636; font-size: 13px">Results load into the table below with the matching filters set. Check the criteria chips before sharing a report.</span>
+</div>
+</sc-if>
+</section>
+<section aria-label="Filters" style="background: #FFFEF9; border: 1px solid #E8D9A8; border-radius: 12px; padding: 16px 20px; display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; flex-wrap: wrap; gap: 12px">
+<label style="display: flex; flex-direction: column; gap: 4px; flex: 2 1 220px"><span style="font-size: 12px; color: #4A4636; font-weight: 600">Campaign</span><select style="height: 40px; border: 1px solid #CDBF8F; border-radius: 8px; padding: 0 8px; font: inherit; background: #FFFEF9"><option>All campaigns</option><option>Seattle Dinner Gala 2026</option><option>Bay Area Dinner Gala 2026</option><option>Web donations</option><option>Holi 2026</option></select></label>
+<label style="display: flex; flex-direction: column; gap: 4px; flex: 1 1 140px"><span style="font-size: 12px; color: #4A4636; font-weight: 600">Receipt date from</span><input type="text" placeholder="mmm-dd-yyyy" value="Jan-01-2026" style="height: 40px; border: 1px solid #CDBF8F; border-radius: 8px; padding: 0 10px; font: inherit; background: #FFFEF9"></label>
+<label style="display: flex; flex-direction: column; gap: 4px; flex: 1 1 140px"><span style="font-size: 12px; color: #4A4636; font-weight: 600">Receipt date to</span><input type="text" placeholder="mmm-dd-yyyy" value="Oct-16-2026" style="height: 40px; border: 1px solid #CDBF8F; border-radius: 8px; padding: 0 10px; font: inherit; background: #FFFEF9"></label>
+<label style="display: flex; flex-direction: column; gap: 4px; flex: 1 1 180px"><span style="font-size: 12px; color: #4A4636; font-weight: 600">Payment type</span><select style="height: 40px; border: 1px solid #CDBF8F; border-radius: 8px; padding: 0 8px; font: inherit; background: #FFFEF9"><option>All payment types</option><option>Authorized.net</option><option>Events Authorized.net</option><option>Paypal</option><option>Give Butter</option><option>Recurring Auth.net</option><option>Recurring Events Auth.net</option><option>Offline Recurring</option><option>Fiduciaries</option><option>Checks</option><option>Wire</option><option>Stocks</option></select></label>
+<label style="display: flex; flex-direction: column; gap: 4px; flex: 1 1 160px"><span style="font-size: 12px; color: #4A4636; font-weight: 600">Sales agent</span><select style="height: 40px; border: 1px solid #CDBF8F; border-radius: 8px; padding: 0 8px; font: inherit; background: #FFFEF9"><option>All agents</option><option>No agent</option><option>[Agent name]</option></select></label>
+<label style="display: flex; flex-direction: column; gap: 4px; flex: 1 1 160px"><span style="font-size: 12px; color: #4A4636; font-weight: 600">QuickBooks</span><select style="height: 40px; border: 1px solid #CDBF8F; border-radius: 8px; padding: 0 8px; font: inherit; background: #FFFEF9"><option>All</option><option>Posted</option><option>Not posted</option><option>Awaiting approval</option></select></label>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: space-between; align-items: center"><span style="color: #4A4636">Quick ranges: <a href="#">This month</a> · <a href="#">Last month</a> · <a href="#">This quarter</a> · <a href="#">FY 2026</a></span><div style="display: flex; gap: 12px"><button type="button" style="height: 36px; padding: 0 14px; border: 1px solid #CDBF8F; border-radius: 8px; background: #FFFEF9; font: inherit">Clear</button><button type="button" style="height: 36px; padding: 0 14px; border: 0; border-radius: 8px; background: #171717; color: #F9CC02; font: inherit; font-weight: 600">Apply filters</button></div></div>
+</section>
+<div style="display: flex; flex-wrap: wrap; gap: 12px; font-variant-numeric: tabular-nums">
+<div style="flex: 1 1 160px; padding: 14px 16px; border-radius: 10px; background: #FFFEF9; border: 1px solid #E8D9A8; display: flex; flex-direction: column"><span style="font-size: 22px; line-height: 28px; font-weight: 700">[n]</span><span style="color: #4A4636">Gifts in filter</span></div>
+<div style="flex: 1 1 160px; padding: 14px 16px; border-radius: 10px; background: #FFFEF9; border: 1px solid #E8D9A8; display: flex; flex-direction: column"><span style="font-size: 22px; line-height: 28px; font-weight: 700">$[total]</span><span style="color: #4A4636">Donation amount</span></div>
+<div style="flex: 1 1 160px; padding: 14px 16px; border-radius: 10px; background: #FFFEF9; border: 1px solid #E8D9A8; display: flex; flex-direction: column"><span style="font-size: 22px; line-height: 28px; font-weight: 700">$[total]</span><span style="color: #4A4636">Quid pro quo</span></div>
+<div style="flex: 1 1 160px; padding: 14px 16px; border-radius: 10px; background: #FBEBD7; display: flex; flex-direction: column"><span style="font-size: 22px; line-height: 28px; font-weight: 700; color: #8A4B08">[n]</span><span style="color: #8A4B08">Not posted to QuickBooks</span></div>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: space-between"><span style="color: #4A4636">2 selected</span><div style="display: flex; gap: 8px; flex-wrap: wrap"><button type="button" style="height: 36px; padding: 0 14px; border: 1px solid #171717; border-radius: 8px; background: #FFFEF9; font: inherit; font-weight: 600">Reprint receipts</button><button type="button" style="height: 36px; padding: 0 14px; border: 0; border-radius: 8px; background: #171717; color: #F9CC02; font: inherit; font-weight: 600">Send for Operations Head approval</button></div></div>
+<div style="background: #FFFEF9; border: 1px solid #E8D9A8; border-radius: 12px; overflow-x: auto">
+<table style="width: 100%; min-width: 1100px; border-collapse: collapse; font-variant-numeric: tabular-nums">
+<thead><tr style="background: #FFFBEA; text-align: left; color: #4A4636; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px">
+<th style="padding: 12px 8px 12px 16px; width: 32px"><input type="checkbox" aria-label="Select all" style="width: 18px; height: 18px; accent-color: #171717"></th><th style="padding: 12px; font-weight: 600">Receipt no.</th><th style="padding: 12px; font-weight: 600">Receipt date</th><th style="padding: 12px; font-weight: 600">Donor</th><th style="padding: 12px; font-weight: 600">Campaign</th><th style="padding: 12px; font-weight: 600">Payment type</th><th style="padding: 12px; font-weight: 600">Sales agent</th><th style="padding: 12px; font-weight: 600; text-align: right">Donation</th><th style="padding: 12px 16px 12px 12px; font-weight: 600">QuickBooks</th>
+</tr></thead>
+<tbody>
+<tr style="border-top: 1px solid #F1E7C4"><td style="padding: 12px 8px 12px 16px"><input type="checkbox" checked aria-label="Select receipt" style="width: 18px; height: 18px; accent-color: #171717"></td><td style="padding: 12px"><a href="NewDonation.dc.html" style="font-weight: 600">[Receipt no.]</a></td><td style="padding: 12px">Oct-13-2026</td><td style="padding: 12px"><a href="DonorOverview.dc.html">Deepa Doshi</a></td><td style="padding: 12px">[Campaign]</td><td style="padding: 12px">Give Butter</td><td style="padding: 12px; color: #4A4636">—</td><td style="padding: 12px; text-align: right">$1,000.00</td><td style="padding: 12px 16px 12px 12px"><span style="padding: 2px 10px; border-radius: 999px; background: #FBEBD7; color: #8A4B08; font-weight: 600; font-size: 12px; white-space: nowrap">Not posted</span></td></tr>
+<tr style="border-top: 1px solid #F1E7C4"><td style="padding: 12px 8px 12px 16px"><input type="checkbox" checked aria-label="Select receipt" style="width: 18px; height: 18px; accent-color: #171717"></td><td style="padding: 12px"><a href="NewDonation.dc.html" style="font-weight: 600">[Receipt no.]</a></td><td style="padding: 12px">Oct-09-2026</td><td style="padding: 12px"><a href="DonorOverview.dc.html">[Donor name]</a></td><td style="padding: 12px">Seattle Dinner Gala 2026</td><td style="padding: 12px">Checks</td><td style="padding: 12px">[Agent name]</td><td style="padding: 12px; text-align: right">$[amount]</td><td style="padding: 12px 16px 12px 12px"><span style="padding: 2px 10px; border-radius: 999px; background: #FBEBD7; color: #8A4B08; font-weight: 600; font-size: 12px; white-space: nowrap">Not posted</span></td></tr>
+<tr style="border-top: 1px solid #F1E7C4"><td style="padding: 12px 8px 12px 16px"><input type="checkbox" aria-label="Select receipt" style="width: 18px; height: 18px; accent-color: #171717"></td><td style="padding: 12px"><a href="NewDonation.dc.html" style="font-weight: 600">[Receipt no.]</a></td><td style="padding: 12px">Oct-06-2026</td><td style="padding: 12px"><a href="DonorOverview.dc.html">Benevity</a></td><td style="padding: 12px">Workplace giving</td><td style="padding: 12px">Fiduciaries</td><td style="padding: 12px; color: #4A4636">—</td><td style="padding: 12px; text-align: right">$[amount]</td><td style="padding: 12px 16px 12px 12px"><span style="padding: 2px 10px; border-radius: 999px; background: #E3EAF5; color: #1F3A68; font-weight: 600; font-size: 12px; white-space: nowrap">Awaiting approval</span></td></tr>
+<tr style="border-top: 1px solid #F1E7C4"><td style="padding: 12px 8px 12px 16px"><input type="checkbox" aria-label="Select receipt" style="width: 18px; height: 18px; accent-color: #171717"></td><td style="padding: 12px"><a href="NewDonation.dc.html" style="font-weight: 600">[Receipt no.]</a></td><td style="padding: 12px">Sep-30-2026</td><td style="padding: 12px"><a href="DonorOverview.dc.html">[Donor name]</a></td><td style="padding: 12px">Web donations</td><td style="padding: 12px">Recurring Auth.net</td><td style="padding: 12px; color: #4A4636">—</td><td style="padding: 12px; text-align: right">$[amount]</td><td style="padding: 12px 16px 12px 12px"><span style="padding: 2px 10px; border-radius: 999px; background: #DCEFE3; color: #1E6B47; font-weight: 600; font-size: 12px; white-space: nowrap">Posted · [QB doc no.]</span></td></tr>
+<tr style="border-top: 1px solid #F1E7C4"><td style="padding: 12px 8px 12px 16px"><input type="checkbox" aria-label="Select receipt" style="width: 18px; height: 18px; accent-color: #171717"></td><td style="padding: 12px"><a href="NewDonation.dc.html" style="font-weight: 600">[Receipt no.]</a></td><td style="padding: 12px">Sep-26-2026</td><td style="padding: 12px"><a href="DonorOverview.dc.html">[Company name]</a></td><td style="padding: 12px">Seattle Dinner Gala 2026</td><td style="padding: 12px">Events Authorized.net</td><td style="padding: 12px">[Agent name]</td><td style="padding: 12px; text-align: right">$[amount]</td><td style="padding: 12px 16px 12px 12px"><span style="padding: 2px 10px; border-radius: 999px; background: #DCEFE3; color: #1E6B47; font-weight: 600; font-size: 12px; white-space: nowrap">Posted · [QB doc no.]</span></td></tr>
+<tr style="border-top: 1px solid #F1E7C4"><td style="padding: 12px 8px 12px 16px"><input type="checkbox" aria-label="Select receipt" style="width: 18px; height: 18px; accent-color: #171717"></td><td style="padding: 12px"><a href="NewDonation.dc.html" style="font-weight: 600">[Receipt no.]</a></td><td style="padding: 12px">Sep-18-2026</td><td style="padding: 12px"><a href="DonorOverview.dc.html">[Donor name]</a></td><td style="padding: 12px">Web donations</td><td style="padding: 12px">Stocks</td><td style="padding: 12px; color: #4A4636">—</td><td style="padding: 12px; text-align: right">$[amount]</td><td style="padding: 12px 16px 12px 12px"><span style="padding: 2px 10px; border-radius: 999px; background: #DCEFE3; color: #1E6B47; font-weight: 600; font-size: 12px; white-space: nowrap">Posted · [QB doc no.]</span></td></tr>
+<tr style="border-top: 1px solid #F1E7C4"><td style="padding: 12px 8px 12px 16px"><input type="checkbox" aria-label="Select receipt" style="width: 18px; height: 18px; accent-color: #171717"></td><td style="padding: 12px"><a href="NewDonation.dc.html" style="font-weight: 600">[Receipt no.]</a></td><td style="padding: 12px">Sep-11-2026</td><td style="padding: 12px"><a href="DonorOverview.dc.html">[Donor name]</a></td><td style="padding: 12px">Bay Area Dinner Gala 2026</td><td style="padding: 12px">Paypal</td><td style="padding: 12px">[Agent name]</td><td style="padding: 12px; text-align: right">$[amount]</td><td style="padding: 12px 16px 12px 12px"><span style="padding: 2px 10px; border-radius: 999px; background: #DCEFE3; color: #1E6B47; font-weight: 600; font-size: 12px; white-space: nowrap">Posted · [QB doc no.]</span></td></tr>
+</tbody>
+</table>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: space-between; color: #4A4636"><span>Showing 1–7 of [total] · newest receipt date first</span><div style="display: flex; gap: 8px"><button type="button" style="height: 36px; padding: 0 14px; border: 1px solid #CDBF8F; border-radius: 8px; background: #FFFEF9; font: inherit">Previous</button><button type="button" style="height: 36px; padding: 0 14px; border: 1px solid #CDBF8F; border-radius: 8px; background: #FFFEF9; font: inherit">Next</button></div></div>
+</main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1560}}'>
+class Component extends DCLogic {
+constructor(props) {
+super(props);
+this.state = { q: 'Gifts not yet posted to QuickBooks that are older than 7 days, by payment type', answered: true, idx: 0 };
+}
+renderVals() {
+const ex = [
+{ q: 'Gifts not yet posted to QuickBooks that are older than 7 days, by payment type', chips: ['QuickBooks: Not posted', 'Receipt date before Oct-09-2026', 'Group by payment type'], count: '[n] gifts', note: 'in [n] payment types · $[total]' },
+{ q: 'Revenue by campaign for Q3 2026 vs Q3 2025', chips: ['Receipt date: Jul-01 – Sep-30, 2026 and 2025', 'Group by campaign', 'Compare years', 'Sum: donation amount'], count: '[n] campaigns', note: '$[total] vs $[prior]' },
+{ q: 'Checks received in September by sales agent', chips: ['Payment type: Checks', 'Receipt date: Sep-01-2026 – Sep-30-2026', 'Group by sales agent'], count: '[n] checks', note: 'from [n] agents · $[total]' },
+{ q: 'Gala gifts with a quid-pro-quo amount over $100', chips: ['Campaign category: Events · Dinners', 'Quid pro quo > $100', 'Show: transaction, QPQ, donation amount'], count: '[n] gifts', note: '$[total] quid pro quo' }
+];
+const i = this.state.idx;
+return {
+q: this.state.q,
+answered: this.state.answered,
+result: i < 0 ? { chips: ['Claude turns your question into filters on transactions, donors, campaigns and QuickBooks fields'], count: '—', note: 'live results appear when the CRM is connected' } : ex[i],
+examples: ex.map((e, n) => ({ q: e.q, pick: () => this.setState({ q: e.q, idx: n, answered: true }) })),
+onType: (e) => this.setState({ q: e.target.value, idx: -1, answered: false }),
+onAsk: () => this.setState({ answered: true })
+};
+}
+}
+</script>
+<a href="index.html" style="position:fixed;right:20px;bottom:20px;z-index:9999;background:#171717;color:#F9CC02;font:600 13px/1 'IBM Plex Sans',system-ui,sans-serif;padding:11px 16px;border-radius:999px;text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,.25)">&#8592; All screens</a>
+</body>
+</html>

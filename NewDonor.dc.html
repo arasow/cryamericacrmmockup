@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>New donor — CRY America CRM</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#171717}a:hover{color:#8A5A00}
+</style>
+</helmet>
+<div style="display: flex; flex-wrap: wrap; min-height: 1400px; background: #FFF6CF; color: #171717; font-family: 'IBM Plex Sans', sans-serif; font-size: 14px; line-height: 20px">
+<nav aria-label="Main" style="flex: 1 1 232px; background: #F9CC02; color: #171717; padding: 24px 16px; box-sizing: border-box; display: flex; flex-direction: column; gap: 4px">
+<div style="padding: 0 12px 24px; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 18px; font-weight: 700; color: #171717">CRY America</span><span style="font-size: 12px; color: #3D3A2E">Donor CRM</span></div>
+<a href="Main.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #171717; text-decoration: none">Dashboard</a>
+<a href="Donors.dc.html" style="padding: 10px 12px; border-radius: 8px; background: #171717; color: #F9CC02; text-decoration: none; font-weight: 600">Donors</a>
+<a href="Donations.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #171717; text-decoration: none">Donations</a>
+<a href="NewPledge.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #171717; text-decoration: none">Pledges</a>
+<a href="BulkImport.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #171717; text-decoration: none">Bulk import</a>
+<a href="TC-Dashboard.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #171717; text-decoration: none">Tele-calling</a>
+<a href="VM-Dashboard.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #171717; text-decoration: none">Volunteers</a>
+<span style="padding: 16px 12px 6px; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: #3D3A2E">Set-up</span>
+<a href="Masters.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #171717; text-decoration: none">Masters</a>
+<a href="Organisation.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #171717; text-decoration: none">Organisation</a>
+</nav>
+<main style="flex: 999 1 560px; min-width: 0; padding: 24px 32px 48px; box-sizing: border-box; display: flex; flex-direction: column; gap: 24px">
+<a href="Donors.dc.html" style="color: #4A4636; text-decoration: none">← Back to donors</a>
+<h1 style="margin: 0; font-size: 28px; line-height: 36px; font-weight: 600">New donor</h1>
+<form style="display: flex; flex-direction: column; gap: 24px; max-width: 880px">
+<section style="background: #FFFEF9; border: 1px solid #E8D9A8; border-radius: 12px; padding: 24px; display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 18px; line-height: 24px; font-weight: 600">Donor type <span style="color: #A3261F">*</span></h2>
+<div style="display: flex; flex-wrap: wrap; gap: 12px">
+<label style="flex: 1 1 220px; display: flex; gap: 12px; align-items: flex-start; padding: 16px; border: 2px solid #171717; border-radius: 10px; background: #FFF3B8"><input type="radio" name="dtype" checked style="width: 18px; height: 18px; margin-top: 2px; accent-color: #171717"><span><b>Individual</b><br><span style="color: #4A4636">Donor, volunteer or household member</span></span></label>
+<label style="flex: 1 1 220px; display: flex; gap: 12px; align-items: flex-start; padding: 16px; border: 1px solid #CDBF8F; border-radius: 10px"><input type="radio" name="dtype" style="width: 18px; height: 18px; margin-top: 2px; accent-color: #171717"><span><b>Company</b><br><span style="color: #4A4636">Employer, corporate sponsor, foundation</span></span></label>
+<label style="flex: 1 1 220px; display: flex; gap: 12px; align-items: flex-start; padding: 16px; border: 1px solid #CDBF8F; border-radius: 10px"><input type="radio" name="dtype" style="width: 18px; height: 18px; margin-top: 2px; accent-color: #171717"><span><b>Fiduciary</b><br><span style="color: #4A4636">Benevity, YourCause, CyberGrants…</span></span></label>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 16px">
+<label style="flex: 0 1 120px; display: flex; flex-direction: column; gap: 6px"><span style="font-weight: 600">Prefix</span><select style="height: 40px; border: 1px solid #CDBF8F; border-radius: 8px; padding: 0 8px; font: inherit; background: #FFFEF9"><option>—</option><option>Mr.</option><option>Ms.</option><option>Dr.</option></select></label>
+<label style="flex: 1 1 200px; display: flex; flex-direction: column; gap: 6px"><span style="font-weight: 600">First name <span style="color: #A3261F">*</span></span><input type="text" style="height: 40px; border: 1px solid #CDBF8F; border-radius: 8px; padding: 0 12px; font: inherit"></label>
+<label style="flex: 1 1 160px; display: flex; flex-direction: column; gap: 6px"><span style="font-weight: 600">Middle name</span><input type="text" style="height: 40px; border: 1px solid #CDBF8F; border-radius: 8px; padding: 0 12px; font: inherit"></label>
+<label style="flex: 1 1 200px; display: flex; flex-direction: column; gap: 6px"><span style="font-weight: 600">Last name <span style="color: #A3261F">*</span></span><input type="text" style="height: 40px; border: 1px solid #CDBF8F; border-radius: 8px; padding: 0 12px; font: inherit"></label>
+</div>
+</section>
+<section style="background: #FFFEF9; border: 1px solid #E8D9A8; border-radius: 12px; padding: 24px; display: flex; flex-direction: column; gap: 16px">
+<div style="display: flex; justify-content: space-between; align-items: center"><h2 style="margin: 0; font-size: 18px; line-height: 24px; font-weight: 600">Email addresses</h2><button type="button" style="border: 0; background: none; color: #8A5A00; font: inherit; font-weight: 600; padding: 0">+ Add another email</button></div>
+<div style="display: flex; flex-wrap: wrap; gap: 12px; align-items: flex-end">
+<label style="flex: 3 1 280px; display: flex; flex-direction: column; gap: 6px"><span style="font-weight: 600">Email</span><input type="email" placeholder="name@example.com" style="height: 40px; border: 1px solid #CDBF8F; border-radius: 8px; padding: 0 12px; font: inherit"></label>
+<label style="flex: 1 1 140px; display: flex; flex-direction: column; gap: 6px"><span style="font-weight: 600">Type</span><select style="height: 40px; border: 1px solid #CDBF8F; border-radius: 8px; padding: 0 8px; font: inherit; background: #FFFEF9"><option>Personal</option><option>Work</option><option>Family</option></select></label>
+<label style="flex: 0 0 auto; display: flex; gap: 8px; align-items: center; height: 40px"><input type="radio" name="pemail" checked style="width: 18px; height: 18px; accent-color: #171717">Primary</label>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 12px; align-items: flex-end">
+<label style="flex: 3 1 280px; display: flex; flex-direction: column; gap: 6px"><span style="font-weight: 600">Email</span><input type="email" placeholder="name@company.com" style="height: 40px; border: 1px solid #CDBF8F; border-radius: 8px; padding: 0 12px; font: inherit"></label>
+<label style="flex: 1 1 140px; display: flex; flex-direction: column; gap: 6px"><span style="font-weight: 600">Type</span><select style="height: 40px; border: 1px solid #CDBF8F; border-radius: 8px; padding: 0 8px; font: inherit; background: #FFFEF9"><option>Work</option><option>Personal</option><option>Family</option></select></label>
+<label style="flex: 0 0 auto; display: flex; gap: 8px; align-items: center; height: 40px"><input type="radio" name="pemail" style="width: 18px; height: 18px; accent-color: #171717">Primary</label>
+</div>
+</section>
+<section style="background: #FFFEF9; border: 1px solid #E8D9A8; border-radius: 12px; padding: 24px; display: flex; flex-direction: column; gap: 16px">
+<div style="display: flex; justify-content: space-between; align-items: center"><h2 style="margin: 0; font-size: 18px; line-height: 24px; font-weight: 600">Mobile and telephone numbers</h2><button type="button" style="border: 0; background: none; color: #8A5A00; font: inherit; font-weight: 600; padding: 0">+ Add another number</button></div>
+<div style="display: flex; flex-wrap: wrap; gap: 12px; align-items: flex-end">
+<label style="flex: 3 1 220px; display: flex; flex-direction: column; gap: 6px"><span style="font-weight: 600">Number</span><input type="tel" placeholder="+1 000 000 0000" style="height: 40px; border: 1px solid #CDBF8F; border-radius: 8px; padding: 0 12px; font: inherit"></label>
+<label style="flex: 1 1 140px; display: flex; flex-direction: column; gap: 6px"><span style="font-weight: 600">Type</span><select style="height: 40px; border: 1px solid #CDBF8F; border-radius: 8px; padding: 0 8px; font: inherit; background: #FFFEF9"><option>Personal</option><option>Work</option><option>Family</option></select></label>
+<label style="flex: 1 1 140px; display: flex; flex-direction: column; gap: 6px"><span style="font-weight: 600">Line</span><select style="height: 40px; border: 1px solid #CDBF8F; border-radius: 8px; padding: 0 8px; font: inherit; background: #FFFEF9"><option>Mobile</option><option>Landline</option></select></label>
+<label style="flex: 0 0 auto; display: flex; gap: 8px; align-items: center; height: 40px"><input type="radio" name="pphone" checked style="width: 18px; height: 18px; accent-color: #171717">Primary</label>
+</div>
+<span style="color: #4A4636">Do Not Call and Invalid flags are added later from tele-calling dispositions, not on this form.</span>
+</section>
+<section style="background: #FFFEF9; border: 1px solid #E8D9A8; border-radius: 12px; padding: 24px; display: flex; flex-direction: column; gap: 16px">
+<div style="display: flex; flex-wrap: wrap; gap: 8px; justify-content: space-between; align-items: center"><h2 style="margin: 0; font-size: 18px; line-height: 24px; font-weight: 600">Address</h2><span style="color: #4A4636">Type to search — verified with Smarty</span></div>
+<label style="display: flex; flex-direction: column; gap: 6px"><span style="font-weight: 600">Address line 1</span><input type="text" placeholder="Start typing a street address" style="height: 40px; border: 1px solid #CDBF8F; border-radius: 8px; padding: 0 12px; font: inherit"></label>
+<label style="display: flex; flex-direction: column; gap: 6px"><span style="font-weight: 600">Address line 2</span><input type="text" placeholder="Apt, suite, etc." style="height: 40px; border: 1px solid #CDBF8F; border-radius: 8px; padding: 0 12px; font: inherit"></label>
+<div style="display: flex; flex-wrap: wrap; gap: 16px">
+<label style="flex: 1 1 140px; display: flex; flex-direction: column; gap: 6px"><span style="font-weight: 600">ZIP code</span><input type="text" style="height: 40px; border: 1px solid #CDBF8F; border-radius: 8px; padding: 0 12px; font: inherit"></label>
+<label style="flex: 2 1 200px; display: flex; flex-direction: column; gap: 6px"><span style="font-weight: 600">City</span><input type="text" style="height: 40px; border: 1px solid #CDBF8F; border-radius: 8px; padding: 0 12px; font: inherit"></label>
+<label style="flex: 1 1 140px; display: flex; flex-direction: column; gap: 6px"><span style="font-weight: 600">State</span><select style="height: 40px; border: 1px solid #CDBF8F; border-radius: 8px; padding: 0 8px; font: inherit; background: #FFFEF9"><option>Select</option><option>WA</option><option>CA</option><option>NY</option><option>TX</option></select></label>
+<label style="flex: 1 1 160px; display: flex; flex-direction: column; gap: 6px"><span style="font-weight: 600">Country</span><select style="height: 40px; border: 1px solid #CDBF8F; border-radius: 8px; padding: 0 8px; font: inherit; background: #FFFEF9"><option>United States</option></select></label>
+</div>
+<span style="color: #4A4636">City, state and country fill in from the Zip Code master when a ZIP is entered.</span>
+</section>
+<section style="background: #FFFEF9; border: 1px solid #E8D9A8; border-radius: 12px; padding: 24px; display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 18px; line-height: 24px; font-weight: 600">Assignment and preferences</h2>
+<div style="display: flex; flex-wrap: wrap; gap: 16px">
+<label style="flex: 1 1 220px; display: flex; flex-direction: column; gap: 6px"><span style="font-weight: 600">Location</span><select style="height: 40px; border: 1px solid #CDBF8F; border-radius: 8px; padding: 0 8px; font: inherit; background: #FFFEF9"><option>Seattle (Action Center)</option><option>Corporate</option></select></label>
+<label style="flex: 1 1 220px; display: flex; flex-direction: column; gap: 6px"><span style="font-weight: 600">Donor owner (fundraiser)</span><select style="height: 40px; border: 1px solid #CDBF8F; border-radius: 8px; padding: 0 8px; font: inherit; background: #FFFEF9"><option>Unassigned</option></select></label>
+<label style="flex: 1 1 220px; display: flex; flex-direction: column; gap: 6px"><span style="font-weight: 600">Employer</span><input type="text" placeholder="Search companies" style="height: 40px; border: 1px solid #CDBF8F; border-radius: 8px; padding: 0 12px; font: inherit"></label>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 24px">
+<label style="display: flex; gap: 8px; align-items: center"><input type="checkbox" checked style="width: 18px; height: 18px; accent-color: #171717">Email</label>
+<label style="display: flex; gap: 8px; align-items: center"><input type="checkbox" checked style="width: 18px; height: 18px; accent-color: #171717">Text message</label>
+<label style="display: flex; gap: 8px; align-items: center"><input type="checkbox" checked style="width: 18px; height: 18px; accent-color: #171717">Phone calls</label>
+<label style="display: flex; gap: 8px; align-items: center"><input type="checkbox" checked style="width: 18px; height: 18px; accent-color: #171717">Direct mail</label>
+</div>
+</section>
+<div style="display: flex; gap: 12px; justify-content: flex-end; flex-wrap: wrap"><a href="Donors.dc.html" style="height: 44px; padding: 0 20px; display: flex; align-items: center; border: 1px solid #CDBF8F; border-radius: 8px; text-decoration: none; font-weight: 600; background: #FFFEF9">Cancel</a><a href="DonorOverview.dc.html" style="height: 44px; padding: 0 20px; display: flex; align-items: center; background: #171717; color: #F9CC02; border-radius: 8px; text-decoration: none; font-weight: 600">Save donor</a></div>
+</form>
+</main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1400}}'>
+class Component extends DCLogic {
+renderVals() {
+return {};
+}
+}
+</script>
+<a href="index.html" style="position:fixed;right:20px;bottom:20px;z-index:9999;background:#171717;color:#F9CC02;font:600 13px/1 'IBM Plex Sans',system-ui,sans-serif;padding:11px 16px;border-radius:999px;text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,.25)">&#8592; All screens</a>
+</body>
+</html>

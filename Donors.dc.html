@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Donors — CRY America CRM</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#171717}a:hover{color:#8A5A00}
+</style>
+</helmet>
+<div style="display: flex; flex-wrap: wrap; min-height: 1360px; background: #FFF6CF; color: #171717; font-family: 'IBM Plex Sans', sans-serif; font-size: 14px; line-height: 20px">
+<nav aria-label="Main" style="flex: 1 1 232px; background: #F9CC02; color: #171717; padding: 24px 16px; box-sizing: border-box; display: flex; flex-direction: column; gap: 4px">
+<div style="padding: 0 12px 24px; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 18px; font-weight: 700; color: #171717">CRY America</span><span style="font-size: 12px; color: #3D3A2E">Donor CRM</span></div>
+<a href="Main.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #171717; text-decoration: none">Dashboard</a>
+<a href="Donors.dc.html" style="padding: 10px 12px; border-radius: 8px; background: #171717; color: #F9CC02; text-decoration: none; font-weight: 600">Donors</a>
+<a href="Donations.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #171717; text-decoration: none">Donations</a>
+<a href="NewPledge.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #171717; text-decoration: none">Pledges</a>
+<a href="BulkImport.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #171717; text-decoration: none">Bulk import</a>
+<a href="TC-Dashboard.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #171717; text-decoration: none">Tele-calling</a>
+<a href="VM-Dashboard.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #171717; text-decoration: none">Volunteers</a>
+<span style="padding: 16px 12px 6px; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: #3D3A2E">Set-up</span>
+<a href="Masters.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #171717; text-decoration: none">Masters</a>
+<a href="Organisation.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #171717; text-decoration: none">Organisation</a>
+</nav>
+<main style="flex: 999 1 560px; min-width: 0; display: flex; flex-direction: column">
+<div style="display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: space-between; padding: 16px 32px; background: #FFFEF9; border-bottom: 1px solid #E8D9A8">
+<label style="display: flex; align-items: center; gap: 8px; flex: 1 1 320px; max-width: 520px"><span style="position: absolute; left: -9999px">Search donors</span><input type="search" placeholder="Search name, email, phone or receipt no." style="flex: 1; height: 40px; padding: 0 12px; border: 1px solid #CDBF8F; border-radius: 8px; font: inherit; background: #FFFBEA"></label>
+<div style="display: flex; align-items: center; gap: 12px"><span style="color: #4A4636">FY 2026</span><span style="width: 36px; height: 36px; border-radius: 50%; background: #F9CC02; color: #8A4B08; display: flex; align-items: center; justify-content: center; font-weight: 600" aria-label="Signed in as Aravind">AR</span></div>
+</div>
+<div style="padding: 32px; display: flex; flex-direction: column; gap: 24px; max-width: 1240px; box-sizing: border-box; width: 100%">
+<div style="display: flex; flex-wrap: wrap; gap: 16px; align-items: flex-end; justify-content: space-between">
+<div style="display: flex; flex-direction: column; gap: 4px"><h1 style="margin: 0; font-size: 28px; line-height: 36px; font-weight: 600">Donors</h1><span style="color: #4A4636">About 50,000 donors since 2003</span></div>
+<div style="display: flex; gap: 12px; flex-wrap: wrap"><a href="BulkImport.dc.html" style="height: 40px; padding: 0 16px; display: flex; align-items: center; border: 1px solid #171717; border-radius: 8px; text-decoration: none; font-weight: 600">Import</a><a href="NewDonor.dc.html" style="height: 40px; padding: 0 16px; display: flex; align-items: center; background: #171717; color: #F9CC02; border-radius: 8px; text-decoration: none; font-weight: 600">+ New donor</a></div>
+</div>
+<section aria-label="Ask the donor database" style="background: #FFFEF9; border: 1px solid #E8D9A8; border-radius: 12px; padding: 20px 24px; display: flex; flex-direction: column; gap: 14px">
+<div style="display: flex; flex-wrap: wrap; gap: 8px; justify-content: space-between; align-items: baseline"><h2 style="margin: 0; font-size: 18px; line-height: 24px; font-weight: 600">Ask the donor database</h2><span style="color: #4A4636; font-size: 13px">AI report builder · read-only, it cannot change any record</span></div>
+<div style="display: flex; flex-wrap: wrap; gap: 12px">
+<label style="flex: 1 1 420px; display: flex"><span style="position: absolute; left: -9999px">Describe the report you need</span><input type="text" value="{{ q }}" onChange="{{ onType }}" placeholder="e.g. Lapsed donors in Seattle who gave over $500 to a gala, with a valid phone" style="flex: 1; height: 44px; padding: 0 14px; border: 1px solid #171717; border-radius: 10px; font: inherit; background: #FFFBEA"></label>
+<button type="button" onClick="{{ onAsk }}" style="height: 44px; padding: 0 20px; border: 0; border-radius: 10px; background: #171717; color: #F9CC02; font: inherit; font-weight: 600">Generate report</button>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center"><span style="color: #4A4636">Try:</span>
+<sc-for list="{{ examples }}" as="e" hint-placeholder-count="4"><button type="button" onClick="{{ e.pick }}" style="min-height: 32px; padding: 4px 12px; border: 1px solid #CDBF8F; border-radius: 999px; background: #FFFEF9; font: inherit; font-size: 13px; text-align: left">{{ e.q }}</button></sc-for>
+</div>
+<sc-if value="{{ answered }}" hint-placeholder-val="{{ true }}">
+<div style="border-top: 1px solid #F1E7C4; padding-top: 14px; display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center"><span style="font-weight: 600">Understood as:</span>
+<sc-for list="{{ result.chips }}" as="c" hint-placeholder-count="4"><span style="padding: 3px 10px; border-radius: 999px; background: #FFF3B8; color: #171717; font-size: 13px">{{ c }}</span></sc-for>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: space-between">
+<span><b style="font-size: 18px">{{ result.count }}</b> <span style="color: #4A4636">{{ result.note }}</span></span>
+<div style="display: flex; flex-wrap: wrap; gap: 8px"><button type="button" style="height: 36px; padding: 0 14px; border: 1px solid #171717; border-radius: 8px; background: #FFFEF9; font: inherit; font-weight: 600">Save as report</button><button type="button" style="height: 36px; padding: 0 14px; border: 1px solid #171717; border-radius: 8px; background: #FFFEF9; font: inherit; font-weight: 600">Export to Excel</button><button type="button" style="height: 36px; padding: 0 14px; border: 0; border-radius: 8px; background: #8A5A00; color: #FFFFFF; font: inherit; font-weight: 600">Add to tele-calling list</button></div>
+</div>
+<span style="color: #4A4636; font-size: 13px">Results load into the table below. Check the criteria chips before acting on a list; edit any chip to refine.</span>
+</div>
+</sc-if>
+</section>
+<div style="display: flex; flex-wrap: wrap; gap: 12px">
+<label style="display: flex; flex-direction: column; gap: 4px; flex: 1 1 150px"><span style="font-size: 12px; color: #4A4636">Donor status</span><select style="height: 40px; border: 1px solid #CDBF8F; border-radius: 8px; padding: 0 8px; font: inherit; background: #FFFEF9"><option>All statuses</option><option>Active · New</option><option>Active · Live</option><option>Active · Lapsed</option><option>Super lapsed</option></select></label>
+<label style="display: flex; flex-direction: column; gap: 4px; flex: 1 1 150px"><span style="font-size: 12px; color: #4A4636">Scrub tag</span><select style="height: 40px; border: 1px solid #CDBF8F; border-radius: 8px; padding: 0 8px; font: inherit; background: #FFFEF9"><option>Any</option><option>No scrub tags</option><option>Do Not Call</option><option>Invalid phone</option><option>Email bounced</option><option>Do Not Mail</option><option>Deceased</option></select></label>
+<label style="display: flex; flex-direction: column; gap: 4px; flex: 1 1 150px"><span style="font-size: 12px; color: #4A4636">Donor type</span><select style="height: 40px; border: 1px solid #CDBF8F; border-radius: 8px; padding: 0 8px; font: inherit; background: #FFFEF9"><option>All types</option><option>Individual</option><option>Company</option><option>Fiduciary</option></select></label>
+<label style="display: flex; flex-direction: column; gap: 4px; flex: 1 1 150px"><span style="font-size: 12px; color: #4A4636">Location</span><select style="height: 40px; border: 1px solid #CDBF8F; border-radius: 8px; padding: 0 8px; font: inherit; background: #FFFEF9"><option>All locations</option><option>Seattle</option><option>Bay Area</option><option>New York</option><option>Texas</option><option>San Diego</option></select></label>
+<label style="display: flex; flex-direction: column; gap: 4px; flex: 1 1 150px"><span style="font-size: 12px; color: #4A4636">Campaign</span><select style="height: 40px; border: 1px solid #CDBF8F; border-radius: 8px; padding: 0 8px; font: inherit; background: #FFFEF9"><option>All campaigns</option><option>Seattle Dinner Gala 2026</option><option>Holi 2026</option></select></label>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 8px 20px; color: #4A4636; font-size: 13px">
+<span><span style="padding: 1px 8px; border-radius: 999px; background: #DCEFE3; color: #1E6B47; font-weight: 600">Active · New</span> first gift in the last 12 months</span>
+<span><span style="padding: 1px 8px; border-radius: 999px; background: #E3EAF5; color: #1F3A68; font-weight: 600">Active · Live</span> gave in the last 3 years</span>
+<span><span style="padding: 1px 8px; border-radius: 999px; background: #FBEBD7; color: #8A4B08; font-weight: 600">Active · Lapsed</span> last gift 4–7 years ago</span>
+<span><span style="padding: 1px 8px; border-radius: 999px; background: #F1E7C4; color: #4A4F5C; font-weight: 600">Super lapsed</span> last gift more than 7 years ago</span>
+</div>
+<div style="background: #FFFEF9; border: 1px solid #E8D9A8; border-radius: 12px; overflow-x: auto">
+<table style="width: 100%; min-width: 1000px; border-collapse: collapse; font-variant-numeric: tabular-nums">
+<thead><tr style="background: #FFFBEA; text-align: left; color: #4A4636; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px">
+<th style="padding: 12px 16px; font-weight: 600">Donor</th><th style="padding: 12px 12px; font-weight: 600">Type</th><th style="padding: 12px 12px; font-weight: 600">Primary contact</th><th style="padding: 12px 12px; font-weight: 600">Location</th><th style="padding: 12px 12px; font-weight: 600; text-align: right">Lifetime giving</th><th style="padding: 12px 12px; font-weight: 600">Last gift</th><th style="padding: 12px 12px; font-weight: 600">Status</th><th style="padding: 12px 16px 12px 12px; font-weight: 600">Scrub tags</th>
+</tr></thead>
+<tbody>
+<tr style="border-top: 1px solid #F1E7C4"><td style="padding: 14px 16px"><a href="DonorOverview.dc.html" style="font-weight: 600">Deepa Doshi</a></td><td style="padding: 14px 12px">Individual</td><td style="padding: 14px 12px">deepa.doshi@gmail.com<br><span style="color: #4A4636">+1 425-314-3192</span></td><td style="padding: 14px 12px">Seattle</td><td style="padding: 14px 12px; text-align: right">$1,000</td><td style="padding: 14px 12px">Oct-13-2026</td><td style="padding: 14px 12px"><span style="padding: 2px 10px; border-radius: 999px; background: #DCEFE3; color: #1E6B47; font-weight: 600; font-size: 12px; white-space: nowrap">Active · New</span></td><td style="padding: 14px 16px 14px 12px; color: #4A4636">—</td></tr>
+<tr style="border-top: 1px solid #F1E7C4"><td style="padding: 14px 16px"><a href="DonorOverview.dc.html" style="font-weight: 600">[Donor name]</a></td><td style="padding: 14px 12px">Individual</td><td style="padding: 14px 12px">[email]<br><span style="color: #4A4636">[phone]</span></td><td style="padding: 14px 12px">Bay Area</td><td style="padding: 14px 12px; text-align: right">$[amount]</td><td style="padding: 14px 12px">[mmm-dd-yyyy, within 3 yrs]</td><td style="padding: 14px 12px"><span style="padding: 2px 10px; border-radius: 999px; background: #E3EAF5; color: #1F3A68; font-weight: 600; font-size: 12px; white-space: nowrap">Active · Live</span></td><td style="padding: 14px 16px 14px 12px; color: #4A4636">—</td></tr>
+<tr style="border-top: 1px solid #F1E7C4"><td style="padding: 14px 16px"><a href="DonorOverview.dc.html" style="font-weight: 600">[Donor name]</a></td><td style="padding: 14px 12px">Individual</td><td style="padding: 14px 12px">[email]<br><span style="color: #4A4636">[phone]</span></td><td style="padding: 14px 12px">New York</td><td style="padding: 14px 12px; text-align: right">$[amount]</td><td style="padding: 14px 12px">[mmm-dd-yyyy, 4–7 yrs ago]</td><td style="padding: 14px 12px"><span style="padding: 2px 10px; border-radius: 999px; background: #FBEBD7; color: #8A4B08; font-weight: 600; font-size: 12px; white-space: nowrap">Active · Lapsed</span></td><td style="padding: 14px 16px 14px 12px"><span style="padding: 2px 8px; border-radius: 6px; border: 1px solid #CDBF8F; font-size: 12px; white-space: nowrap"># Email bounced</span></td></tr>
+<tr style="border-top: 1px solid #F1E7C4"><td style="padding: 14px 16px"><a href="DonorOverview.dc.html" style="font-weight: 600">[Company name]</a></td><td style="padding: 14px 12px">Company</td><td style="padding: 14px 12px">[email]<br><span style="color: #4A4636">[phone]</span></td><td style="padding: 14px 12px">Texas</td><td style="padding: 14px 12px; text-align: right">$[amount]</td><td style="padding: 14px 12px">[mmm-dd-yyyy, within 3 yrs]</td><td style="padding: 14px 12px"><span style="padding: 2px 10px; border-radius: 999px; background: #E3EAF5; color: #1F3A68; font-weight: 600; font-size: 12px; white-space: nowrap">Active · Live</span></td><td style="padding: 14px 16px 14px 12px; color: #4A4636">—</td></tr>
+<tr style="border-top: 1px solid #F1E7C4"><td style="padding: 14px 16px"><a href="DonorOverview.dc.html" style="font-weight: 600">Benevity</a></td><td style="padding: 14px 12px">Fiduciary</td><td style="padding: 14px 12px">[email]<br><span style="color: #4A4636">—</span></td><td style="padding: 14px 12px">Corporate</td><td style="padding: 14px 12px; text-align: right">$[amount]</td><td style="padding: 14px 12px">[mmm-dd-yyyy, within 3 yrs]</td><td style="padding: 14px 12px"><span style="padding: 2px 10px; border-radius: 999px; background: #E3EAF5; color: #1F3A68; font-weight: 600; font-size: 12px; white-space: nowrap">Active · Live</span></td><td style="padding: 14px 16px 14px 12px; color: #4A4636">—</td></tr>
+<tr style="border-top: 1px solid #F1E7C4"><td style="padding: 14px 16px"><a href="DonorOverview.dc.html" style="font-weight: 600">[Donor name]</a></td><td style="padding: 14px 12px">Individual</td><td style="padding: 14px 12px">[email]<br><span style="color: #4A4636">[phone]</span></td><td style="padding: 14px 12px">San Diego</td><td style="padding: 14px 12px; text-align: right">$[amount]</td><td style="padding: 14px 12px">[mmm-dd-yyyy, within 3 yrs]</td><td style="padding: 14px 12px"><span style="padding: 2px 10px; border-radius: 999px; background: #E3EAF5; color: #1F3A68; font-weight: 600; font-size: 12px; white-space: nowrap">Active · Live</span></td><td style="padding: 14px 16px 14px 12px"><span style="padding: 2px 8px; border-radius: 6px; border: 1px solid #E8B4AE; color: #A3261F; font-size: 12px; white-space: nowrap"># Do Not Call</span></td></tr>
+<tr style="border-top: 1px solid #F1E7C4"><td style="padding: 14px 16px"><a href="DonorOverview.dc.html" style="font-weight: 600">[Donor name]</a></td><td style="padding: 14px 12px">Individual</td><td style="padding: 14px 12px">[email]<br><span style="color: #4A4636">[phone]</span></td><td style="padding: 14px 12px">Seattle</td><td style="padding: 14px 12px; text-align: right">$[amount]</td><td style="padding: 14px 12px">[mmm-dd-yyyy, 7+ yrs ago]</td><td style="padding: 14px 12px"><span style="padding: 2px 10px; border-radius: 999px; background: #F1E7C4; color: #4A4F5C; font-weight: 600; font-size: 12px; white-space: nowrap">Super lapsed</span></td><td style="padding: 14px 16px 14px 12px"><span style="display: flex; flex-wrap: wrap; gap: 4px"><span style="padding: 2px 8px; border-radius: 6px; border: 1px solid #CDBF8F; font-size: 12px; white-space: nowrap"># Invalid phone</span><span style="padding: 2px 8px; border-radius: 6px; border: 1px solid #CDBF8F; font-size: 12px; white-space: nowrap"># Do Not Mail</span></span></td></tr>
+</tbody>
+</table>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: space-between; color: #4A4636"><span>Showing 1–7 of [total] · status recalculates nightly from the last gift date</span><div style="display: flex; gap: 8px"><button type="button" style="height: 36px; padding: 0 14px; border: 1px solid #CDBF8F; border-radius: 8px; background: #FFFEF9; font: inherit">Previous</button><button type="button" style="height: 36px; padding: 0 14px; border: 1px solid #CDBF8F; border-radius: 8px; background: #FFFEF9; font: inherit">Next</button></div></div>
+</div>
+</main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1360}}'>
+class Component extends DCLogic {
+constructor(props) {
+super(props);
+this.state = { q: 'Lapsed donors in Seattle who gave over $500 to a gala, with a valid phone', answered: true, idx: 0 };
+}
+renderVals() {
+const ex = [
+{ q: 'Lapsed donors in Seattle who gave over $500 to a gala, with a valid phone', chips: ['Status: Active · Lapsed', 'Location: Seattle', 'Campaign category: Events · Dinners', 'Single gift > $500', 'Exclude scrub tags: Do Not Call, Invalid phone'], count: '[n] donors', note: 'match · lifetime giving $[total]' },
+{ q: 'Top 20 donors this FY by total giving', chips: ['Receipt date: FY 2026', 'Group by donor', 'Sort: donation amount, high to low', 'Limit: 20'], count: '20 donors', note: 'ranked · $[total] combined' },
+{ q: 'Gala pledges over 60 days unpaid, by fundraiser', chips: ['Pledges: open', 'Days past due > 60', 'Campaign category: Events · Dinners', 'Group by fundraiser'], count: '[n] pledges', note: 'outstanding · $[balance]' },
+{ q: 'Employer matches expected but not received this year', chips: ['Match expectation: Eligible or Submitted', 'Received: no', 'Gift date: calendar 2026', 'Group by employer'], count: '[n] matches', note: 'pending · $[expected]' }
+];
+const i = this.state.idx;
+const custom = i < 0;
+return {
+q: this.state.q,
+answered: this.state.answered,
+result: custom ? { chips: ['Claude converts your question into filters on donors, gifts, pledges and campaigns'], count: '—', note: 'live results appear when the CRM is connected' } : ex[i],
+examples: ex.map((e, n) => ({ q: e.q, pick: () => this.setState({ q: e.q, idx: n, answered: true }) })),
+onType: (e) => this.setState({ q: e.target.value, idx: -1, answered: false }),
+onAsk: () => this.setState({ answered: true })
+};
+}
+}
+</script>
+<a href="index.html" style="position:fixed;right:20px;bottom:20px;z-index:9999;background:#171717;color:#F9CC02;font:600 13px/1 'IBM Plex Sans',system-ui,sans-serif;padding:11px 16px;border-radius:999px;text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,.25)">&#8592; All screens</a>
+</body>
+</html>

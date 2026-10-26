@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>New pledge — CRY America CRM</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#171717}a:hover{color:#8A5A00}
+</style>
+</helmet>
+<div style="display: flex; flex-wrap: wrap; min-height: 1420px; background: #FFF6CF; color: #171717; font-family: 'IBM Plex Sans', sans-serif; font-size: 14px; line-height: 20px">
+<nav aria-label="Main" style="flex: 1 1 232px; background: #F9CC02; color: #171717; padding: 24px 16px; box-sizing: border-box; display: flex; flex-direction: column; gap: 4px">
+<div style="padding: 0 12px 24px; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 18px; font-weight: 700; color: #171717">CRY America</span><span style="font-size: 12px; color: #3D3A2E">Donor CRM</span></div>
+<a href="Main.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #171717; text-decoration: none">Dashboard</a>
+<a href="Donors.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #171717; text-decoration: none">Donors</a>
+<a href="Donations.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #171717; text-decoration: none">Donations</a>
+<a href="NewPledge.dc.html" style="padding: 10px 12px; border-radius: 8px; background: #171717; color: #F9CC02; text-decoration: none; font-weight: 600">Pledges</a>
+<a href="BulkImport.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #171717; text-decoration: none">Bulk import</a>
+<a href="TC-Dashboard.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #171717; text-decoration: none">Tele-calling</a>
+<a href="VM-Dashboard.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #171717; text-decoration: none">Volunteers</a>
+<span style="padding: 16px 12px 6px; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: #3D3A2E">Set-up</span>
+<a href="Masters.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #171717; text-decoration: none">Masters</a>
+<a href="Organisation.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #171717; text-decoration: none">Organisation</a>
+</nav>
+<main style="flex: 999 1 560px; min-width: 0; padding: 24px 32px 48px; box-sizing: border-box; display: flex; flex-direction: column; gap: 24px">
+<a href="DonorOverview.dc.html" style="color: #4A4636; text-decoration: none">← Back to donor</a>
+<div style="display: flex; flex-direction: column; gap: 4px"><h1 style="margin: 0; font-size: 28px; line-height: 36px; font-weight: 600">New pledge</h1><span style="color: #4A4636">A committed amount the donor will pay later, at a gala or after a proposal.</span></div>
+<div style="display: flex; flex-wrap: wrap; gap: 24px; align-items: flex-start">
+<form style="flex: 3 1 560px; min-width: 0; display: flex; flex-direction: column; gap: 24px">
+<section style="background: #FFFEF9; border: 1px solid #E8D9A8; border-radius: 12px; padding: 24px; display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 18px; line-height: 24px; font-weight: 600">Donor and commitment</h2>
+<label style="display: flex; flex-direction: column; gap: 6px"><span style="font-weight: 600">Donor <span style="color: #A3261F">*</span></span><input type="search" value="Deepa Doshi · deepa.doshi@gmail.com · ID 46877319" style="height: 40px; border: 1px solid #171717; border-radius: 8px; padding: 0 12px; font: inherit"></label>
+<label style="display: flex; gap: 10px; align-items: flex-start"><input type="checkbox" style="width: 18px; height: 18px; margin-top: 1px; accent-color: #171717"><span><b>Send confirmation email to the donor now</b><br><span style="color: #4A4636">The donor gets an email with the pledge details and a payment link as soon as it is saved.</span></span></label>
+<div style="display: flex; flex-wrap: wrap; gap: 16px">
+<label style="flex: 1 1 220px; display: flex; flex-direction: column; gap: 6px"><span style="font-weight: 600">Pledge amount (USD) <span style="color: #A3261F">*</span></span><input type="number" placeholder="$0.00" style="height: 40px; border: 1px solid #CDBF8F; border-radius: 8px; padding: 0 12px; font: inherit"></label>
+<label style="flex: 1 1 220px; display: flex; flex-direction: column; gap: 6px"><span style="font-weight: 600">Pledged on</span><input type="text" placeholder="mmm-dd-yyyy" value="Oct-16-2026" style="height: 40px; border: 1px solid #CDBF8F; border-radius: 8px; padding: 0 12px; font: inherit"></label>
+<label style="flex: 1 1 220px; display: flex; flex-direction: column; gap: 6px"><span style="font-weight: 600">Instalment frequency</span><select style="height: 40px; border: 1px solid #CDBF8F; border-radius: 8px; padding: 0 8px; font: inherit; background: #FFFEF9"><option>One-time</option><option>Monthly</option><option>Quarterly</option><option>Annually</option></select></label>
+<label style="flex: 1 1 220px; display: flex; flex-direction: column; gap: 6px"><span style="font-weight: 600">Intended fulfilment date <span style="color: #A3261F">*</span></span><input type="text" placeholder="mmm-dd-yyyy" value="Dec-31-2026" style="height: 40px; border: 1px solid #CDBF8F; border-radius: 8px; padding: 0 12px; font: inherit"></label>
+</div>
+</section>
+<section style="background: #FFFEF9; border: 1px solid #E8D9A8; border-radius: 12px; padding: 24px; display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 18px; line-height: 24px; font-weight: 600">Classification</h2>
+<div style="display: flex; flex-wrap: wrap; gap: 16px">
+<label style="flex: 1 1 220px; display: flex; flex-direction: column; gap: 6px"><span style="font-weight: 600">Pledge type</span><select style="height: 40px; border: 1px solid #CDBF8F; border-radius: 8px; padding: 0 8px; font: inherit; background: #FFFEF9"><option>Donation</option><option>Sponsorship</option><option>Match</option><option>Payroll</option><option>Other</option></select></label>
+<label style="flex: 1 1 220px; display: flex; flex-direction: column; gap: 6px"><span style="font-weight: 600">Fund</span><select style="height: 40px; border: 1px solid #CDBF8F; border-radius: 8px; padding: 0 8px; font: inherit; background: #FFFEF9"><option>Unrestricted</option><option>Restricted</option></select></label>
+<label style="flex: 1 1 220px; display: flex; flex-direction: column; gap: 6px"><span style="font-weight: 600">Associated campaign <span style="color: #A3261F">*</span></span><select style="height: 40px; border: 1px solid #CDBF8F; border-radius: 8px; padding: 0 8px; font: inherit; background: #FFFEF9"><option>[Campaign code] · [Campaign name]</option></select></label>
+<label style="flex: 1 1 220px; display: flex; flex-direction: column; gap: 6px"><span style="font-weight: 600">Cause</span><select style="height: 40px; border: 1px solid #CDBF8F; border-radius: 8px; padding: 0 8px; font: inherit; background: #FFFEF9"><option>[Cause name]</option></select></label>
+<label style="flex: 1 1 220px; display: flex; flex-direction: column; gap: 6px"><span style="font-weight: 600">Fundraiser</span><select style="height: 40px; border: 1px solid #CDBF8F; border-radius: 8px; padding: 0 8px; font: inherit; background: #FFFEF9"><option>[Fundraiser name]</option></select></label>
+<label style="flex: 1 1 220px; display: flex; flex-direction: column; gap: 6px"><span style="font-weight: 600">Gala table</span><select style="height: 40px; border: 1px solid #CDBF8F; border-radius: 8px; padding: 0 8px; font: inherit; background: #FFFEF9"><option>Not at a gala</option><option>[Gala] · Table [no.]</option></select></label>
+</div>
+<label style="display: flex; gap: 10px; align-items: flex-start"><input type="checkbox" style="width: 18px; height: 18px; margin-top: 1px; accent-color: #171717"><span><b>Employer will match this pledge</b><br><span style="color: #4A4636">Creates a matching-gift expectation using the employer’s ratio on the donor’s Relationships tab.</span></span></label>
+</section>
+<section style="background: #FFFEF9; border: 1px solid #E8D9A8; border-radius: 12px; padding: 24px; display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 18px; line-height: 24px; font-weight: 600">Messages</h2>
+<label style="display: flex; flex-direction: column; gap: 6px"><span style="font-weight: 600">Memo to donor</span><textarea rows="4" maxlength="600" placeholder="Include a personal message to the donor" style="border: 1px solid #CDBF8F; border-radius: 8px; padding: 10px 12px; font: inherit; resize: vertical"></textarea><span style="color: #4A4636; font-size: 13px">0 / 600 characters</span></label>
+<label style="display: flex; flex-direction: column; gap: 6px"><span style="font-weight: 600">Internal note</span><textarea rows="4" maxlength="600" placeholder="For staff only" style="border: 1px solid #CDBF8F; border-radius: 8px; padding: 10px 12px; font: inherit; resize: vertical"></textarea><span style="color: #4A4636; font-size: 13px">0 / 600 characters</span></label>
+</section>
+<section style="background: #FFFEF9; border: 1px solid #E8D9A8; border-radius: 12px; padding: 24px; display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 18px; line-height: 24px; font-weight: 600">Reminders and payment</h2>
+<label style="display: flex; justify-content: space-between; align-items: center; gap: 16px"><span><b>Send automatic reminders</b><br><span style="color: #4A4636">48 hours before the fulfilment date, then at 15, 30 and 60 days past due.</span></span><input type="checkbox" checked style="width: 20px; height: 20px; accent-color: #171717"></label>
+<label style="display: flex; justify-content: space-between; align-items: center; gap: 16px"><span><b>Allow the donor to pay a custom amount</b><br><span style="color: #4A4636">Part-payments reduce the balance; the pledge stays open until paid in full.</span></span><input type="checkbox" checked style="width: 20px; height: 20px; accent-color: #171717"></label>
+</section>
+<div style="display: flex; gap: 12px; justify-content: flex-end; flex-wrap: wrap"><a href="DonorOverview.dc.html" style="height: 44px; padding: 0 20px; display: flex; align-items: center; border: 1px solid #CDBF8F; border-radius: 8px; text-decoration: none; font-weight: 600; background: #FFFEF9">Cancel</a><a href="DonorOverview.dc.html" style="height: 44px; padding: 0 20px; display: flex; align-items: center; background: #171717; color: #F9CC02; border-radius: 8px; text-decoration: none; font-weight: 600">Save pledge</a></div>
+</form>
+<aside aria-label="Pledge status" style="flex: 1 1 280px; min-width: 0; background: #FFFEF9; border: 1px solid #E8D9A8; border-radius: 12px; padding: 24px; display: flex; flex-direction: column; gap: 16px; font-variant-numeric: tabular-nums">
+<h2 style="margin: 0; font-size: 18px; line-height: 24px; font-weight: 600">How this pledge is tracked</h2>
+<div style="display: flex; justify-content: space-between"><span style="color: #4A4636">Pledged</span><b>$[amount]</b></div>
+<div style="display: flex; justify-content: space-between"><span style="color: #4A4636">Paid to date</span><b>$0.00</b></div>
+<div style="display: flex; justify-content: space-between"><span style="color: #4A4636">Balance</span><b>$[amount]</b></div>
+<div style="height: 8px; border-radius: 999px; background: #F1E7C4" aria-hidden="true"></div>
+<span style="color: #4A4636">Payments from any channel — Givebutter, website, checks, fiduciaries — are matched to this pledge by donor and amount, then confirmed by Finance.</span>
+<div style="display: flex; flex-direction: column; gap: 8px"><span style="font-weight: 600">Status steps</span><span>Open → Partly paid → Fulfilled</span><span style="color: #4A4636">or Written off (needs approval) / Cancelled</span></div>
+</aside>
+</div>
+</main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1420}}'>
+class Component extends DCLogic {
+renderVals() {
+return {};
+}
+}
+</script>
+<a href="index.html" style="position:fixed;right:20px;bottom:20px;z-index:9999;background:#171717;color:#F9CC02;font:600 13px/1 'IBM Plex Sans',system-ui,sans-serif;padding:11px 16px;border-radius:999px;text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,.25)">&#8592; All screens</a>
+</body>
+</html>

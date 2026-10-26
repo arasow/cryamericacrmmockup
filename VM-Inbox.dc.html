@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Volunteer interest inbox — CRY America CRM</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&amp;display=swap">
+<style>
+body{margin:0}
+a{color:#171717}a:hover{color:#8A5A00}
+</style>
+</helmet>
+<div style="display: flex; flex-wrap: wrap; min-height: 1600px; background: #FFF6CF; color: #171717; font-family: 'IBM Plex Sans', sans-serif; font-size: 14px; line-height: 20px">
+<nav aria-label="Main" style="flex: 1 1 232px; background: #F9CC02; color: #171717; padding: 24px 16px; box-sizing: border-box; display: flex; flex-direction: column; gap: 4px">
+<div style="padding: 0 12px 24px; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 18px; font-weight: 700; color: #171717">CRY America</span><span style="font-size: 12px; color: #3D3A2E">Donor CRM</span></div>
+<a href="Main.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #171717; text-decoration: none">Dashboard</a>
+<a href="Donors.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #171717; text-decoration: none">Donors</a>
+<a href="Donations.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #171717; text-decoration: none">Donations</a>
+<a href="NewPledge.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #171717; text-decoration: none">Pledges</a>
+<a href="BulkImport.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #171717; text-decoration: none">Bulk import</a>
+<a href="TC-Dashboard.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #171717; text-decoration: none">Tele-calling</a>
+<a href="VM-Dashboard.dc.html" style="padding: 10px 12px; border-radius: 8px; background: #171717; color: #F9CC02; font-weight: 600; text-decoration: none">Volunteers</a>
+<span style="padding: 16px 12px 6px; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: #3D3A2E">Set-up</span>
+<a href="Masters.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #171717; text-decoration: none">Masters</a>
+<a href="Organisation.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #171717; text-decoration: none">Organisation</a>
+</nav>
+<main style="flex: 999 1 560px; min-width: 0; padding: 32px 32px 48px; box-sizing: border-box; display: flex; flex-direction: column; gap: 24px">
+<div style="display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between; align-items: flex-end">
+<div style="display: flex; flex-direction: column; gap: 4px"><h1 style="margin: 0; font-size: 28px; line-height: 36px; font-weight: 600">Volunteer interest inbox</h1><span style="color: #4A4636">Website volunteer form and emails to support@cryamerica.org · fields read automatically, checked by staff before saving</span></div>
+<div style="display: flex; flex-wrap: wrap; gap: 12px; align-items: center"><label style="display: flex; gap: 8px; align-items: center"><span style="color: #4A4636">Show</span><select style="height: 40px; border: 1px solid #CDBF8F; border-radius: 8px; padding: 0 8px; font: inherit; background: #FFFEF9"><option>New (5)</option><option>Assigned</option><option>All</option></select></label><button type="button" style="height: 40px; padding: 0 16px; display: inline-flex; align-items: center; border-radius: 8px; text-decoration: none; font: inherit; font-weight: 600; background: #FFFEF9; color: #171717; border: 1px solid #171717">Add sign-up manually</button></div>
+</div>
+<div role="tablist" aria-label="Volunteers" style="display: flex; gap: 24px; border-bottom: 1px solid #E8D9A8; flex-wrap: wrap"><a href="VM-Dashboard.dc.html" role="tab" aria-selected="false" style="padding: 8px 0 10px; text-decoration: none; white-space: nowrap; color: #4A4636">Dashboard</a><a href="VM-Inbox.dc.html" role="tab" aria-selected="true" style="padding: 8px 0 10px; text-decoration: none; white-space: nowrap; border-bottom: 3px solid #171717; font-weight: 600; color: #171717">Interest inbox</a><a href="VM-ActionCenter.dc.html" role="tab" aria-selected="false" style="padding: 8px 0 10px; text-decoration: none; white-space: nowrap; color: #4A4636">Action Center</a><a href="VM-Event.dc.html" role="tab" aria-selected="false" style="padding: 8px 0 10px; text-decoration: none; white-space: nowrap; color: #4A4636">Event planner</a><a href="VM-Volunteer.dc.html" role="tab" aria-selected="false" style="padding: 8px 0 10px; text-decoration: none; white-space: nowrap; color: #4A4636">Volunteer profile</a><a href="VM-Portal.dc.html" role="tab" aria-selected="false" style="padding: 8px 0 10px; text-decoration: none; white-space: nowrap; color: #4A4636">Volunteer portal</a><a href="VM-Roles.dc.html" role="tab" aria-selected="false" style="padding: 8px 0 10px; text-decoration: none; white-space: nowrap; color: #4A4636">Workflow & access</a></div>
+<div style="display: flex; flex-wrap: wrap; gap: 24px; align-items: flex-start">
+<section aria-label="Emails" style="flex: 1 1 320px; display: flex; flex-direction: column; gap: 10px; min-width: 0">
+<sc-for list="{{ list }}" as="x" hint-placeholder-count="4"><button type="button" onClick="{{ x.pick }}" style="text-align: left; padding: 14px 16px; border-radius: 12px; border: {{ x.border }}; background: {{ x.bg }}; font: inherit; color: #171717; display: flex; flex-direction: column; gap: 4px; cursor: pointer">
+<span style="display: flex; justify-content: space-between; gap: 8px"><b>{{ x.sender }}</b><span style="padding: 1px 8px; border-radius: 999px; background: {{ x.sBg }}; color: {{ x.sFg }}; font-weight: 600; font-size: 12px">{{ x.status }}</span></span>
+<span style="font-weight: 600">{{ x.subj }}</span><span style="color: #4A4636; font-size: 13px">{{ x.recv }} · {{ x.city }}</span></button></sc-for>
+</section>
+<div style="flex: 3 1 640px; display: flex; flex-direction: column; gap: 20px; min-width: 0">
+<section aria-label="Email" style="background: #FFFEF9; border: 1px solid #E8D9A8; border-radius: 12px; padding: 20px 24px; display: flex; flex-direction: column; gap: 8px">
+<span style="color: #4A4636">{{ m.source }} · from {{ m.sender }} &lt;{{ m.addr }}&gt; · {{ m.recv }}</span>
+<b style="font-size: 16px">{{ m.subj }}</b>
+<p style="margin: 0; white-space: pre-line; padding: 12px 14px; border-radius: 10px; background: #FFFBEA; border: 1px solid #F1E7C4">{{ m.body }}</p>
+</section>
+<section aria-label="Extracted details" style="background: #FFFEF9; border: 1px solid #E8D9A8; border-radius: 12px; padding: 20px 24px; display: flex; flex-direction: column; gap: 14px">
+<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 8px; flex-wrap: wrap"><h2 style="margin: 0; font-size: 18px; line-height: 24px; font-weight: 600">Volunteer details</h2><span style="color: #4A4636">Edit anything the AI read wrongly</span></div>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px">
+<label style="display: flex; flex-direction: column; gap: 4px"><span style="font-weight: 600">Volunteer name</span><input type="text" value="{{ m.name }}" style="height: 40px; border: 1px solid #CDBF8F; border-radius: 8px; padding: 0 10px; font: inherit; background: #FFFEF9"></label>
+<label style="display: flex; flex-direction: column; gap: 4px"><span style="font-weight: 600">Volunteer email</span><input type="text" value="{{ m.email }}" style="height: 40px; border: 1px solid #CDBF8F; border-radius: 8px; padding: 0 10px; font: inherit; background: #FFFEF9"></label>
+<label style="display: flex; flex-direction: column; gap: 4px"><span style="font-weight: 600">Phone / mobile</span><input type="text" value="{{ m.phone }}" style="height: 40px; border: 1px solid #CDBF8F; border-radius: 8px; padding: 0 10px; font: inherit; background: #FFFEF9"></label>
+<label style="display: flex; flex-direction: column; gap: 4px"><span style="font-weight: 600">City they live in</span><input type="text" value="{{ m.city }}" style="height: 40px; border: 1px solid #CDBF8F; border-radius: 8px; padding: 0 10px; font: inherit; background: #FFFEF9"></label>
+<div style="display: flex; flex-direction: column; gap: 6px"><span style="font-weight: 600">Interests</span><div style="display: flex; gap: 6px; flex-wrap: wrap"><sc-for list="{{ ints }}" as="i" hint-placeholder-count="3"><span style="padding: 3px 10px; border-radius: 999px; background: #FFF3B8; border: 1px solid #E8D9A8; font-size: 13px">{{ i.t }}</span></sc-for></div></div>
+<label style="display: flex; flex-direction: column; gap: 4px"><span style="font-weight: 600">Availability</span><input type="text" value="{{ m.avail }}" style="height: 40px; border: 1px solid #CDBF8F; border-radius: 8px; padding: 0 10px; font: inherit; background: #FFFEF9"></label>
+<label style="display: flex; flex-direction: column; gap: 4px"><span style="font-weight: 600">I want to</span><input type="text" value="{{ m.intent }}" style="height: 40px; border: 1px solid #CDBF8F; border-radius: 8px; padding: 0 10px; font: inherit; background: #FFFEF9"></label>
+<label style="display: flex; flex-direction: column; gap: 4px"><span style="font-weight: 600">Consent to updates</span><input type="text" value="{{ m.consent }}" style="height: 40px; border: 1px solid #CDBF8F; border-radius: 8px; padding: 0 10px; font: inherit; background: #FFFEF9"></label>
+</div>
+<div style="display: flex; gap: 16px; flex-wrap: wrap; padding: 14px 16px; border-radius: 10px; background: #FFF3B8">
+<div style="flex: 1 1 220px; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 12px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: #4A4636">Closest Action Center</span><b style="font-size: 18px">{{ m.ac }}</b><span style="color: #4A4636">{{ m.dist }} from home address · next closest: {{ m.alt }}</span></div>
+<label style="flex: 1 1 200px; display: flex; flex-direction: column; gap: 4px"><span style="font-weight: 600">Assign to</span><select style="height: 40px; border: 1px solid #171717; border-radius: 8px; padding: 0 8px; font: inherit; background: #FFFEF9"><option>Suggested: closest</option><option>Seattle</option><option>Bothell</option><option>Bay Area</option><option>Los Angeles</option><option>Los Angeles — Youth Chapter</option><option>San Diego</option><option>Texas (Dallas)</option><option>Detroit</option><option>Connecticut</option><option>Virtual pool</option></select></label>
+</div>
+<span style="padding: 8px 12px; border-radius: 10px; background: {{ m.matchBg }}; color: {{ m.matchFg }}; font-weight: 600">{{ m.match }}</span>
+<sc-if value="{{ hasFlag }}" hint-placeholder-val="{{ false }}"><span style="padding: 8px 12px; border-radius: 10px; background: {{ m.flagBg }}; color: {{ m.flagFg }}; font-weight: 600">{{ m.flag }}</span></sc-if>
+<span style="color: #4A4636; font-size: 13px">Distance comes from the home address geocoded by the Smarty address check; the Action Center's base city is in the Action Center master.</span>
+</section>
+<section aria-label="Notifications" style="background: #FFFEF9; border: 1px solid #E8D9A8; border-radius: 12px; padding: 20px 24px; display: flex; flex-direction: column; gap: 10px">
+<h2 style="margin: 0; font-size: 18px; line-height: 24px; font-weight: 600">Notifications this will send</h2>
+<sc-for list="{{ notes }}" as="n" hint-placeholder-count="4"><div style="display: flex; gap: 12px; padding: 8px 0; border-top: 1px solid #F1E7C4"><b style="flex: 0 0 300px">{{ n.to }}</b><span style="color: #4A4636">{{ n.what }}</span></div></sc-for>
+<div style="display: flex; gap: 12px; justify-content: flex-end; flex-wrap: wrap; align-items: center">
+<sc-if value="{{ notAssigned }}" hint-placeholder-val="{{ true }}"><button type="button" style="height: 44px; padding: 0 16px; border: 1px solid #CDBF8F; border-radius: 8px; background: #FFFEF9; font: inherit">Not a volunteer enquiry</button><button type="button" onClick="{{ onAssign }}" style="height: 44px; padding: 0 20px; border: 0; border-radius: 8px; background: #171717; color: #F9CC02; font: inherit; font-weight: 700">{{ actionLabel }}</button></sc-if>
+<sc-if value="{{ assigned }}" hint-placeholder-val="{{ false }}"><span role="status" style="padding: 10px 14px; border-radius: 10px; background: #DCEFE3; color: #1E6B47; font-weight: 600">Done — volunteer record created, notifications sent, follow-up task due in 48 hours</span><button type="button" onClick="{{ onUndo }}" style="height: 44px; padding: 0 16px; border: 1px solid #171717; border-radius: 8px; background: #FFFEF9; font: inherit; font-weight: 600">Undo</button><a href="VM-Volunteer.dc.html" style="height: 44px; padding: 0 18px; display: flex; align-items: center; border-radius: 8px; background: #171717; color: #F9CC02; text-decoration: none; font-weight: 700">Open volunteer record →</a></sc-if>
+</div>
+</section>
+</div></div>
+<span style="color: #4A4636">Sample sign-ups; contact details are partly masked. The first item follows the cryamerica.org volunteer form (Full Name, Email, Phone, City, I want to, consent).</span>
+</main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1600}}'>
+class Component extends DCLogic {
+constructor(props) { super(props); this.state = { sel: 'm0', done: {} }; }
+renderVals() {
+const mails = [{"id": "m0", "sender": "Julie P.", "addr": "jp•••@aol.com", "recv": "Oct-24-2026 2:05 PM", "subj": "Website form: Join or start Action Center in my city", "body": "Full Name: Julie P.\nEmail: jp•••@aol.com\nPhone: (847) •••-1545\nCity: Chicago\nI want to: Join or start Action Center in my city\nConsent to receive stories and updates (mobile, WhatsApp, landline, email, post): Checked", "name": "Julie P.", "email": "jp•••@aol.com", "phone": "(847) •••-1545", "city": "Chicago, IL", "interests": ["Start an Action Center"], "avail": "Not given — ask on the call", "ac": "No Action Center in Chicago", "dist": "Nearest is Detroit, ~280 miles", "alt": "Start a Chicago Action Center", "match": "No donor match found — check by phone and email before saving", "matchBg": "#ECE7D6", "matchFg": "#4A4636", "flag": "Wants to start a new Action Center: routes to the Volunteer Action Manager and National Coordinator", "age": "", "vam": true, "source": "cryamerica.org volunteer form", "intent": "Join or start Action Center in my city", "consent": "Yes — checked on the form"}, {"id": "m1", "sender": "Priya Raman", "addr": "pr•••@gmail.com", "recv": "Oct-24-2026 9:12 AM", "subj": "Interested in volunteering with CRY", "body": "Hi CRY team, I moved to Redmond last month and would love to volunteer. I can help with event set-up and social media, mostly on weekends (Saturday mornings work best). My number is (425) •••-0192. Thanks, Priya", "name": "Priya Raman", "email": "pr•••@gmail.com", "phone": "(425) •••-0192", "city": "Redmond, WA 98052", "interests": ["Event logistics", "Social media"], "avail": "Weekends · Saturday mornings", "ac": "Bothell", "dist": "~8 miles", "alt": "Seattle (~16 miles)", "match": "Possible donor match: P. Raman, donor since 2019, lifetime $1,050 — confirm and link", "matchBg": "#E3EAF5", "matchFg": "#1F3A68", "flag": "", "age": "", "vam": false, "source": "Email to support@cryamerica.org", "intent": "Volunteer at an Action Center", "consent": "Not asked yet — ask on the call"}, {"id": "m2", "sender": "Arjun Mehta", "addr": "am•••@outlook.com", "recv": "Oct-23-2026 6:40 PM", "subj": "Volunteer - Dallas", "body": "Hello, I work in Plano and would like to help CRY with fundraising and reaching out to companies for matching gifts. Weekday evenings after 6 PM. Arjun, (469) •••-3381", "name": "Arjun Mehta", "email": "am•••@outlook.com", "phone": "(469) •••-3381", "city": "Plano, TX 75024", "interests": ["Fundraising", "Corporate outreach"], "avail": "Weekday evenings after 6 PM", "ac": "Texas (Dallas)", "dist": "~19 miles", "alt": "—", "match": "No donor match found", "matchBg": "#ECE7D6", "matchFg": "#4A4636", "flag": "", "age": "", "vam": false, "source": "Email to support@cryamerica.org", "intent": "Volunteer at an Action Center", "consent": "Not asked yet — ask on the call"}, {"id": "m3", "sender": "Neha Kapoor", "addr": "nk•••@gmail.com", "recv": "Oct-22-2026 4:05 PM", "subj": "High school student wanting to volunteer", "body": "Hi! I am a junior in high school in Irvine and want to volunteer for CRY, maybe the youth chapter. I like art and public speaking. I am free on Sundays. Mom’s number is (949) •••-7720.", "name": "Neha Kapoor", "email": "nk•••@gmail.com", "phone": "(949) •••-7720 (parent)", "city": "Irvine, CA 92618", "interests": ["Youth chapter", "Art", "Public speaking"], "avail": "Sundays", "ac": "Los Angeles — Youth Chapter", "dist": "~42 miles", "alt": "San Diego (~75 miles)", "match": "Related to donor? Parent phone matches donor R. Kapoor — confirm relationship", "matchBg": "#E3EAF5", "matchFg": "#1F3A68", "flag": "Under 18: parental consent form and youth-safety rules apply before any shift", "age": "minor", "vam": false, "source": "Email to support@cryamerica.org", "intent": "Join the Youth Chapter", "consent": "Parent to confirm"}, {"id": "m4", "sender": "Rahul Iyer", "addr": "ri•••@yahoo.com", "recv": "Oct-21-2026 11:30 AM", "subj": "Volunteering from Boston?", "body": "Is there a CRY action centre near Boston? I can help with data entry or graphic design remotely, a few hours a week. - Rahul", "name": "Rahul Iyer", "email": "ri•••@yahoo.com", "phone": "Not given — ask in reply", "city": "Boston, MA 02116", "interests": ["Data entry", "Graphic design", "Remote"], "avail": "A few hours a week, flexible", "ac": "No Action Center within 50 miles", "dist": "Connecticut is ~100 miles", "alt": "Virtual volunteering pool", "match": "No donor match found", "matchBg": "#ECE7D6", "matchFg": "#4A4636", "flag": "Routes to the Volunteer Action Manager: offer virtual roles or seed a new Boston Action Center", "age": "", "vam": true, "source": "Email to support@cryamerica.org", "intent": "Volunteer remotely", "consent": "Not asked yet — ask on the call"}];
+const st = this.state;
+const m = mails.find((x) => x.id === st.sel);
+const assigned = !!st.done[m.id];
+m.flagBg = m.age === 'minor' ? '#FBE4E2' : '#E3EAF5'; m.flagFg = m.age === 'minor' ? '#A3261F' : '#1F3A68';
+const list = mails.map((x) => ({ ...x, bg: x.id === st.sel ? '#FFF3B8' : '#FFFEF9', border: x.id === st.sel ? '2px solid #171717' : '1px solid #E8D9A8', status: st.done[x.id] ? 'Assigned' : 'New', sBg: st.done[x.id] ? '#DCEFE3' : '#FBEBD7', sFg: st.done[x.id] ? '#1E6B47' : '#8A4B08', pick: () => this.setState({ sel: x.id }) }));
+const ints = m.interests.map((t) => ({ t: t }));
+const remote = m.vam;
+const notes = remote ? [
+{ to: 'CRY America Volunteer Action Manager', what: 'No Action Center within 50 miles of ' + m.city + ' — ' + m.intent + '. Call within 2 working days.' },
+{ to: 'National Coordinator (cc)', what: m.id === 'm0' ? 'Possible new Action Center: Chicago — a local lead has come forward' : 'Remote volunteer in an area with no Action Center' },
+{ to: m.name + ' (auto-reply)', what: 'Thank you; our Volunteer Action Manager will call you within 2 working days' + (m.id === 'm0' ? ' about starting a CRY Action Center in Chicago' : ' about remote roles') }
+] : [
+{ to: m.ac + ' Action Center Leader', what: 'New volunteer ' + m.name + ' · ' + m.interests.join(', ') + ' · ' + m.avail },
+{ to: m.ac + ' Volunteer Manager', what: 'Please call within 48 hours and book orientation' },
+{ to: 'CRY America Volunteer Action Manager (cc)', what: 'New sign-up assigned to ' + m.ac },
+{ to: m.name + ' (auto-reply)', what: 'Welcome email with orientation dates, code of conduct and portal login link' + (m.age === 'minor' ? '; parental consent form sent to the parent' : '') }
+];
+return { list: list, m: m, ints: ints, notes: notes, assigned: assigned, notAssigned: !assigned, hasFlag: !!m.flag, actionLabel: remote ? 'Route to Volunteer Action Manager' : 'Create volunteer & assign to ' + m.ac,
+onAssign: () => this.setState({ done: { ...st.done, [m.id]: true } }), onUndo: () => { const d = { ...st.done }; delete d[m.id]; this.setState({ done: d }); } };
+}
+}
+</script>
+<a href="index.html" style="position:fixed;right:20px;bottom:20px;z-index:9999;background:#171717;color:#F9CC02;font:600 13px/1 'IBM Plex Sans',system-ui,sans-serif;padding:11px 16px;border-radius:999px;text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,.25)">&#8592; All screens</a>
+</body>
+</html>
