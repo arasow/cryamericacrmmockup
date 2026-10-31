@@ -18,7 +18,7 @@ Start page: `index.html`
 | `data/zip_master.csv` | 33,121 | Zip Codes master, ready to import: zip (5-digit text, leading zeros restored), city, county, state_code, state_name, time_zone (IANA), time_zone_name, latitude, longitude |
 | `data/states.csv` | 57 | State short codes used as the QuickBooks class: 52 from Google's states.csv, USPS codes for VI, GU, MP, AS, and OC (Other Country) for any donor outside the United States, with the ZIP count per state |
 | `data/fiduciaries.csv` | 36 | Fiduciary master seed: type, legal payer, portal login email, default payment type and QB bank, name on the bank credit, receipt rule |
-| `data/company_routes.csv` | 130 | Company → fiduciary routes with payment type and QB bank, as listed in CRY's FIDUCIARY Details sheet, with a `flags` column for rows that need attention |
+| `data/company_routes.csv` | 125 | Company → fiduciary routes with payment type and QB bank from CRY's FIDUCIARY Details sheet, duplicates removed and names corrected (Oct 31, 2026); `flags` marks the rows still to fill |
 
 Check the country before the ZIP: anything other than US / USA / United States / blank gets state code OC, the ZIP check is skipped, and the postal code is kept as typed.
 
