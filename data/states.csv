@@ -1,0 +1,57 @@
+state_code,state_name,code_source,zip_count,latitude,longitude
+AK,Alaska,Google states.csv,238,63.588753,-154.493062
+AL,Alabama,Google states.csv,642,32.318231,-86.902298
+AR,Arkansas,Google states.csv,591,35.20105,-91.831833
+AS,American Samoa,USPS (not in Google list),1,,
+AZ,Arizona,Google states.csv,405,34.048928,-111.093731
+CA,California,Google states.csv,1761,36.778261,-119.417932
+CO,Colorado,Google states.csv,525,39.550051,-105.782067
+CT,Connecticut,Google states.csv,282,41.603221,-73.087749
+DC,District of Columbia,Google states.csv,52,38.905985,-77.033418
+DE,Delaware,Google states.csv,67,38.910832,-75.52767
+FL,Florida,Google states.csv,981,27.664827,-81.515754
+GA,Georgia,Google states.csv,735,32.157435,-82.907123
+GU,Guam,USPS (not in Google list),9,,
+HI,Hawaii,Google states.csv,94,19.898682,-155.665857
+IA,Iowa,Google states.csv,934,41.878003,-93.097702
+ID,Idaho,Google states.csv,277,44.068202,-114.742041
+IL,Illinois,Google states.csv,1383,40.633125,-89.398528
+IN,Indiana,Google states.csv,775,40.551217,-85.602364
+KS,Kansas,Google states.csv,697,39.011902,-98.484246
+KY,Kentucky,Google states.csv,767,37.839333,-84.270018
+LA,Louisiana,Google states.csv,515,31.244823,-92.145024
+MA,Massachusetts,Google states.csv,537,42.407211,-71.382437
+MD,Maryland,Google states.csv,468,39.045755,-76.641271
+ME,Maine,Google states.csv,432,45.253783,-69.445469
+MI,Michigan,Google states.csv,986,44.314844,-85.602364
+MN,Minnesota,Google states.csv,884,46.729553,-94.6859
+MO,Missouri,Google states.csv,1022,37.964253,-91.831833
+MP,Northern Mariana Islands,USPS (not in Google list),3,,
+MS,Mississippi,Google states.csv,423,32.354668,-89.398528
+MT,Montana,Google states.csv,361,46.879682,-110.362566
+NC,North Carolina,Google states.csv,808,35.759573,-79.0193
+ND,North Dakota,Google states.csv,383,47.551493,-101.002012
+NE,Nebraska,Google states.csv,581,41.492537,-99.901813
+NH,New Hampshire,Google states.csv,248,43.193852,-71.572395
+NJ,New Jersey,Google states.csv,595,40.058324,-74.405661
+NM,New Mexico,Google states.csv,368,34.97273,-105.032363
+NV,Nevada,Google states.csv,175,38.80261,-116.419389
+NY,New York,Google states.csv,1794,43.299428,-74.217933
+OH,Ohio,Google states.csv,1195,40.417287,-82.907123
+OK,Oklahoma,Google states.csv,648,35.007752,-97.092877
+OR,Oregon,Google states.csv,417,43.804133,-120.554201
+PA,Pennsylvania,Google states.csv,1795,41.203322,-77.194525
+PR,Puerto Rico,Google states.csv,131,18.220833,-66.590149
+RI,Rhode Island,Google states.csv,77,41.580095,-71.477429
+SC,South Carolina,Google states.csv,424,33.836081,-81.163725
+SD,South Dakota,Google states.csv,371,43.969515,-99.901813
+TN,Tennessee,Google states.csv,628,35.517491,-86.580447
+TX,Texas,Google states.csv,1935,31.968599,-99.901813
+UT,Utah,Google states.csv,287,39.32098,-111.093731
+VA,Virginia,Google states.csv,896,37.431573,-78.656894
+VI,Virgin Islands,USPS (not in Google list),11,,
+VT,Vermont,Google states.csv,255,44.558803,-72.577841
+WA,Washington,Google states.csv,596,47.751074,-120.740139
+WI,Wisconsin,Google states.csv,772,43.78444,-88.787868
+WV,West Virginia,Google states.csv,706,38.597626,-80.454903
+WY,Wyoming,Google states.csv,178,43.075968,-107.290284

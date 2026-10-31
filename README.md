@@ -1,6 +1,6 @@
 # CRY America Donor CRM — clickable mockup
 
-A clickable prototype of the CRY America Donor CRM: 12 desktop screens, 4 tele-calling screens, 7 volunteer-management screens, 3 payment and QuickBooks screens and 7 workflows. All names, amounts and contact details are sample figures for layout only.
+A clickable prototype of the CRY America Donor CRM: desktop screens, tele-calling, volunteer management, payments and QuickBooks, integrations, masters and workflows. Donor names are shortened (first name + last initial); sample screens are marked as such.
 
 Start page: `index.html`
 
@@ -10,6 +10,17 @@ Start page: `index.html`
 2. In the repository, go to **Settings → Pages**.
 3. Under **Build and deployment**, set **Source** to *Deploy from a branch*, choose the `main` branch and the `/ (root)` folder, then **Save**.
 4. After a minute or two the site is live at `https://<your-account>.github.io/<repository-name>/`.
+
+## For the Zoho developers: data files
+
+| File | Rows | What it is |
+|---|---|---|
+| `data/zip_master.csv` | 33,121 | Zip Codes master, ready to import: zip (5-digit text, leading zeros restored), city, county, state_code, state_name, time_zone (IANA), time_zone_name, latitude, longitude |
+| `data/states.csv` | 56 | State short codes used as the QuickBooks class: 52 from Google's states.csv plus USPS codes for VI, GU, MP, AS, with the ZIP count per state |
+
+Import the ZIP column as **text**, never as a number, or the leading zeros are lost again. The rules for cleaning and checking addresses are in workflow WF-11 and on the *Masters → Zip codes* screen.
+
+State codes source: [Google DSPL states.csv](https://developers.google.com/public-data/docs/canonical/states_csv) (CC BY 4.0).
 
 ## Notes
 
