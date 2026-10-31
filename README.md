@@ -16,7 +16,9 @@ Start page: `index.html`
 | File | Rows | What it is |
 |---|---|---|
 | `data/zip_master.csv` | 33,121 | Zip Codes master, ready to import: zip (5-digit text, leading zeros restored), city, county, state_code, state_name, time_zone (IANA), time_zone_name, latitude, longitude |
-| `data/states.csv` | 56 | State short codes used as the QuickBooks class: 52 from Google's states.csv plus USPS codes for VI, GU, MP, AS, with the ZIP count per state |
+| `data/states.csv` | 57 | State short codes used as the QuickBooks class: 52 from Google's states.csv, USPS codes for VI, GU, MP, AS, and OC (Other Country) for any donor outside the United States, with the ZIP count per state |
+
+Check the country before the ZIP: anything other than US / USA / United States / blank gets state code OC, the ZIP check is skipped, and the postal code is kept as typed.
 
 Import the ZIP column as **text**, never as a number, or the leading zeros are lost again. The rules for cleaning and checking addresses are in workflow WF-11 and on the *Masters → Zip codes* screen.
 

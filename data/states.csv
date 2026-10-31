@@ -55,3 +55,4 @@ WA,Washington,Google states.csv,596,47.751074,-120.740139
 WI,Wisconsin,Google states.csv,772,43.78444,-88.787868
 WV,West Virginia,Google states.csv,706,38.597626,-80.454903
 WY,Wyoming,Google states.csv,178,43.075968,-107.290284
+OC,Other Country (outside the United States),CRY (for any non-US donor),0,,
