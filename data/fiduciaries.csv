@@ -1,0 +1,37 @@
+fiduciary,type,legal_payer,login_email,payment_method,qb_bank,name_on_bank_credit,receipt,note
+Benevity,Workplace giving platform,American Online Giving Foundation (AOGF),matching@cryamerica.org,ACH,Bank of America-MMA - 3583,,Issued by fiduciary: CRY sends thank-you only,
+Yourcause,Workplace giving platform,Blackbaud Giving Fund,support@cryamerica.org,ACH,Eastern Bank (Century),,Issued by fiduciary: CRY sends thank-you only,
+Cybergrants,Workplace giving platform,Charities Aid Foundation America (CAF America),,ACH or Check (set per company),,,Issued by fiduciary: CRY sends thank-you only,
+FrontDoor,Workplace giving platform,Charities Aid Foundation America (CAF America),,ACH or Check (set per company),,,Issued by fiduciary: CRY sends thank-you only,
+Stripe,Payment processor,Stripe,support@cryamerica.org,ACH,Eastern Bank (Century),Stripe,CRY receipt (processor only),
+Bonterra,Workplace giving platform,Charities Aid Foundation America (CAF America),matching@cryamerica.org,ACH,Eastern Bank (Century),,Issued by fiduciary: CRY sends thank-you only,
+BrightFunds,Workplace giving platform,Bright Funds Foundation,matching@cryamerica.org,ACH,Eastern Bank (Century),,Issued by fiduciary: CRY sends thank-you only,Check and it's changed to Sandeep Bathala
+Fidelity Charitable,DAF sponsor,Fidelity Charitable,matching@cryamerica.org,ACH,Eastern Bank (Century),Fidiciary Grant,Issued by fiduciary: CRY sends thank-you only,
+Fidelity Giving Marketplace / Natl Charitable Svcs via Stripe,Giving marketplace,National Charitable Services,support@cryamerica.org,ACH,Eastern Bank (Century),Stripe,Issued by fiduciary: CRY sends thank-you only,
+Paypal Giving Fund,Giving marketplace,PayPal Giving Fund,support@cryamerica.org,,,,Issued by fiduciary: CRY sends thank-you only,
+Paypal Foundation,Giving marketplace,PayPal Charitable Giving Fund,support@cryamerica.org,PayPal,PayPal Account,Paypal,Issued by fiduciary: CRY sends thank-you only,
+Paypal Account,Payment processor,PayPal,support@cryamerica.org,PayPal,PayPal Account,,CRY receipt (processor only),
+Network for Good,Giving marketplace,Network for Good,matching@cryamerica.org,ACH,BofA Main Checking -1864,Fidiciary Grant,Issued by fiduciary: CRY sends thank-you only,
+Give Lively Foundation,Giving marketplace,Give Lively Foundation,support@cryamerica.org,ACH (via Stripe),Eastern Bank (Century),Fidiciary Grant,Issued by fiduciary: CRY sends thank-you only,
+Pledgeling,Giving marketplace,Pledgeling Foundation,matching@cryamerica.org,ACH,Eastern Bank (Century),Fidiciary Grant,Issued by fiduciary: CRY sends thank-you only,
+America's Charities,Workplace giving platform,America's Charities,matching@cryamerica.org,ACH,Eastern Bank (Century),Fidiciary Grant,Issued by fiduciary: CRY sends thank-you only,
+Chariot Giving / Give Chariot,Donor-advised fund connector,Chariot,matching@cryamerica.org,ACH,Eastern Bank (Century),,Issued by fiduciary: CRY sends thank-you only,
+Schwab Charitable/DAF Giving 360,DAF sponsor,Schwab Charitable,,,,,Issued by fiduciary: CRY sends thank-you only,
+Ren Giving,DAF administrator,Ren,,Check,BofA Main Checking -1864,Fidiciary Grant,Issued by fiduciary: CRY sends thank-you only,
+T Rowe Charitable Giving,DAF sponsor,T. Rowe Price Charitable (via Ren Giving),,Check,BofA Main Checking -1864,Fidiciary Grant,Issued by fiduciary: CRY sends thank-you only,
+Morgan Stanley Gift Fund,DAF sponsor,Morgan Stanley Global Impact Funding Trust (via Ren Giving),,Check,BofA Main Checking -1864,Fidiciary Grant,Issued by fiduciary: CRY sends thank-you only,
+United Way,United Way chapter,United Way,,,,,Issued by fiduciary: CRY sends thank-you only,https://unitedwayconnect.org/
+United Way King County,United Way chapter,United Way King County,,,,,Issued by fiduciary: CRY sends thank-you only,https://www.uwkc.org/
+United Way California Capital,United Way chapter,United Way California Capital,,,,,Issued by fiduciary: CRY sends thank-you only,
+United Way of Greater Portland,United Way chapter,United Way of Greater Portland,,,,,Issued by fiduciary: CRY sends thank-you only,https://uwsme.org/
+United Way of Greater Philadelphia and Southern New Jersey,United Way chapter,United Way of Greater Philadelphia and Southern New Jersey,,Check,BofA Main Checking -1864,United Way of Mass Bay & Merrimack Valley,Issued by fiduciary: CRY sends thank-you only,https://epledge.unitedforimpact.org/epledge/crm/Start.jsp
+United Way of Mass Bay & Merrimack Valley,United Way chapter,United Way of Mass Bay & Merrimack Valley,,Check,BofA Main Checking -1864,Fidiciary Grant,Issued by fiduciary: CRY sends thank-you only,https://unitedwayconnect.org/
+Seattle Foundation,Community foundation,Seattle Foundation,,Check,BofA Main Checking -1864,Fidiciary Grant,Issued by fiduciary: CRY sends thank-you only,Created Online Logins
+Raymond James Charitable,DAF sponsor,Raymond James Charitable,,Check,BofA Main Checking -1864,Fidiciary Grant,Issued by fiduciary: CRY sends thank-you only,No online Login Option
+Raytheon Technologies Charity Custodial,Custodial charity account,Raytheon Technologies,,Check,BofA Main Checking -1864,Fidiciary Grant,Issued by fiduciary: CRY sends thank-you only,No online Login Option - Only 1 Check in 2024
+National Philanthropic Trust,DAF sponsor,National Philanthropic Trust,,,,,Issued by fiduciary: CRY sends thank-you only,DAF paid and registered though Paypal Grant
+Vanguard Charitable,DAF sponsor,Vanguard Charitable,,Check,BofA Main Checking -1864,Fidiciary Grant,Issued by fiduciary: CRY sends thank-you only,DAF paid and registered though Paypal Grant
+Daffy Charitable Fund,DAF sponsor,Daffy Charitable Fund,,Check,BofA Main Checking -1864,Fidiciary Grant,Issued by fiduciary: CRY sends thank-you only,
+Charityvest Inc,DAF sponsor,Charityvest,,Check,BofA Main Checking -1864,Fidiciary Grant,Issued by fiduciary: CRY sends thank-you only,
+Gordon and Betty Moore Foundation,Private foundation,Gordon and Betty Moore Foundation,,Check,BofA Main Checking -1864,Fidiciary Grant,Issued by fiduciary: CRY sends thank-you only,
+Bernstein Philanthropic Impact Fund,DAF sponsor,Bernstein Philanthropic Impact Fund,,,,,Issued by fiduciary: CRY sends thank-you only,
