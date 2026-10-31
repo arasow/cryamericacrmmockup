@@ -37,8 +37,18 @@ State codes source: [Google DSPL states.csv](https://developers.google.com/publi
 - Push: Monday and Thursday, 2:00 AM ET. Constant Contact `POST /v3/activities/contacts_json_import` (up to 40,000 contacts / 4 MB per call, 1–50 list_ids, custom fields as `cf:` properties); poll `GET /v3/activities/{id}`. Zoho Campaigns `addlistsubscribersinbulk`.
 - Pull every night: unsubscribes (`GET /v3/contacts?status=unsubscribed&updated_after=`), bounces (`/v3/reports/email_reports/{id}/tracking/bounces`), campaign summaries; Zoho Campaigns `getlistsubscribers` by status. These set Unsubscribed / Hard bounce on the donor master.
 - ZeroBounce every night on new or changed emails (`validatebatch`, or `sendfile`/`getfile` for big files) and live on the tele-calling screen before a revised email is saved.
-- Each EDM is a Campaign Master row (category EDM). Links carry `utm_campaign=<campaign code>`; gifts arriving with that UTM link to the campaign. The CRM keeps summaries only: sent, delivered, opened, clicked, bounced, unsubscribed, gifts, amount.
+- Each campaign in the Campaign Master has a unique **short name**; each EDM is a **mailer** under the campaign with its own **mailer code**. The CRM builds every donate link, and the website stores the four campaign fields:
+
+  | Website field | UTM parameter | Value |
+  |---|---|---|
+  | Campaign Medium | `utm_medium` | `email` |
+  | Campaign Source | `utm_source` | `CC` (Constant Contact) or `Zoho` (Zoho Campaigns) |
+  | Campaign Name | `utm_campaign` | campaign short name, e.g. `seadandiya26` |
+  | Mailer Code | `utm_content` (confirm with the web team) | mailer code, e.g. `EDM-2610-SEA-DANDIYA` |
+
+  On import, Campaign Name finds the campaign (FK) and Mailer Code finds the mailer. The CRM keeps summaries only: sent, delivered, opened, clicked, bounced, unsubscribed, gifts, amount.
 - Hard bounces with a phone not on DNC go to an `EMAIL-<month>` tele-calling list; staff choose the callers.
+- **GOPS file from CRY India** (quarterly or half-yearly, donors whose country is USA): upload the Excel; each row is matched by CRY India donor ID → email → phone → name + ZIP (possible match, staff decide). Existing donors only get the GOPS flag and CRY India ID (nothing overwritten); **only missing donors are added**, source GOPS · CRY India, with ZeroBounce and Smarty checks. No gifts are created. Each upload is a GOPS file record linked to its rows.
 
 ## Notes
 
