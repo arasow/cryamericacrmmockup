@@ -1,0 +1,52 @@
+code,name,city,state_code,zip,email,parent,home_state,qb_class_prefix,qb_bank,active,flags
+HO,CRY America,BRAINTREE MA,MA,02185,support@cryamerica.org,,MA,1-Corporate,BofA Main Checking -1864 and the web / MMA / Eastern accounts,Yes,"ZIP 02185 not in the ZIP master (PO Box or unique ZIP: add it, or use the street ZIP)"
+AAC,Atlanta Action Center,ATLANTA GA,GA,02185,atlanta@cryamerica.org,,GA,GA:Atlanta,Bank of America - Atlanta AC,Yes,ZIP is a placeholder (021xx)
+BAC,Boston Action Center,BRAINTREE [MA],MA,02186,boston@cryamerica.org,,MA,MA:Boston,,Yes,address field holds a person's name
+CAC,Chicago Action Center,BRAINTREE [MA],MA,02187,chicago@cryamerica.org,,IL,IL:Chicago Action Center,,Yes,"city, state and ZIP are placeholders (Braintree MA)"
+DAC,Dallas Action Center,BRAINTREE [MA],MA,02188,dallas@cryamerica.org,,TX,TX:Dallas,,Yes,"city, state and ZIP are placeholders (Braintree MA)"
+LAC,Lexington Action Center,BRAINTREE [MA],MA,02189,lexington@cryamerica.org,,KY,KY,,Yes,"city, state and ZIP are placeholders (Braintree MA); overlaps Kentucky (KAC)"
+MUW,Madison - University of Wisconsin,BRAINTREE [MA],MA,02190,madison@cryamerica.org,,WI,WI:Madison Action Center,,Yes,"city, state and ZIP are placeholders (Braintree MA)"
+PAC,Pittsburgh Action Center,BRAINTREE [MA],MA,02191,pittsburgh@cryamerica.org,,PA,PA:Pittsburgh,PA-Pittsburgh Checking,Yes,"city, state and ZIP are placeholders (Braintree MA)"
+RDU,Raleigh - Durham Action Center (RDU),BRAINTREE [MA],MA,02192,rdu@cryamerica.org,,NC,NC:RDU,,Yes,"city, state and ZIP are placeholders (Braintree MA)"
+SAC,Seattle Action Center,SEATTLE WA,WA,02193,seattle@cryamerica.org,,WA,WA:Seattle,Wells Fargo (Seattle) 9136; Seattle Paypal,Yes,ZIP is a placeholder (021xx)
+SDA,San Diego Action Center,SAN DIEGO CA,CA,02194,sd@cryamerica.org,,CA,CA:San Diego,BOA-San Diego-0738,Yes,ZIP is a placeholder (021xx)
+UAC,Utah University Action Center,BRAINTREE [MA],MA,02195,logan@cryamerica.org,,UT,UT,,Yes,"city, state and ZIP are placeholders (Braintree MA)"
+BAA,Bay Area Action Center,BRAINTREE [MA],MA,02196,bayarea@cryamerica.org,,CA,CA:Bay Area,BOA-Bay Area-3597,Yes,"city, state and ZIP are placeholders (Braintree MA)"
+CSA,College Station Action Center,BRAINTREE [MA],MA,02197,cs@cryamerica.org,,TX,TX:College Station,,Yes,"city, state and ZIP are placeholders (Braintree MA)"
+DTA,Detroit Action Center,BRAINTREE [MA],MA,02198,detroit@cryamerica.org,,MI,MI:Detroit,BOA - Detriot AC-0182,Yes,"city, state and ZIP are placeholders (Braintree MA); overlaps MI (MIAC)"
+FUA,Florida International University Action Center,BRAINTREE [MA],MA,02199,florida@cryamerica.org,,FL,FL:FIU,,Yes,"city, state and ZIP are placeholders (Braintree MA)"
+MPA,Manassas Park Action Center,BRAINTREE [MA],MA,02200,manassaspark@cryamerica.org,,VA,VA,,Yes,"city, state and ZIP are placeholders (Braintree MA)"
+NAC,New York-New Jersey Action Center,BRAINTREE [MA],MA,02201,nynj@cryamerica.org,,NY,NY:NY AC / NJ,BCB-NJ-0605,Yes,"city, state and ZIP are placeholders (Braintree MA)"
+POC,Portland Action Center,BRAINTREE [MA],MA,02202,portland@cryamerica.org,,OR,OR:Portland,,Yes,"city, state and ZIP are placeholders (Braintree MA)"
+RAC,Richmond Action Center,BRAINTREE [MA],MA,02203,richmond@cryamerica.org,,VA,VA:Richmond,,Yes,"city, state and ZIP are placeholders (Braintree MA)"
+SCA,Southern California Action Center,BRAINTREE [MA],MA,02204,socal@cryamerica.org,,CA,CA:SoCal,BOA-2802-SoCal,Yes,"city, state and ZIP are placeholders (Braintree MA); overlaps LA and Orange County"
+UOI,University of Indianapolis,BRAINTREE [MA],MA,02205,indianapolis@cryamerica.org,,IN,IN,,Yes,"city, state and ZIP are placeholders (Braintree MA); overlaps INDIANA (IN)"
+AAAC,Alabama Action Center,BRAINTREE [MA],MA,02185,support@cryamerica.org,,AL,AL,,Yes,"city, state and ZIP are placeholders (Braintree MA)"
+ASAC,Arkansas Action Center,BRAINTREE [MA],MA,02185,support@cryamerica.org,,AR,AR,,Yes,"city, state and ZIP are placeholders (Braintree MA)"
+CANC,Charlotte Action Centre,BRAINTREE [MA],MA,02185,support@cryamerica.org,,NC,NC:Charlotte,,Yes,"city, state and ZIP are placeholders (Braintree MA)"
+CEAC,Charlottesville Action Center,BRAINTREE [MA],MA,02185,support@cryamerica.org,,VA,VA,,Yes,"city, state and ZIP are placeholders (Braintree MA)"
+CIAC,Cincinnati Action Center,BRAINTREE [MA],MA,02185,support@cryamerica.org,,OH,OH,,Yes,"city, state and ZIP are placeholders (Braintree MA)"
+CTAC,Connecticut Action Center,BRAINTREE [MA],MA,02185,support@cryamerica.org,,CT,CT,Bank of America - CT AC,Yes,"city, state and ZIP are placeholders (Braintree MA)"
+DSAC,Davis Action Center,BRAINTREE [MA],MA,02185,support@cryamerica.org,,CA,CA:Davis,,Yes,"city, state and ZIP are placeholders (Braintree MA)"
+KAC,Kentucky Action Center,BRAINTREE [MA],MA,02185,support@cryamerica.org,,KY,KY,,Yes,"city, state and ZIP are placeholders (Braintree MA); overlaps Lexington (LAC)"
+MIAC,MI Action Center,BRAINTREE [MA],MA,02185,support@cryamerica.org,,MI,MI,,Yes,"city, state and ZIP are placeholders (Braintree MA); overlaps Detroit (DTA)"
+MAC,Minneapolis Action Centre,BRAINTREE [MA],MA,02185,support@cryamerica.org,,MN,MN,,Yes,"city, state and ZIP are placeholders (Braintree MA)"
+NCA,North Carolina Action Center,BRAINTREE [MA],MA,02185,support@cryamerica.org,,NC,NC,,Yes,"city, state and ZIP are placeholders (Braintree MA); overlaps RDU and Charlotte"
+PYAC,Philly Action Center,BRAINTREE [MA],MA,02185,support@cryamerica.org,,PA,PA:Philadelphia,,Yes,"city, state and ZIP are placeholders (Braintree MA); same city as PA (Philadelphia)"
+PHAC,Phoenix Action Center,BRAINTREE [MA],MA,02185,support@cryamerica.org,,AZ,AZ:Phoenix,,Yes,"city, state and ZIP are placeholders (Braintree MA)"
+SCAC,South Carolina Action Center,BRAINTREE [MA],MA,02185,support@cryamerica.org,,SC,SC,,Yes,"city, state and ZIP are placeholders (Braintree MA)"
+TAC,Texas Action Center,SAN ANTONIO TX,TX,02185,support@cryamerica.org,,TX,TX:San Antonio,,Yes,"ZIP is a placeholder (021xx); overlaps Dallas, Austin, College Station"
+WAC,Washington DC Action Center,BRAINTREE [MA],MA,02185,support@cryamerica.org,,DC,DC:Washington,,Yes,"city, state and ZIP are placeholders (Braintree MA)"
+MUN,MUNSTER ACTION CENTER,BRAINTREE MA,MA,02185,,,IN,IN:Munster,,Yes,"city, state and ZIP are placeholders (Braintree MA); no email; Munster is in Indiana; classes have both IN:Munster and ""IL - Munster"""
+BUF,BUFFALO ACTION CENTER,BUFFALO NY,NY,02185,,NAC,NY,NY:NY-Buffalo,,Yes,ZIP is a placeholder (021xx); no email
+DEN,DENVER ACTION CENTER,DENVER CO,CO,80209,,,CO,CO:Denver,,Yes,no email
+CLEVELAND,CLEVELAND ACTION CENTER,CLEVELAND OH,OH,44101,,,OH,OH:Cleveland,,Yes,no email
+NASH,NASHVILLE[TN],NASHVILLE TN,TN,37201,,,TN,TN:Nashville,,Yes,no email
+PA,PHILADELPHIA ACTION CENTER,PHILADELPHIA PA,PA,19019,,,PA,PA:Philadelphia,,Yes,"ZIP 19019 not in the ZIP master (PO Box or unique ZIP: add it, or use the street ZIP); code ""PA"" is also a state code; no email; same city as PYAC (Philly)"
+EWA,Eastern WA,CHENEY WA,WA,99004,,,WA,WA:Eastern WA,,Yes,no email
+FF,FRANKFORT ACTION Center,FRANKFORT ME,ME,12020,,,ME,ME,,Yes,"ZIP 12020 is Ballston Spa, NY, but the office is in ME; no email"
+LA,Los Angeles Action Center,LANCASTER CA,CA,93535,,,CA,CA:LA,,Yes,"code ""LA"" is also a state code; no email; LA sits under SoCal in the classes (CA:SoCal:z-LA AC)"
+IN,INDIANA,BOSTON MA,MA,02205,,,IN,IN,,Yes,"city, state and ZIP are placeholders (Braintree MA); code ""IN"" is also a state code; no email; overlaps University of Indianapolis and Munster"
+OC,Orange County,ORANGE COUNTY CA,CA,02040,,HO,CA,CA:SoCal,,Yes,"ZIP 02040 not in the ZIP master (PO Box or unique ZIP: add it, or use the street ZIP); code ""OC"" clashes with OC (Other Country) in the states list; no email; overlaps SoCal"
+Austin,Austin,AUSTIN TX,TX,73301,,,TX,TX:Austin,,Yes,"ZIP 73301 not in the ZIP master (PO Box or unique ZIP: add it, or use the street ZIP); no email"
+(none),Houston Action Center,Houston TX,TX,,,,TX,TX:Houston,BOA-Houston-0823,—,"NOT in the Offices list, but QB has class TX:Houston (Dandiya, Walk, Dinner) and bank BOA-Houston-0823"

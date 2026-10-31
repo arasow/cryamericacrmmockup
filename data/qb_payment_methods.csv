@@ -1,0 +1,11 @@
+qb_payment_method,key,used_for_in_crm,note
+Wire,30000-1145463381,"ACH from fiduciaries, Benevity, Auth.net Web and Events settlements, Givebutter payouts, wire / ACH gifts",QB uses Wire for card settlements too
+Check,20000-1060104771,"Checks (individual, company, fiduciary, DAF)",
+Paypal,80000008-1444220607,"PayPal day deposits (website, Event Espresso, Charitable)",
+Cash,10000-1060104771,"Cash at events (Charitable ""Custom"")",
+Credit Card,80000006-1234897521,Not used by QB for Auth.net (Wire is used),Decide: keep Wire for card settlements or switch to Credit Card
+E-Check,80000009-1495208456,Not used in the workflows,Could be Auth.net eCheck if CRY takes it
+Direct Deposit,80000005-1174312926,Not used in the workflows,Overlaps Wire
+Money Order,40000-1149605422,Manual entry only,
+Money Order - Check,80000007-1406573791,Manual entry only,Overlaps Money Order
+Not available,- NA -,Placeholder,Do not offer in the CRM

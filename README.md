@@ -19,8 +19,13 @@ Start page: `index.html`
 | `data/states.csv` | 57 | State short codes used as the QuickBooks class: 52 from Google's states.csv, USPS codes for VI, GU, MP, AS, and OC (Other Country) for any donor outside the United States, with the ZIP count per state |
 | `data/fiduciaries.csv` | 36 | Fiduciary master seed: type, legal payer, portal login email, default payment type and QB bank, name on the bank credit, receipt rule |
 | `data/company_routes.csv` | 125 | Company → fiduciary routes with payment type and QB bank from CRY's FIDUCIARY Details sheet, duplicates removed and names corrected (Oct 31, 2026); `flags` marks the rows still to fill |
+| `data/offices.csv` | 51 | Locations (Action Centers + corporate office) from the old CRM with QB class prefix, AC bank and a `flags` column (placeholder addresses, overlaps, code clashes); Houston added as missing. Street addresses and phones left out |
+| `data/qb_banks.csv` | 36 | QB bank accounts from the old CRM: key, old name, current QB name, what the CRM uses it for, flags |
+| `data/qb_payment_methods.csv` | 10 | QB payment methods with key and how the CRM uses each |
 
 Check the country before the ZIP: anything other than US / USA / United States / blank gets state code OC, the ZIP check is skipped, and the postal code is kept as typed.
+
+Store QuickBooks **keys** (ListID now, QBO Id after January 2027), not names: QB renames accounts and classes, and the old CRM still shows old names. The QB class list (550) is synced from QuickBooks, not seeded from a file.
 
 Import the ZIP column as **text**, never as a number, or the leading zeros are lost again. The rules for cleaning and checking addresses are in workflow WF-11 and on the *Masters → Zip codes* screen.
 

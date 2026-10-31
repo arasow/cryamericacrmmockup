@@ -1,0 +1,37 @@
+key,name_in_old_crm,name_in_qb_now,is_bank,use_in_crm,flags
+250000-1060108541,Corporate Checking,Corporate Checking,Yes,? (JPMC route in the fiduciary sheet),same key as another row (old and new name both listed)
+800000E6-1210859932,Bank of America - Atlanta AC,Bank of America - Atlanta AC,Yes,Action Center bank: AAC (confirm what is deposited here),
+800000E5-1210859912,Bank of America - CT AC,Bank of America - CT AC,Yes,Action Center bank: CTAC (confirm what is deposited here),
+800000E9-1214238094,Bank of America-MMA,Bank of America-MMA - 3583,Yes,Donations: Benevity ACH,"renamed in QB: now ""Bank of America-MMA - 3583"""
+3C0000-1073948381,Deposit in transit,Deposit in transit,Yes,Clearing: ask Paul,
+MIGRATION,Migration,Migration,Yes,Not for donations,
+800000E4-1210859888,BOA - Detriot AC-0182,BOA - Detriot AC-0182,Yes,Action Center bank: DTA (confirm what is deposited here),
+800000E0-1209566396,Corporate Banking CitiBank-7132,Corporate Banking CitiBank-7132,Yes,Old? ask Paul,
+CC0000-1156261198,Century Bank,Eastern Bank (Century),Yes,"Donations: ACH (YourCause, CyberGrants, Fidelity, Bright Funds…)","renamed in QB: now ""Eastern Bank (Century)"""
+660000-1101839165,Washington Checking,Washington Checking,Yes,Action Center bank: SAC (confirm what is deposited here),same key as another row (old and new name both listed)
+BB0000-1142007660,Petty Cash Accounts:KY-Lexington,Petty Cash Accounts:KY-Lexington,Yes,Petty cash: not for donations,
+800000ED-1224530258,BOA-Bay Area-3597,BOA-Bay Area-3597,Yes,Action Center bank: BAA (confirm what is deposited here),
+6B0000-1103146027,PA-Pittsburgh Checking,PA-Pittsburgh Checking,Yes,Action Center bank: PAC (confirm what is deposited here),
+800000EE-1224530285,BOA-Houston-0823,BOA-Houston-0823,Yes,Action Center bank: Houston (no office) (confirm what is deposited here),
+B30000-1138728717,Petty Cash Accounts:CA-San Diego,Petty Cash Accounts:CA-San Diego,Yes,Petty cash: not for donations,
+800000DE-1199724942,Petty Cash Accounts:MN-Minneapolis,Petty Cash Accounts:MN-Minneapolis,Yes,Petty cash: not for donations,
+B10000-1138725809,Petty Cash Accounts,Petty Cash Accounts,Yes,Petty cash: not for donations,
+8000010C-1288815508,PayPal Account,PayPal Account,Yes,Donations: PayPal,
+80000109-1260385629,BOA-2815-NEW,BOA-2815-NEW,Yes,? ask Paul,
+5B0000-1095198965,Deposit in transit:Web Donations,Deposit in transit:Web Donations,Yes,Clearing: ask Paul,
+80000108-1260385613,BOA-2802-SoCal,BOA-2802-SoCal,Yes,Action Center bank: SCA (confirm what is deposited here),
+410000-1075241993,Corporate Banking CitiBank-1086,Corporate Banking CitiBank-1086,Yes,Old? ask Paul,
+80000131-1421785241,Seattle Paypal,Seattle Paypal,Yes,Action Center bank: SAC (confirm what is deposited here),
+80000129-1385570965,BOA-San Diego-0738,BOA-San Diego-0738,Yes,Action Center bank: SDA (confirm what is deposited here),
+250000-1060108541,Corporate Checking - 3074,Corporate Checking - 3074,Yes,? (JPMC route in the fiduciary sheet),same key as another row (old and new name both listed)
+80000132-1425490240,Receivable - Giving & Matching,Receivable - Giving & Matching,Yes,Receivable: are matches booked here before cash arrives? ask Paul,
+80000140-1520277398,Bank of America - Auth Net Acct,Bank of America -Web Event-1161,Yes,Donations: Auth.net Events + Givebutter payouts,"renamed in QB: now ""Bank of America -Web Event-1161"""
+80000142-1536673661,Bank of America - Web- 9853,Bank of America - Web- 9853,Yes,Donations: Auth.net Web,
+80000145-1570041889,BCB-NJ-0605,BCB-NJ-0605,Yes,Action Center bank: NAC (confirm what is deposited here),
+800000DC-1197994873,Corporation Expenses:Insurance,Corporation Expenses:Insurance,No,Not a bank (expense account),not a bank account
+80000161-1693410008,Merrill Lynch - Stock Donation,Merrill Lynch - Stock Donation,Yes,Donations: stock,
+80000152-1632932286,SBI,SBI,Yes,Not for donations (India),
+80000168-1726602373,BofA Main Checking -1864,BofA Main Checking -1864,Yes,Donations: checks,
+660000-1101839165,Wells Fargo Checking (Seattle),Wells Fargo Checking (Seattle),Yes,Action Center bank: SAC (confirm what is deposited here),same key as another row (old and new name both listed)
+80000166-1714731262,Merrill Lynch - CD's/Investment:Preferred Deposit Savings,Merrill Lynch - CD's/Investment:Preferred Deposit Savings,Yes,Not donations: interest (kept out of the CRM),
+8000016E-1785243015,Wells Fargo (Seattle) 9136,Wells Fargo (Seattle) 9136,Yes,Action Center bank: SAC (confirm what is deposited here),
