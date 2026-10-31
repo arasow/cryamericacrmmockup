@@ -31,6 +31,15 @@ Import the ZIP column as **text**, never as a number, or the leading zeros are l
 
 State codes source: [Google DSPL states.csv](https://developers.google.com/public-data/docs/canonical/states_csv) (CC BY 4.0).
 
+## EDM sync (screen 14, WF-15)
+
+- Constant Contact gets **Live** donors only (current FY + last 3 years); Lapsed and Super-lapsed go to Zoho Campaigns. A donor is in one platform at a time.
+- Push: Monday and Thursday, 2:00 AM ET. Constant Contact `POST /v3/activities/contacts_json_import` (up to 40,000 contacts / 4 MB per call, 1–50 list_ids, custom fields as `cf:` properties); poll `GET /v3/activities/{id}`. Zoho Campaigns `addlistsubscribersinbulk`.
+- Pull every night: unsubscribes (`GET /v3/contacts?status=unsubscribed&updated_after=`), bounces (`/v3/reports/email_reports/{id}/tracking/bounces`), campaign summaries; Zoho Campaigns `getlistsubscribers` by status. These set Unsubscribed / Hard bounce on the donor master.
+- ZeroBounce every night on new or changed emails (`validatebatch`, or `sendfile`/`getfile` for big files) and live on the tele-calling screen before a revised email is saved.
+- Each EDM is a Campaign Master row (category EDM). Links carry `utm_campaign=<campaign code>`; gifts arriving with that UTM link to the campaign. The CRM keeps summaries only: sent, delivered, opened, clicked, bounced, unsubscribed, gifts, amount.
+- Hard bounces with a phone not on DNC go to an `EMAIL-<month>` tele-calling list; staff choose the callers.
+
 ## Notes
 
 - The screens need to be opened from a web address (GitHub Pages or any web server). Double-clicking the files on your computer shows some lists empty.
