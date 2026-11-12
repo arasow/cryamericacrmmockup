@@ -1,6 +1,6 @@
 # CRY America Donor CRM — clickable mockup
 
-A clickable prototype of the CRY America Donor CRM: desktop screens, tele-calling, volunteer management, payments and QuickBooks, integrations, masters and workflows. Donor names are shortened (first name + last initial); sample screens are marked as such.
+A clickable prototype of the CRY America Donor CRM: desktop screens, tele-calling, volunteer management, payments and QuickBooks, integrations, masters and workflows. All names, contact details, bank account and check numbers are dummy data for demonstration; no real donor data is shown.
 
 Start page: `index.html`
 
