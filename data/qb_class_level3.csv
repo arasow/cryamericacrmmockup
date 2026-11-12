@@ -1,0 +1,56 @@
+action_center,state,office_code,to_do
+Alabama,AL,AAAC,
+Arkansas,AR,ASAC,
+Atlanta,GA,AAC,
+Austin,TX,Austin,
+Bay Area,CA,BAA,
+Boston,MA,BAC,
+Buffalo,NY,BUF,
+Charlotte,NC,CANC,
+Charlottesville,VA,CEAC,
+Chicago,IL,CAC,
+Cincinnati,OH,CIAC,
+Cleveland,OH,CLEVELAND,
+College Station,TX,CSA,
+Connecticut,CT,CTAC,
+Dallas,TX,DAC,
+Davis,CA,DSAC,
+Denver,CO,DEN,
+Detroit,MI,DTA,
+Eastern WA,WA,EWA,
+Frankfort,KY?,FF,Check the state
+Houston,TX,(add),Add to the Locations master first
+Indianapolis,IN,UOI,
+Kentucky,KY,KAC,
+Lexington,KY,LAC,
+Los Angeles,CA,LA,
+Madison,WI,MUW,
+Manassas Park,VA,MPA,
+Miami,FL,FUA,
+Michigan,MI,MIAC,
+Minneapolis,MN,MAC,
+Munster,IN,MUN,
+Nashville,TN,NASH,
+New York-New Jersey,NY/NJ,NAC,Check the state
+North Carolina,NC,NCA,
+Orange County,CA,OC,
+Philadelphia,PA,PYAC / PA,
+Phoenix,AZ,PHAC,
+Pittsburgh,PA,PAC,
+Portland,OR,POC,
+Raleigh-Durham,NC,RDU,
+Richmond,VA,RAC,
+Salt Lake City,UT,UAC,
+San Antonio,TX,TAC,
+San Diego,CA,SDA,
+Seattle,WA,SAC,
+South Carolina,SC,SCAC,
+Southern California,CA,SCA,
+Washington DC,DC,WAC,
+Cornell,,(none),Not an office: add as a Location (student chapter) or map to the nearest Action Center
+Delaware,,(none),Not an office: add as a Location (student chapter) or map to the nearest Action Center
+Harrisburg,,(none),Not an office: add as a Location (student chapter) or map to the nearest Action Center
+NYIT,,(none),Not an office: add as a Location (student chapter) or map to the nearest Action Center
+NYMC,,(none),Not an office: add as a Location (student chapter) or map to the nearest Action Center
+Texas Tech,,(none),Not an office: add as a Location (student chapter) or map to the nearest Action Center
+Western Washington Univ,,(none),Not an office: add as a Location (student chapter) or map to the nearest Action Center

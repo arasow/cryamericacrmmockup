@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Tele-calling dashboard — CRY America CRM</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>/*cry-inputs*/select,textarea,input:not([type=checkbox]):not([type=radio]):not([type=range]):not([type=button]):not([type=submit]){background-color:#FFFFFF!important;border:1.5px solid #6C757D!important;color:#1A1A1A!important;border-radius:8px}select{appearance:none;-webkit-appearance:none;padding-right:36px!important;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%231A1A1A' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")!important;background-repeat:no-repeat!important;background-position:right 12px center!important;cursor:pointer}select:hover,textarea:hover,input:not([type=checkbox]):not([type=radio]):hover{border-color:#343A40!important}select:focus,textarea:focus,input:not([type=checkbox]):not([type=radio]):focus{outline:2px solid #1A1A1A!important;outline-offset:0;box-shadow:0 0 0 5px #FFD806!important}select:not(:has(option:first-child:checked)){background-color:#FFF6CC!important;border-color:#1A1A1A!important;font-weight:500}::placeholder{color:#6B6B6B!important;opacity:1}select:disabled,input:disabled,textarea:disabled{background-color:#F4F5F6!important;border-color:#DEE2E6!important;color:#6B6B6B!important}label[style*='flex-direction: column']>span:first-child{color:#343A40;font-weight:500}body,html{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}td,.kpi,[data-num]{font-variant-numeric:tabular-nums}th{font-weight:500!important}
+body{margin:0}
+a{color:#1A1A1A}a:hover{color:#8A3A0D}
+</style>
+</helmet>
+<div style="display: flex; flex-wrap: wrap; min-height: 2280px; background: #FFFBE6; color: #1A1A1A; font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 14px; line-height: 20px">
+<nav aria-label="Main" style="flex: 1 1 232px; background: #FFD806; color: #1A1A1A; padding: 24px 16px; box-sizing: border-box; display: flex; flex-direction: column; gap: 4px">
+<div style="padding: 0 12px 24px; display: flex; flex-direction: column; gap: 2px"><img src="assets/cry-logo-yellow.png" alt="CRY – Child Rights and You, www.cryamerica.org" width="168" height="104" style="width: 168px; height: 104px; object-fit: contain; display: block"><span style="font-size: 20px; line-height: 26px; font-weight: 800; color: #1A1A1A; margin-top: 8px">Donor CRM</span></div>
+<a href="Main.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #1A1A1A; text-decoration: none">Dashboard</a>
+<a href="Donors.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #1A1A1A; text-decoration: none">Donors</a>
+<a href="Donations.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #1A1A1A; text-decoration: none">Donations</a>
+<a href="NewPledge.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #1A1A1A; text-decoration: none">Pledges</a>
+<a href="BulkImport.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #1A1A1A; text-decoration: none">Bulk import</a>
+<a href="TC-Dashboard.dc.html" style="padding: 10px 12px; border-radius: 8px; background: #1A1A1A; color: #FFD806; font-weight: 600; text-decoration: none">Tele-calling</a>
+<a href="VM-Dashboard.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #1A1A1A; text-decoration: none">Volunteers</a>
+<span style="padding: 16px 12px 6px; font-size: 12px; letter-spacing: 1px; text-transform: uppercase; color: #343A40">Set-up</span>
+<a href="Masters.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #1A1A1A; text-decoration: none">Masters</a>
+<a href="Organisation.dc.html" style="padding: 10px 12px; border-radius: 8px; color: #1A1A1A; text-decoration: none">Organisation</a>
+</nav>
+<main style="flex: 999 1 560px; min-width: 0; padding: 32px 32px 48px; box-sizing: border-box; display: flex; flex-direction: column; gap: 24px">
+<div style="display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between; align-items: flex-end">
+<div style="display: flex; flex-direction: column; gap: 4px"><h1 style="margin: 0; font-size: 28px; line-height: 36px; font-weight: 600">Tele-calling dashboard</h1><span style="color: #495057">Live Donors Tele-calling 2026 · October 2026 · as of Fri Oct-16-2026, 1:30 PM ET</span></div>
+<div style="display: flex; flex-wrap: wrap; gap: 12px; align-items: center"><label style="display: flex; gap: 8px; align-items: center"><span style="color: #495057">Campaign</span><select style="height: 40px; border: 1px solid #8E959C; border-radius: 8px; padding: 0 8px; font: inherit; background: #FFFFFF"><option>Live Donors Tele-calling 2026</option><option>Lapsed Donors Tele-calling 2026</option></select></label><label style="display: flex; gap: 8px; align-items: center"><span style="color: #495057">Telecaller</span><select style="height: 40px; border: 1px solid #8E959C; border-radius: 8px; padding: 0 8px; font: inherit; background: #FFFFFF"><option>All telecallers</option><option>Nandini</option><option>Meena</option><option>Kevin</option><option>Sarita</option></select></label><label style="display: flex; gap: 8px; align-items: center"><span style="color: #495057">Month</span><select style="height: 40px; border: 1px solid #8E959C; border-radius: 8px; padding: 0 8px; font: inherit; background: #FFFFFF"><option>October 2026</option><option>September 2026</option></select></label></div>
+</div>
+<div role="tablist" aria-label="Tele-calling" style="display: flex; gap: 28px; border-bottom: 1px solid #DEE2E6; flex-wrap: wrap"><a href="TC-Dashboard.dc.html" role="tab" aria-selected="true" style="padding: 8px 0 10px; text-decoration: none; border-bottom: 3px solid #1A1A1A; font-weight: 600; color: #1A1A1A">Dashboard</a><a href="TC-CallList.dc.html" role="tab" aria-selected="false" style="padding: 8px 0 10px; text-decoration: none; color: #495057">Call list</a><a href="TC-Call.dc.html" role="tab" aria-selected="false" style="padding: 8px 0 10px; text-decoration: none; color: #495057">Call workspace</a><a href="TC-Rules.dc.html" role="tab" aria-selected="false" style="padding: 8px 0 10px; text-decoration: none; color: #495057">Disposition rules</a></div>
+<section aria-label="Key figures" style="display: flex; flex-wrap: wrap; gap: 12px; font-variant-numeric: tabular-nums">
+<sc-for list="{{ kpis }}" as="k" hint-placeholder-count="6">
+<div style="flex: 1 1 140px; background: #FFFFFF; border: 1px solid #DEE2E6; border-radius: 12px; padding: 16px 18px; display: flex; flex-direction: column; gap: 4px">
+<span style="color: #495057; font-weight: 600">{{ k.label }}</span>
+<span style="font-size: 30px; line-height: 38px; font-weight: 700">{{ k.value }}</span>
+<span style="color: #495057; font-size: 13px">{{ k.note }}</span>
+</div>
+</sc-for>
+</section>
+<div style="display: flex; flex-wrap: wrap; gap: 24px; align-items: stretch">
+<section aria-label="Reminders" style="flex: 3 1 560px; background: #FFFFFF; border: 1px solid #DEE2E6; border-radius: 12px; padding: 20px 24px; display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px"><h2 style="margin: 0; font-size: 18px; line-height: 24px; font-weight: 600">Reminders for today</h2><span style="color: #495057">Generated by the disposition workflows</span></div>
+<sc-for list="{{ reminders }}" as="r" hint-placeholder-count="5">
+<div style="display: flex; gap: 16px; align-items: center; padding: 12px 0; border-top: 1px solid #DEE2E6">
+<span style="min-width: 56px; height: 44px; padding: 0 8px; box-sizing: border-box; border-radius: 10px; background: {{ r.bg }}; color: {{ r.fg }}; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: 700">{{ r.n }}</span>
+<div style="flex: 1; display: flex; flex-direction: column; gap: 2px"><b>{{ r.t }}</b><span style="color: #495057">{{ r.d }}</span></div>
+<a href="{{ r.h }}" style="white-space: nowrap; font-weight: 600">{{ r.a }} →</a>
+</div>
+</sc-for>
+</section>
+<section aria-label="Best time to call" style="flex: 2 1 340px; background: #FFFFFF; border: 1px solid #DEE2E6; border-radius: 12px; padding: 20px 24px; display: flex; flex-direction: column; gap: 12px">
+<h2 style="margin: 0; font-size: 18px; line-height: 24px; font-weight: 600">Who to call right now</h2>
+<span style="color: #495057">Today's due follow-ups by the donor's time zone. Calls are allowed 9 AM–8 PM donor local time.</span>
+<sc-for list="{{ tzs }}" as="z" hint-placeholder-count="4">
+<div style="display: flex; gap: 12px; align-items: center; padding: 10px 0; border-top: 1px solid #DEE2E6">
+<div style="flex: 1; display: flex; flex-direction: column"><b>{{ z.z }}</b><span style="color: #495057">Local time {{ z.t }}</span></div>
+<span style="font-size: 20px; font-weight: 700; min-width: 32px; text-align: right">{{ z.n }}</span>
+<span style="padding: 3px 10px; border-radius: 999px; background: {{ z.bg }}; color: {{ z.fg }}; font-weight: 600; font-size: 12px; white-space: nowrap">{{ z.s }}</span>
+</div>
+</sc-for>
+<div style="margin-top: auto; padding: 12px 14px; border-radius: 10px; background: #FFF0A3"><b>Pace check:</b> 794 donors are not yet called. At 25 calls a day per telecaller, all 4 telecallers would finish the base in about 8 working days.</div>
+</section>
+</div>
+<section aria-label="Productivity by telecaller" style="background: #FFFFFF; border: 1px solid #DEE2E6; border-radius: 12px; padding: 20px 24px; display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px"><h2 style="margin: 0; font-size: 18px; line-height: 24px; font-weight: 600">Productivity by telecaller</h2><span style="color: #495057">Coverage = calls ÷ base · Contact rate = spoken ÷ calls</span></div>
+<div style="overflow-x: auto">
+<table style="width: 100%; min-width: 980px; border-collapse: collapse; font-variant-numeric: tabular-nums">
+<thead><tr style="background: #FFF6CC; text-align: left; color: #495057; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px">
+<th style="padding: 10px 12px; font-weight: 600">Telecaller</th><th style="padding: 10px 12px; font-weight: 600; text-align: right">Base</th><th style="padding: 10px 12px; font-weight: 600; width: 220px">Coverage</th><th style="padding: 10px 12px; font-weight: 600; text-align: right">Spoken</th><th style="padding: 10px 12px; font-weight: 600; text-align: right">Contact rate</th><th style="padding: 10px 12px; font-weight: 600; text-align: right">Pledges</th><th style="padding: 10px 12px; font-weight: 600; text-align: right">Donated</th><th style="padding: 10px 12px; font-weight: 600; text-align: right">Amount</th><th style="padding: 10px 12px; font-weight: 600; text-align: right">$ per call</th><th style="padding: 10px 12px; font-weight: 600">Status</th></tr></thead>
+<tbody>
+<sc-for list="{{ prod }}" as="p" hint-placeholder-count="4">
+<tr style="border-top: 1px solid #DEE2E6">
+<td style="padding: 12px"><b>{{ p.name }}</b><br><span style="color: #495057; font-size: 12px">{{ p.mix }}</span></td>
+<td style="padding: 12px; text-align: right">{{ p.base }}</td>
+<td style="padding: 12px"><div style="display: flex; flex-direction: column; gap: 4px"><span>{{ p.calls }} calls · {{ p.cov }}</span><div style="height: 8px; border-radius: 4px; background: #DEE2E6"><div style="width: {{ p.covw }}; height: 8px; border-radius: 4px; background: #1A1A1A"></div></div></div></td>
+<td style="padding: 12px; text-align: right">{{ p.spk }}</td>
+<td style="padding: 12px; text-align: right; font-weight: 600">{{ p.cr }}</td>
+<td style="padding: 12px; text-align: right">{{ p.pl }}</td>
+<td style="padding: 12px; text-align: right">{{ p.don }}</td>
+<td style="padding: 12px; text-align: right; font-weight: 600">{{ p.amt }}</td>
+<td style="padding: 12px; text-align: right">{{ p.perCall }}</td>
+<td style="padding: 12px"><span style="padding: 2px 10px; border-radius: 999px; background: {{ p.sbg }}; color: {{ p.sfg }}; font-weight: 600; font-size: 12px; white-space: nowrap">{{ p.status }}</span></td>
+</tr>
+</sc-for>
+<tr style="border-top: 2px solid #1A1A1A; font-weight: 700"><td style="padding: 12px">Total</td><td style="padding: 12px; text-align: right">878</td><td style="padding: 12px">84 calls · 10%</td><td style="padding: 12px; text-align: right">18</td><td style="padding: 12px; text-align: right">21%</td><td style="padding: 12px; text-align: right">17</td><td style="padding: 12px; text-align: right">3</td><td style="padding: 12px; text-align: right">$1,501</td><td style="padding: 12px; text-align: right">$17.87</td><td style="padding: 12px"></td></tr>
+</tbody></table></div>
+<span style="color: #495057"><b style="color: #1A1A1A">Insight:</b> Nandini reaches 37% of the donors she calls and converts every conversation to a pledge; Meena reaches 10%. Most of Meena's calls end as Ringing or Voicemail — calling Pacific donors after 5 PM local time may lift her contact rate.</span>
+</section>
+<div style="display: flex; flex-wrap: wrap; gap: 24px; align-items: stretch">
+<section aria-label="Conversion funnel" style="flex: 1 1 460px; background: #FFFFFF; border: 1px solid #DEE2E6; border-radius: 12px; padding: 20px 24px; display: flex; flex-direction: column; gap: 12px">
+<h2 style="margin: 0; font-size: 18px; line-height: 24px; font-weight: 600">Conversion funnel, October</h2>
+<sc-for list="{{ funnel }}" as="f" hint-placeholder-count="5">
+<div style="display: flex; flex-direction: column; gap: 4px">
+<div style="display: flex; justify-content: space-between; gap: 8px"><b>{{ f.name }}</b><span style="font-variant-numeric: tabular-nums"><b>{{ f.v }}</b> <span style="color: #495057">{{ f.conv }}</span></span></div>
+<div style="height: 14px; border-radius: 4px; background: #DEE2E6"><div style="width: {{ f.w }}; height: 14px; border-radius: 4px; background: #1A1A1A"></div></div>
+</div>
+</sc-for>
+<span style="color: #495057">The leak is between pledge and gift: 14 of 17 pledges have not arrived. Pledge follow-ups are the fastest money.</span>
+</section>
+<section aria-label="Call outcomes" style="flex: 1 1 460px; background: #FFFFFF; border: 1px solid #DEE2E6; border-radius: 12px; padding: 20px 24px; display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; flex-direction: column; gap: 2px"><h2 style="margin: 0; font-size: 18px; line-height: 24px; font-weight: 600">Call outcomes by disposition</h2><span style="color: #495057">Meena's calls on Oct-10-2026 (19 donors in the sample)</span></div>
+<sc-for list="{{ dispo }}" as="d" hint-placeholder-count="5">
+<div style="display: flex; gap: 12px; align-items: center">
+<span style="width: 132px; padding: 2px 10px; border-radius: 999px; background: {{ d.bg }}; color: {{ d.fg }}; font-weight: 600; font-size: 12px; text-align: center">{{ d.name }}</span>
+<div style="flex: 1; height: 14px; border-radius: 4px; background: #DEE2E6"><div style="width: {{ d.w }}; height: 14px; border-radius: 4px; background: #1A1A1A"></div></div>
+<span style="width: 72px; text-align: right; font-variant-numeric: tabular-nums"><b>{{ d.n }}</b> · {{ d.share }}</span>
+</div>
+</sc-for>
+<span style="color: #495057">89% not contacted (Ringing, Voicemail, AI Assistant) · 11% contacted. One Will Donate pledge of $300 came in as $350.</span>
+</section>
+</div>
+<section aria-label="Data quality" style="background: #FFFFFF; border: 1px solid #DEE2E6; border-radius: 12px; padding: 20px 24px; display: flex; flex-direction: column; gap: 12px">
+<h2 style="margin: 0; font-size: 18px; line-height: 24px; font-weight: 600">Data checks before calling</h2>
+<div style="display: flex; flex-wrap: wrap; gap: 12px">
+<sc-for list="{{ dq }}" as="q" hint-placeholder-count="4">
+<div style="flex: 1 1 220px; padding: 14px 16px; border-radius: 10px; background: #FFF6CC; border: 1px solid #DEE2E6; display: flex; flex-direction: column; gap: 4px"><span style="font-size: 22px; font-weight: 700">{{ q.n }}</span><b>{{ q.t }}</b><span style="color: #495057; font-size: 13px">{{ q.d }}</span></div>
+</sc-for>
+</div>
+</section>
+</main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":2280}}'>
+class Component extends DCLogic {
+renderVals() {
+return {"kpis": [{"label": "Calling base", "value": "878", "note": "Regular 511 · Dinner 367 · 4 telecallers"}, {"label": "Calls made", "value": "84", "note": "10% of base covered · 794 not yet called"}, {"label": "Spoken to", "value": "18", "note": "21% contact rate (spoken ÷ calls)"}, {"label": "Pledges", "value": "17", "note": "94% of donors spoken to pledged"}, {"label": "Donated", "value": "3", "note": "18% of pledges converted · 14 awaiting gift"}, {"label": "Amount raised", "value": "$1,501", "note": "$500 per gift · $17.87 per call"}], "prod": [{"name": "Nandini", "base": "175", "mix": "93 regular · 82 dinner", "calls": "35", "cov": "20%", "covw": "20.0%", "spk": "13", "cr": "37%", "pl": "13", "don": "2", "amt": "$1,151", "perCall": "$32.89", "status": "Top performer", "sbg": "#D2F1F1", "sfg": "#0E6E6F"}, {"name": "Meena", "base": "267", "mix": "122 regular · 145 dinner", "calls": "49", "cov": "18%", "covw": "18.4%", "spk": "5", "cr": "10%", "pl": "4", "don": "1", "amt": "$350", "perCall": "$7.14", "status": "Low contact rate", "sbg": "#FDE3D3", "sfg": "#8A3A0D"}, {"name": "Kevin", "base": "186", "mix": "96 regular · 90 dinner", "calls": "0", "cov": "0%", "covw": "0.0%", "spk": "0", "cr": "—", "pl": "0", "don": "0", "amt": "$0", "perCall": "—", "status": "Not started", "sbg": "#FBDDE7", "sfg": "#9E1446"}, {"name": "Sarita", "base": "250", "mix": "200 regular · 50 dinner", "calls": "0", "cov": "0%", "covw": "0.0%", "spk": "0", "cr": "—", "pl": "0", "don": "0", "amt": "$0", "perCall": "—", "status": "Not started", "sbg": "#FBDDE7", "sfg": "#9E1446"}], "funnel": [{"name": "Calling base", "v": "878", "w": "100.0%", "conv": ""}, {"name": "Called", "v": "84", "w": "9.6%", "conv": "10% of previous step"}, {"name": "Spoken to", "v": "18", "w": "2.1%", "conv": "21% of previous step"}, {"name": "Pledged", "v": "17", "w": "1.9%", "conv": "94% of previous step"}, {"name": "Donated", "v": "3", "w": "0.6%", "conv": "18% of previous step"}], "dispo": [{"name": "Ringing", "cat": "Not contacted", "n": "10", "w": "52.6%", "share": "53%", "bg": "#FDE3D3", "fg": "#8A3A0D"}, {"name": "Voicemail", "cat": "Not contacted", "n": "5", "w": "26.3%", "share": "26%", "bg": "#FDE3D3", "fg": "#8A3A0D"}, {"name": "AI Assistant", "cat": "Not contacted", "n": "2", "w": "10.5%", "share": "11%", "bg": "#ECEEF0", "fg": "#495057"}, {"name": "Call Back", "cat": "Contacted", "n": "1", "w": "5.3%", "share": "5%", "bg": "#EFE3EE", "fg": "#6B2F67"}, {"name": "Will Donate", "cat": "Contacted", "n": "1", "w": "5.3%", "share": "5%", "bg": "#D2F1F1", "fg": "#0E6E6F"}], "tzs": [{"z": "Eastern (ET)", "t": "1:30 PM", "n": "7", "s": "Call now", "bg": "#D2F1F1", "fg": "#0E6E6F"}, {"z": "Central (CT)", "t": "12:30 PM", "n": "1", "s": "Call now", "bg": "#D2F1F1", "fg": "#0E6E6F"}, {"z": "Pacific (PT)", "t": "10:30 AM", "n": "6", "s": "Call now", "bg": "#D2F1F1", "fg": "#0E6E6F"}, {"z": "Hawaii (HT)", "t": "7:30 AM", "n": "1", "s": "From 2:30 PM ET", "bg": "#FBDDE7", "fg": "#9E1446"}], "reminders": [{"n": "15", "t": "Follow-ups due today", "d": "10 Ringing and 5 Voicemail from Oct-10-2026, auto-scheduled to today. 1 in Hawaii can only be called after 2:30 PM ET.", "a": "Open queue", "h": "TC-CallList.dc.html", "bg": "#1A1A1A", "fg": "#FFD806"}, {"n": "1", "t": "Call back without a date", "d": "Hema Kulkarni — “in a flight to california, asked to email”. Call Back needs a follow-up date after today; send the requested email.", "a": "Set date", "h": "TC-Call.dc.html", "bg": "#FBDDE7", "fg": "#9E1446"}, {"n": "14", "t": "Pledges awaiting a gift", "d": "Will Donate / Answered follow-ups stay open until the gift arrives; the workflow closes each one automatically when the donation is posted.", "a": "See pledges", "h": "TC-CallList.dc.html", "bg": "#FDE3D3", "fg": "#8A3A0D"}, {"n": "436", "t": "Donors with no calls yet", "d": "Kevin (186) and Sarita (250) have not started. Half of the base is untouched with 2 weeks left in October.", "a": "Reassign", "h": "TC-CallList.dc.html", "bg": "#FBDDE7", "fg": "#9E1446"}, {"n": "2", "t": "Parked for next year", "d": "AI Assistant (Google Voice screening) → next attempt Oct-10-2027; thank-you email already sent.", "a": "View", "h": "TC-CallList.dc.html", "bg": "#ECEEF0", "fg": "#495057"}], "dq": [{"t": "Email suppressed (Do Not Email)", "n": "5", "d": "Email triggers are skipped for these donors even when the rule says “send”."}, {"t": "Mail scrub flags", "n": "2", "d": "DM bounced (Aug '25) and snail mail bounced — confirm the address on the call."}, {"t": "No account manager", "n": "1", "d": "Naveen Deshpande has a telecaller but no account manager."}, {"t": "Gift date after today", "n": "1", "d": "Naveen Deshpande: $350 dated Nov-10-2026 in the sheet — check the date."}]};
+}
+}
+</script>
+<a href="index.html" style="position:fixed;right:20px;bottom:20px;z-index:9999;background:#1A1A1A;color:#FFD806;font:600 13px/1 system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif,system-ui,sans-serif;padding:11px 16px;border-radius:999px;text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,.25)">&#8592; All screens</a>
+</body>
+</html>
